@@ -18,6 +18,20 @@
             #binding-cells = <2>;
             tapping-term-ms = <100>;
         };
+
+        zeroOne: zeroOne {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ZEROONE";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp NUMBER_1>;
+        };
+
+        twoThree: twoThree {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TWOTHREE";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_2>, <&kp NUMBER_1>;
+        };
     };
 
     keymap {
@@ -53,11 +67,11 @@
 
             display-name = "Nav";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans           &trans    &trans    &trans
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
-&kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
-&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
-                                        &trans        &trans        &trans        &trans    &trans  &trans     &trans     &trans
+&kp LA(F4)  &zeroOne    &twoThree      &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4                     &trans         &trans     &trans     &trans         &trans           &trans
+&kp F1      &kp LC(F4)  &kp LC(PG_UP)  &kp UP        &kp LC(PG_DN)  &kp LC(LS(T))                    &kp LC(PG_UP)  &kp PG_DN  &kp PG_UP  &kp LC(PG_DN)  &kp PRINTSCREEN  &none
+&kp GRAVE   &kp EXCL    &kp LEFT       &kp DOWN      &kp RIGHT      &kp PRCNT                        &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
+&trans      &trans      &trans         &trans        &trans         &trans         &trans    &trans  &kp F          &kp H      &kp HOME   &kp END        &kp RBRC         &kp PIPE
+                                       &trans        &trans         &trans         &trans    &trans  &trans         &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
