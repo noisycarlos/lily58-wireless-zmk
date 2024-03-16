@@ -18,21 +18,22 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
 
-        zeroOne: zeroOne {
+        DoubleNum01: DoubleNum01 {
             compatible = "zmk,behavior-tap-dance";
-            label = "ZEROONE";
+            label = "DOUBLENUM01";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp NUMBER_1>;
         };
 
-        twoThree: twoThree {
+        DoubleNum23: DoubleNum23 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TWOTHREE";
+            label = "DOUBLENUM23";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_2>, <&kp NUMBER_1>;
+            bindings = <&kp NUMBER_2>, <&kp NUMBER_3>;
         };
 
         TapDanceS: TapDanceS {
@@ -75,6 +76,34 @@
             label = "TAPDANCENOISYCARLOS";
             #binding-cells = <0>;
             bindings = <&TypeNoisycarlos>, <&TypeGithub>;
+        };
+
+        UndoRedo: UndoRedo {
+            compatible = "zmk,behavior-tap-dance";
+            label = "UNDOREDO";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Z)>, <&kp LC(LS(Z))>, <&kp LC(Y)>;
+        };
+
+        DoubleNum45: DoubleNum45 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOUBLENUM45";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_4>, <&kp N5>;
+        };
+
+        DoubleNum67: DoubleNum67 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOUBLENUM67";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_6>, <&kp N7>;
+        };
+
+        DoubleNum89: DoubleNum89 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOUBLENUM89";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp N9>;
         };
     };
 
@@ -232,14 +261,12 @@
 
             display-name = "Nav";
             bindings = <
-&kp LA(F4)  &zeroOne    &twoThree      &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4                     &trans         &trans     &trans     &trans         &trans           &trans
-&kp F1      &kp LC(F4)  &kp LC(PG_UP)  &kp UP        &kp LC(PG_DN)  &kp LC(LS(T))                    &kp LC(PG_UP)  &kp PG_DN  &kp PG_UP  &kp LC(PG_DN)  &kp PRINTSCREEN  &none
-&kp GRAVE   &kp EXCL    &kp LEFT       &kp DOWN      &kp RIGHT      &kp PRCNT                        &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
-&trans      &trans      &trans         &trans        &trans         &trans         &trans    &trans  &kp F          &kp H      &kp HOME   &kp END        &kp RBRC         &kp PIPE
-                                       &to 0         &trans         &trans         &trans    &trans  &trans         &trans     &to 0
+&kp LA(F4)  &DoubleNum01  &DoubleNum23   &DoubleNum45      &DoubleNum67   &DoubleNum89                       &trans         &trans     &trans     &trans         &trans           &trans
+&kp F1      &kp LC(F4)    &kp LC(PG_UP)  &kp UP            &kp LC(PG_DN)  &kp LC(LS(T))                      &kp LC(PG_UP)  &kp PG_DN  &kp PG_UP  &kp LC(PG_DN)  &kp PRINTSCREEN  &none
+&kp GRAVE   &UndoRedo     &kp LEFT       &kp DOWN          &kp RIGHT      &kp PRCNT                          &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
+&trans      &trans        &trans         &mt LEFT_SHIFT S  &mt LCTRL D    &mt RIGHT_WIN F  &trans    &trans  &kp F          &kp H      &kp HOME   &kp END        &kp RBRC         &kp PIPE
+                                         &to 0             &trans         &trans           &trans    &trans  &trans         &trans     &to 0
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Numbers {
@@ -275,20 +302,20 @@
         Misc {
             bindings = <
 &trans          &trans      &TapDanceEmail  &TapDanceNoisycarlos  &kp PRINTSCREEN        &trans                               &kp LC(LG(LA(F6)))  &kp LA(LC(LG(F7)))     &kp LA(LC(LG(F8)))     &kp LA(LC(LG(F9)))   &kp LA(LG(LC(F10)))   &kp RA(F4)
-&trans          &trans      &TypeWWB        &TypeFixes            &TapDanceP             &TypeBasecamp                        &kp LG(LC(LA(J)))   &kp LA(LC(LG(L)))      &kp LA(LC(LG(U)))      &kp LC(LG(LA(Y)))    &kp LC(LG(LA(SEMI)))  &trans
+&mo 5           &trans      &TypeWWB        &TypeFixes            &TapDanceP             &TypeBasecamp                        &kp LG(LC(LA(J)))   &kp LA(LC(LG(L)))      &kp LA(LC(LG(U)))      &kp LC(LG(LA(Y)))    &kp LC(LG(LA(SEMI)))  &mo 5
 &trans          &TypeAdds   &TapDanceR      &TapDanceS            &trans                 &trans                               &kp LA(LC(LG(M)))   &kp LA(LC(LG(N)))      &kp LA(LC(LG(E)))      &kp LC(LA(LG(I)))    &kp LA(LC(LG(O)))     &trans
 &kp C_PREVIOUS  &kp C_NEXT  &kp C_PLAY      &none                 &TapDanceD             &TypeMoves     &kp C_MUTE    &trans  &kp LA(LG(LC(K)))   &kp LA(LC(LG(H)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))  &trans
                                             &trans                &kp LA(LC(LG(SPACE)))  &to 1          &to 2         &to 2   &to 1               &kp RG(RC(RA(SPACE)))  &trans
             >;
         };
 
-        layer_5 {
+        Bluetooth {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &kp N1  &kp N2      &kp N3      &kp N4                  &bt BT_SEL 0  &kp N1      &kp N2      &kp N3  &kp N4  &kp C
+&none       &none         &kp C   &kp C       &kp C       &none                   &none         &none       &none       &none   &none   &none
+&none       &none         &kp C   &bt BT_PRV  &bt BT_NXT  &none                   &none         &bt BT_PRV  &bt BT_NXT  &none   &none   &none
+&none       &none         &none   &none       &none       &none   &none    &none  &none         &none       &none       &none   &none   &none
+                                  &none       &none       &none   &none    &none  &none         &none       &none
             >;
         };
     };
