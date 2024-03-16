@@ -34,6 +34,169 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_2>, <&kp NUMBER_1>;
         };
+
+        TapDanceS: TapDanceS {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCES";
+            #binding-cells = <0>;
+            bindings = <&TypeString>, <&TypeSyncopotamus>;
+        };
+
+        TapDanceEmail: TapDanceEmail {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCEEMAIL";
+            #binding-cells = <0>;
+            bindings = <&TypesNoisycarlosHey>, <&TypeCarlosKPEmail>;
+        };
+
+        TapDanceD: TapDanceD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCED";
+            #binding-cells = <0>;
+            bindings = <&TypeDeletes>, <&TypeDatabase>;
+        };
+
+        TapDanceR: TapDanceR {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCER";
+            #binding-cells = <0>;
+            bindings = <&TypeReturn>, <&TypeRefactor>;
+        };
+
+        TapDanceP: TapDanceP {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCEP";
+            #binding-cells = <0>;
+            bindings = <&TypeImplements>, <&TypeUpdates>;
+        };
+
+        TapDanceNoisycarlos: TapDanceNoisycarlos {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCENOISYCARLOS";
+            #binding-cells = <0>;
+            bindings = <&TypeNoisycarlos>, <&TypeGithub>;
+        };
+    };
+
+    macros {
+        TypeDeletes: TypeDeletes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp D &kp E &kp L &kp E &kp T &kp E &kp S>;
+            label = "TYPEDELETES";
+        };
+
+        TypeDatabase: TypeDatabase {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp D &kp A &kp T &kp A &kp B &kp A &kp S &kp E>;
+            label = "TYPEDATABASE";
+        };
+
+        TypeString: TypeString {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp S &kp T &kp R &kp I &kp N &kp G>;
+            label = "TYPESTRING";
+        };
+
+        TypeSyncopotamus: TypeSyncopotamus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp RS(S) &kp Y &kp N &kp C &kp O &kp P &kp O &kp T &kp A &kp M &kp U &kp S>;
+            label = "TYPESYNCOPOTAMUS";
+        };
+
+        TypeReturn: TypeReturn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp R &kp E &kp T &kp U &kp R &kp N>;
+            label = "TYPERETURN";
+        };
+
+        TypeRefactor: TypeRefactor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp R &kp E &kp F &kp A &kp C &kp T &kp O &kp R>;
+            label = "TYPEREFACTOR";
+        };
+
+        TypeAdds: TypeAdds {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp A &kp D &kp D &kp S>;
+            label = "TYPEADDS";
+        };
+
+        TypeWWB: TypeWWB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(W) &kp LS(W) &kp LS(B) &kp UNDER>;
+            label = "TYPEWWB";
+        };
+
+        TypeFixes: TypeFixes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp F &kp I &kp X &kp E &kp S>;
+            label = "TYPEFIXES";
+        };
+
+        TypeImplements: TypeImplements {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp I &kp M &kp P &kp L &kp E &kp M &kp E &kp N &kp T &kp S>;
+            label = "TYPEIMPLEMENTS";
+        };
+
+        TypeUpdates: TypeUpdates {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp U &kp P &kp D &kp A &kp T &kp E &kp S>;
+            label = "TYPEUPDATES";
+        };
+
+        TypeBasecamp: TypeBasecamp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(B) &kp A &kp S &kp E &kp C &kp A &kp M &kp P>;
+            label = "TYPEBASECAMP";
+        };
+
+        TypesNoisycarlosHey: TypesNoisycarlosHey {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp N &kp O &kp I &kp S &kp Y &kp C &kp A &kp R &kp L &kp O &kp S &kp AT &kp H &kp E &kp Y &kp DOT &kp C &kp O &kp M>;
+            label = "TYPESNOISYCARLOSHEY";
+        };
+
+        TypeCarlosKPEmail: TypeCarlosKPEmail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp C &kp A &kp R &kp L &kp O &kp S &kp AT &kp K &kp I &kp N &kp E &kp T &kp I &kp C &kp P &kp O &kp R &kp T &kp A &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "TYPECARLOSKPEMAIL";
+        };
+
+        TypeNoisycarlos: TypeNoisycarlos {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N &kp O &kp I &kp S &kp Y &kp C &kp A &kp R &kp L &kp O &kp S>;
+            label = "TYPENOISYCARLOS";
+        };
+
+        TypeGithub: TypeGithub {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp G &kp I &kp T &kp H &kp U &kp B &kp DOT &kp C &kp O &kp M &kp FSLH &kp N &kp O &kp I &kp S &kp Y &kp C &kp A &kp R &kp L &kp O &kp S &kp FSLH>;
+            label = "TYPEGITHUB";
+        };
+
+        TypeMoves: TypeMoves {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp O &kp V &kp E &kp S>;
+            label = "TYPEMOVES";
+        };
     };
 
     keymap {
@@ -73,7 +236,7 @@
 &kp F1      &kp LC(F4)  &kp LC(PG_UP)  &kp UP        &kp LC(PG_DN)  &kp LC(LS(T))                    &kp LC(PG_UP)  &kp PG_DN  &kp PG_UP  &kp LC(PG_DN)  &kp PRINTSCREEN  &none
 &kp GRAVE   &kp EXCL    &kp LEFT       &kp DOWN      &kp RIGHT      &kp PRCNT                        &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
 &trans      &trans      &trans         &trans        &trans         &trans         &trans    &trans  &kp F          &kp H      &kp HOME   &kp END        &kp RBRC         &kp PIPE
-                                       &trans        &trans         &trans         &trans    &trans  &trans         &trans     &trans
+                                       &to 0         &trans         &trans         &trans    &trans  &trans         &trans     &to 0
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -110,6 +273,16 @@
         };
 
         Misc {
+            bindings = <
+&trans          &trans      &TapDanceEmail  &TapDanceNoisycarlos  &kp PRINTSCREEN        &trans                               &kp LC(LG(LA(F6)))  &kp LA(LC(LG(F7)))     &kp LA(LC(LG(F8)))     &kp LA(LC(LG(F9)))   &kp LA(LG(LC(F10)))   &kp RA(F4)
+&trans          &trans      &TypeWWB        &TypeFixes            &TapDanceP             &TypeBasecamp                        &kp LG(LC(LA(J)))   &kp LA(LC(LG(L)))      &kp LA(LC(LG(U)))      &kp LC(LG(LA(Y)))    &kp LC(LG(LA(SEMI)))  &trans
+&trans          &TypeAdds   &TapDanceR      &TapDanceS            &trans                 &trans                               &kp LA(LC(LG(M)))   &kp LA(LC(LG(N)))      &kp LA(LC(LG(E)))      &kp LC(LA(LG(I)))    &kp LA(LC(LG(O)))     &trans
+&kp C_PREVIOUS  &kp C_NEXT  &kp C_PLAY      &none                 &TapDanceD             &TypeMoves     &kp C_MUTE    &trans  &kp LA(LG(LC(K)))   &kp LA(LC(LG(H)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))  &trans
+                                            &trans                &kp LA(LC(LG(SPACE)))  &to 1          &to 2         &to 2   &to 1               &kp RG(RC(RA(SPACE)))  &trans
+            >;
+        };
+
+        layer_5 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
