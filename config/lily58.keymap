@@ -105,6 +105,13 @@
             #binding-cells = <0>;
             bindings = <&kp N8>, <&kp N9>;
         };
+
+        SwitchWindow: SwitchWindow {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SWITCHWINDOW";
+            #binding-cells = <0>;
+            bindings = <&kp LG(TAB)>, <&kp LA(TAB)>;
+        };
     };
 
     macros {
@@ -228,6 +235,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        WindowSwitcherL {
+            bindings = <&kp LG(F12)>;
+            key-positions = <53 42>;
+        };
+
+        WindowSwitcherR {
+            bindings = <&kp LG(F12)>;
+            key-positions = <43 54>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -245,10 +266,8 @@
 &kp TAB       &kp Q   &DualKey 3 W    &DualKey 2 F      &kp P                 &kp B                                        &kp J                 &kp L        &kp U                  &DualKey 3 Y          &kp SEMI  &kp MINUS
 &kp CAPSLOCK  &kp A   &kp R           &kp S             &kp T                 &DualKey 4 G                                 &DualKey 4 M          &kp N        &kp E                  &kp I                 &kp O     &kp SQT
 &kp LSHFT     &kp Z   &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D           &mt LEFT_GUI V  &kp ESC             &kp ESC  &mt RIGHT_GUI K       &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &kp RSHFT
-                                      &kp LG(F12)       &kp LC(LG(LEFT_ALT))  &kp SPACE       &DualKey 1 ENTER    &kp RET  &DualKey 1 BACKSPACE  &kp SPACE    &mo 4
+                                      &SwitchWindow     &kp LC(LG(LEFT_ALT))  &kp SPACE       &DualKey 1 ENTER    &kp RET  &DualKey 1 BACKSPACE  &kp SPACE    &mo 4
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Navigation {
@@ -285,8 +304,6 @@
 &kp LC(C)   &kp Z       &kp PG_UP      &none     &kp PG_DN      &kp F          &trans    &trans     &kp KP_SUBTRACT  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &kp LS(LC(KP_NUMLOCK))
                                        &to 0     &trans         &trans         &trans    &kp ENTER  &kp KP_NUMBER_0  &kp KP_DOT       &to 0
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Symbols {
@@ -311,11 +328,11 @@
 
         Bluetooth {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_SEL 4                  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&none       &none         &none   &none        &none       &none                   &none         &none       &none       &none   &none   &none
-&none       &none         &none   &bt BT_PRV  &bt BT_NXT  &none                   &none         &bt BT_PRV  &bt BT_NXT  &none   &none   &none
-&none       &none         &none   &none       &none       &none   &none    &none  &none         &none       &none       &none   &none   &none
-                                  &none       &none       &none   &none    &none  &none         &none       &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&none       &none         &none         &none         &none         &none                         &none         &none         &none         &none         &none         &none
+&none       &none         &none         &bt BT_PRV    &bt BT_NXT    &none                         &none         &bt BT_PRV    &bt BT_NXT    &none         &none         &none
+&none       &none         &none         &none         &none         &none         &none    &none  &none         &none         &none         &none         &none         &none
+                                        &none         &none         &none         &none    &none  &none         &none         &none
             >;
         };
     };
