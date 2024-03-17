@@ -110,7 +110,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SWITCHWINDOW";
             #binding-cells = <0>;
-            bindings = <&kp LG(TAB)>, <&kp LA(TAB)>;
+            bindings = <&kp LEFT_GUI>, <&kp LA(TAB)>;
         };
     };
 
