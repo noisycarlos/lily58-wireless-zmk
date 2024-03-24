@@ -266,7 +266,7 @@
 &kp TAB       &kp Q   &DualKey 3 W    &DualKey 2 F      &kp P          &kp B                                                 &kp J            &kp L        &kp U                  &DualKey 3 Y          &kp SEMI  &kp MINUS
 &kp CAPSLOCK  &kp A   &kp R           &kp S             &kp T          &DualKey 4 G                                          &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &kp SQT
 &kp LSHFT     &kp Z   &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D    &mt LEFT_GUI V  &kp ESC             &kp ESC           &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &kp BACKSLASH
-                                      &sl 2        &SwitchWindow  &kp SPACE       &DualKey 1 ENTER    &DualKey 1 ENTER  &kp BACKSPACE    &kp SPACE    &sl 2
+                                      &sl 2             &SwitchWindow  &kp SPACE       &DualKey 1 ENTER    &DualKey 1 ENTER  &kp BACKSPACE    &kp SPACE    &sl 2
             >;
         };
 
@@ -318,11 +318,11 @@
 
         Misc {
             bindings = <
-&trans      &trans      &TapDanceEmail    &TapDanceNoisycarlos  &kp PRINTSCREEN        &trans                               &kp LC(LG(LA(F6)))  &kp LA(LC(LG(F7)))     &kp LA(LC(LG(F8)))     &kp LA(LC(LG(F9)))   &kp LA(LG(LC(F10)))   &kp RA(F4)
-&mo 5       &trans      &TypeWWB          &TypeFixes            &TapDanceP             &TypeBasecamp                        &kp LG(LC(LA(J)))   &kp LA(LC(LG(L)))      &kp LA(LC(LG(U)))      &kp LC(LG(LA(Y)))    &kp LC(LG(LA(SEMI)))  &mo 5
-&trans      &TypeAdds   &TapDanceR        &TapDanceS            &kp C_VOL_DN           &kp C_VOL_UP                         &kp LA(LC(LG(M)))   &kp LA(LC(LG(N)))      &kp LA(LC(LG(E)))      &kp LC(LA(LG(I)))    &kp LA(LC(LG(O)))     &kp LA(LG(LC(ENTER)))
-&kp K_PREV  &kp K_NEXT  &kp K_PLAY_PAUSE  &none                 &TapDanceD             &TypeMoves     &kp K_MUTE    &trans  &kp LA(LG(LC(K)))   &kp LA(LC(LG(H)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))  &trans
-                                          &trans                &kp LA(LC(LG(SPACE)))  &to 1          &to 2         &to 2   &to 1               &kp RG(RC(RA(SPACE)))  &trans
+&trans      &trans      &TapDanceEmail    &TapDanceNoisycarlos  &kp PRINTSCREEN                   &trans                               &kp LC(LG(LA(F6)))  &kp LA(LC(LG(F7)))     &kp LA(LC(LG(F8)))     &kp LA(LC(LG(F9)))   &kp LA(LG(LC(F10)))   &kp RA(F4)
+&mo 5       &trans      &TypeWWB          &TypeFixes            &TapDanceP                        &TypeBasecamp                        &kp LG(LC(LA(J)))   &kp LA(LC(LG(L)))      &kp LA(LC(LG(U)))      &kp LC(LG(LA(Y)))    &kp LC(LG(LA(SEMI)))  &mo 5
+&trans      &TypeAdds   &TapDanceR        &TapDanceS            &kp C_VOL_DN                      &kp C_VOL_UP                         &kp LA(LC(LG(M)))   &kp LA(LC(LG(N)))      &kp LA(LC(LG(E)))      &kp LC(LA(LG(I)))    &kp LA(LC(LG(O)))     &kp LA(LG(LC(ENTER)))
+&kp K_PREV  &kp K_NEXT  &kp K_PLAY_PAUSE  &none                 &TapDanceD                        &TypeMoves     &kp K_MUTE    &trans  &kp LA(LG(LC(K)))   &kp LA(LC(LG(H)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))  &trans
+                                          &kp C_BRIGHTNESS_DEC  &kp LA(LC(LG(C_BRIGHTNESS_INC)))  &to 1          &to 2         &to 2   &to 1               &kp RG(RC(RA(SPACE)))  &trans
             >;
         };
 
