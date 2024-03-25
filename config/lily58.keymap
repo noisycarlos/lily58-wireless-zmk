@@ -112,6 +112,27 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_GUI>, <&kp LA(TAB)>;
         };
+
+        NukeViewer: NukeViewer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUKEVIEWER";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_1>, <&kp NUMBER_2>, <&kp NUMBER_3>;
+        };
+
+        NukeChannel: NukeChannel {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUKECHANNEL";
+            #binding-cells = <0>;
+            bindings = <&kp A>, <&kp R>, <&kp G>, <&kp B>;
+        };
+
+        NukeMerge: NukeMerge {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUKEMERGE";
+            #binding-cells = <0>;
+            bindings = <&kp M>, <&kp PERIOD>;
+        };
     };
 
     macros {
@@ -233,6 +254,13 @@
             bindings = <&kp M &kp O &kp V &kp E &kp S>;
             label = "TYPEMOVES";
         };
+
+        NukeAddNode: NukeAddNode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &to 0>;
+            label = "NukeAddNode";
+        };
     };
 
     combos {
@@ -312,7 +340,7 @@
 &trans    &trans  &kp AT_SIGN           &kp HASH   &kp DOLLAR             &kp PERCENT                          &kp CARET      &kp LEFT_BRACE        &kp PIPE       &kp RIGHT_BRACE        &trans             &trans
 &trans    &trans  &kp LEFT_PARENTHESIS  &kp STAR   &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES                    &kp BACKSLASH  &kp LEFT_BRACKET      &kp AMPERSAND  &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans
 &trans    &trans  &kp TILDE             &kp GRAVE  &kp QUESTION           &kp SQT            &trans    &trans  &kp KP_PLUS    &kp MINUS             &kp COLON      &kp EQUAL              &trans             &trans
-                                        &trans     &trans                 &kp UNDER          &trans    &trans  &trans         &kp UNDER             &trans
+                                        &to 0      &trans                 &kp UNDER          &trans    &trans  &trans         &kp UNDER             &to 0
             >;
         };
 
@@ -320,19 +348,29 @@
             bindings = <
 &trans      &trans      &TapDanceEmail    &TapDanceNoisycarlos  &kp PRINTSCREEN       &trans                               &kp LC(LG(LA(F6)))  &kp LA(LC(LG(F7)))     &kp LA(LC(LG(F8)))     &kp LA(LC(LG(F9)))   &kp LA(LG(LC(F10)))   &kp RA(F4)
 &mo 5       &trans      &TypeWWB          &TypeFixes            &TapDanceP            &TypeBasecamp                        &kp LG(LC(LA(J)))   &kp LA(LC(LG(L)))      &kp LA(LC(LG(U)))      &kp LC(LG(LA(Y)))    &kp LC(LG(LA(SEMI)))  &mo 5
-&trans      &TypeAdds   &TapDanceR        &TapDanceS            &kp C_VOL_DN          &kp C_VOL_UP                         &kp LA(LC(LG(M)))   &kp LA(LC(LG(N)))      &kp LA(LC(LG(E)))      &kp LC(LA(LG(I)))    &kp LA(LC(LG(O)))     &kp LA(LG(LC(ENTER)))
+&to 6       &TypeAdds   &TapDanceR        &TapDanceS            &kp C_VOL_DN          &kp C_VOL_UP                         &kp LA(LC(LG(M)))   &kp LA(LC(LG(N)))      &kp LA(LC(LG(E)))      &kp LC(LA(LG(I)))    &kp LA(LC(LG(O)))     &kp LA(LG(LC(ENTER)))
 &kp K_PREV  &kp K_NEXT  &kp K_PLAY_PAUSE  &none                 &TapDanceD            &TypeMoves     &kp K_MUTE    &trans  &kp LA(LG(LC(K)))   &kp LA(LC(LG(H)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))  &trans
-                                          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &to 1          &to 2         &to 2   &to 1               &kp RG(RC(RA(SPACE)))  &trans
+                                          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &to 1          &mo 5         &mo 5   &to 1               &kp RG(RC(RA(SPACE)))  &trans
             >;
         };
 
-        Bluetooth {
+        Layers {
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&none       &none         &none         &none         &none         &none                         &none         &none         &none         &none         &none         &none
-&none       &none         &none         &bt BT_PRV    &bt BT_NXT    &none                         &none         &bt BT_PRV    &bt BT_NXT    &none         &none         &none
+&bt BT_PRV  &bt BT_NXT    &none         &to 2         &none         &none                         &none         &none         &to 2         &none         &bt BT_PRV    &bt BT_NXT
+&none       &none         &none         &none         &to 6         &none                         &none         &to 6         &none         &none         &none         &none
 &none       &none         &none         &none         &none         &none         &none    &none  &none         &none         &none         &none         &none         &none
                                         &none         &none         &none         &none    &none  &none         &none         &none
+            >;
+        };
+
+        Nuke {
+            bindings = <
+&NukeAddNode  &NukeViewer  &kp UP    &trans            &kp DOWN   &NukeMerge                        &NukeMerge   &kp UP    &trans             &kp DOWN        &trans     &NukeAddNode
+&NukeAddNode  &kp Q        &trans    &kp HOME          &kp J      &kp L                             &kp J        &kp L     &kp HOME           &kp Q           &kp I      &kp O
+&NukeChannel  &UndoRedo    &kp LEFT  &kp END           &kp RIGHT  &NukeViewer                       &NukeViewer  &kp LEFT  &kp END            &kp RIGHT       &UndoRedo  &NukeChannel
+&trans        &trans       &trans    &mt LEFT_SHIFT F  &trans     &mt LEFT_GUI K  &trans    &trans  &trans       &trans    &mt RIGHT_SHIFT F  &mt LEFT_ALT X  &kp Z      &trans
+                                     &to 0             &trans     &trans          &trans    &trans  &trans       &trans    &to 0
             >;
         };
     };
