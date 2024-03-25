@@ -308,11 +308,11 @@
 
         Symbols {
             bindings = <
-&kp CAPS  &trans           &trans                &trans     &trans                 &trans                               &trans         &kp LEFT_PARENTHESIS  &trans         &kp RIGHT_PARENTHESIS  &trans             &kp K_SLEEP
-&trans    &kp EXCLAMATION  &kp AT_SIGN           &kp HASH   &kp DOLLAR             &kp PERCENT                          &kp CARET      &kp LEFT_BRACE        &kp PIPE       &kp RIGHT_BRACE        &trans             &trans
-&trans    &trans           &kp LEFT_PARENTHESIS  &kp STAR   &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES                    &kp BACKSLASH  &kp LEFT_BRACKET      &kp AMPERSAND  &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans
-&trans    &trans           &kp TILDE             &kp GRAVE  &kp QUESTION           &kp SQT            &trans    &trans  &kp KP_PLUS    &kp MINUS             &kp COLON      &kp EQUAL              &trans             &trans
-                                                 &trans     &trans                 &kp UNDER          &trans    &trans  &trans         &kp UNDER             &trans
+&kp CAPS  &trans  &trans                &kp EXCL   &trans                 &trans                               &trans         &kp LEFT_PARENTHESIS  &trans         &kp RIGHT_PARENTHESIS  &trans             &kp K_SLEEP
+&trans    &trans  &kp AT_SIGN           &kp HASH   &kp DOLLAR             &kp PERCENT                          &kp CARET      &kp LEFT_BRACE        &kp PIPE       &kp RIGHT_BRACE        &trans             &trans
+&trans    &trans  &kp LEFT_PARENTHESIS  &kp STAR   &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES                    &kp BACKSLASH  &kp LEFT_BRACKET      &kp AMPERSAND  &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans
+&trans    &trans  &kp TILDE             &kp GRAVE  &kp QUESTION           &kp SQT            &trans    &trans  &kp KP_PLUS    &kp MINUS             &kp COLON      &kp EQUAL              &trans             &trans
+                                        &trans     &trans                 &kp UNDER          &trans    &trans  &trans         &kp UNDER             &trans
             >;
         };
 
