@@ -261,6 +261,76 @@
             bindings = <&kp TAB &to 0>;
             label = "NukeAddNode";
         };
+
+        VimInsertNextChar: VimInsertNextChar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT &to 0>;
+            label = "VIMINSERTNEXTCHAR";
+        };
+
+        VimInsertNextLine: VimInsertNextLine {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp ENTER &to 0>;
+            label = "VIMINSERTNEXTLINE";
+        };
+
+        VimSearch: VimSearch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F) &to 0>;
+            label = "VIMSEARCH";
+        };
+
+        VimYankLine: VimYankLine {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END) &kp LC(C) &to 0>;
+            label = "VIMYANKLINE";
+        };
+
+        VimDeleteLine: VimDeleteLine {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END) &kp LC(X) &to 0>;
+            label = "VIMDELETELINE";
+        };
+
+        VimInsertAtLineEnd: VimInsertAtLineEnd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &to 0>;
+            label = "VIMINSERTATLINEEND";
+        };
+
+        VimChangeToLineEnd: VimChangeToLineEnd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(END) &kp BACKSPACE &to 0>;
+            label = "VIMCHANGETOLINEEND";
+        };
+
+        VimInsertAtLineStart: VimInsertAtLineStart {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &to 0>;
+            label = "VIMINSERTATLINESTART";
+        };
+
+        VimInsertLineAbove: VimInsertLineAbove {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp ENTER &kp UP_ARROW &to 0>;
+            label = "VIMINSERTLINEABOVE";
+        };
+
+        VimYankToLineEnd: VimYankToLineEnd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(END) &kp LC(C) &kp LEFT>;
+            label = "VIMYANKTOLINEEND";
+        };
     };
 
     combos {
