@@ -133,6 +133,13 @@
             #binding-cells = <0>;
             bindings = <&kp M>, <&kp PERIOD>;
         };
+
+        VimDeleteTapDance: VimDeleteTapDance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "VIMDELETETAPDANCE";
+            #binding-cells = <0>;
+            bindings = <&to 0>, <&VimDeleteLine>;
+        };
     };
 
     macros {
@@ -331,6 +338,20 @@
             bindings = <&kp LS(END) &kp LC(C) &kp LEFT>;
             label = "VIMYANKTOLINEEND";
         };
+
+        VimChangeLine: VimChangeLine {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END) &kp LC(X) &to 0>;
+            label = "VIMCHANGELINE";
+        };
+
+        VimSelectLine: VimSelectLine {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp LS(HOME)>;
+            label = "VIMSELECTLINE";
+        };
     };
 
     combos {
@@ -466,21 +487,21 @@
 
         VimPrimary {
             bindings = <
-&trans  &trans  &trans         &trans  &kp END    &trans                          &trans         &trans    &trans     &kp HOME   &trans  &trans
-&trans  &trans  &kp LC(RIGHT)  &trans  &kp LC(V)  &kp LC(LEFT)                    &kp F3         &trans    &kp LC(Z)  &trans     &trans  &trans
-&trans  &trans  &kp LS(RIGHT)  &trans  &trans     &kp LC(HOME)                    &kp LEFT       &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
-&trans  &trans  &kp DEL        &mo 10  &kp LC(X)  &trans        &trans    &trans  &kp LS(SPACE)  &to 0     &mo 10     &kp TAB    &trans  &trans
-                               &trans  &trans     &trans        &trans    &trans  &trans         &trans    &trans
+&trans  &trans              &trans         &trans  &kp END    &trans                          &trans         &trans         &trans     &kp HOME   &trans              &trans
+&trans  &trans              &kp LC(RIGHT)  &trans  &kp LC(V)  &kp LC(LEFT)                    &kp F3         &kp LC(RIGHT)  &kp LC(Z)  &trans     &trans              &trans
+&trans  &VimInsertNextChar  &kp LS(RIGHT)  &trans  &trans     &kp LC(HOME)                    &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT  &VimInsertNextLine  &trans
+&trans  &trans              &kp DEL        &mo 10  &kp LC(X)  &trans        &trans    &trans  &kp LS(SPACE)  &to 0          &mo 10     &kp TAB    &VimSearch          &trans
+                                           &trans  &trans     &trans        &trans    &trans  &trans         &trans         &trans
             >;
         };
 
         VimSecondary {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans               &trans             &trans               &kp RS(END)  &trans                              &trans        &trans                 &trans       &kp LS(HOME)   &kp DOWN             &trans
+&trans  &trans               &kp LS(LC(RIGHT))  &trans               &kp LC(V)    &kp LS(LC(LEFT))                    &kp F3        &VimInsertNextLine     &kp PG_UP    &VimYankLine   &trans               &trans
+&trans  &VimInsertAtLineEnd  &kp LS(LC(Z))      &kp LC(S)            &none        &kp LC(END)                         &kp LS(LEFT)  &kp LS(DOWN)           &kp LS(UP)   &kp LS(RIGHT)  &VimInsertLineAbove  &trans
+&trans  &trans               &kp LS(TAB)        &VimChangeToLineEnd  &kp PG_DN    &VimSelectLine    &trans    &trans  &trans        &VimInsertAtLineStart  &kp LS(TAB)  &kp TAB        &VimSearch           &trans
+                                                &trans               &trans       &trans            &trans    &trans  &trans        &trans                 &trans
             >;
         };
     };
