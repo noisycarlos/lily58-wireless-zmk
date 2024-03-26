@@ -139,7 +139,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "VIMDELETETAPDANCE";
             #binding-cells = <0>;
-            bindings = <&to 0>, <&VimDeleteLine>;
+            bindings = <&kp LC(X)>, <&VimDeleteLine>;
         };
 
         VimYank: VimYank {
