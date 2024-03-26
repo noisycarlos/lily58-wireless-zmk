@@ -418,7 +418,7 @@
             bindings = <
 &kp GRAVE     &kp N1  &kp N2          &kp N3            &kp N4              &kp N5                                                &kp N6           &kp N7       &kp N8                 &kp N9                &kp N0    &kp EQUAL
 &kp TAB       &kp Q   &DualKey 3 W    &DualKey 2 F      &kp P               &kp B                                                 &kp J            &kp L        &kp U                  &DualKey 3 Y          &kp SEMI  &kp MINUS
-&kp CAPSLOCK  &kp A   &kp R           &kp S             &kp T               &DualKey 4 G                                          &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &kp SQT
+&kp CAPSLOCK  &kp A   &kp R           &kp S             &kp T               &DualKey 4 G                                          &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &DualKey 11 APOS
 &to 9         &kp Z   &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D         &mt LEFT_GUI V  &kp ESC             &kp ESC           &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &kp BACKSLASH
                                       &sl 2             &ClipboardTapDance  &kp SPACE       &DualKey 1 ENTER    &DualKey 1 ENTER  &kp BACKSPACE    &kp SPACE    &sl 2
             >;
@@ -537,6 +537,16 @@
 &trans  &VimInsertAtLineEnd  &kp LS(LC(Z))      &kp LC(S)            &none        &kp LC(END)                         &kp LS(LEFT)  &kp LS(DOWN)           &kp LS(UP)   &kp LS(RIGHT)  &VimInsertLineAbove  &trans
 &trans  &trans               &kp LS(TAB)        &VimChangeToLineEnd  &kp PG_DN    &VimSelectLine    &trans    &trans  &trans        &VimInsertAtLineStart  &kp LS(TAB)  &kp TAB        &VimSearch           &trans
                                                 &trans               &trans       &trans            &trans    &trans  &trans        &trans                 &trans
+            >;
+        };
+
+        QuickActions {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans              &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &to 2   &ClipboardTapDance  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &to 2   &ClipboardTapDance  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans              &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
