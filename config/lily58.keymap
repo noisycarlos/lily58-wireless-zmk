@@ -383,5 +383,35 @@
                                 &to 0         &trans       &trans    &trans    &trans  &trans    &trans       &to 0
             >;
         };
+
+        AfterEffects {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        VimPrimary {
+            bindings = <
+&trans  &trans  &trans         &trans  &kp END    &trans                          &trans         &trans    &trans     &kp HOME   &trans  &trans
+&trans  &trans  &kp LC(RIGHT)  &trans  &kp LC(V)  &kp LC(LEFT)                    &kp F3         &trans    &kp LC(Z)  &trans     &trans  &trans
+&trans  &trans  &kp LS(RIGHT)  &trans  &trans     &kp LC(HOME)                    &kp LEFT       &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
+&trans  &trans  &kp DEL        &mo 10  &kp LC(X)  &trans        &trans    &trans  &kp LS(SPACE)  &to 0     &mo 10     &kp TAB    &trans  &trans
+                               &trans  &trans     &trans        &trans    &trans  &trans         &trans    &trans
+            >;
+        };
+
+        VimSecondary {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
     };
 };
