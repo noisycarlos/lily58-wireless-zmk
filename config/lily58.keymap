@@ -361,12 +361,6 @@
             label = "VIMSELECTLINE";
         };
 
-        VimSelect: VimSelect {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(RIGHT) &kp>;
-            label = "VIMSELECT";
-        };
     };
 
     combos {
