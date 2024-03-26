@@ -542,10 +542,10 @@
 
         QuickActions {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans     &trans              &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &UndoRedo  &ClipboardTapDance  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &UndoRedo  &kp LC(V)           &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans     &trans              &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans       &trans     &trans              &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans       &UndoRedo  &ClipboardTapDance  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &kp LA(TAB)  &UndoRedo  &kp LC(V)           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans       &trans     &trans              &trans
                         &trans  &trans  &trans  &trans    &trans  &to 9   &to 1   &to 2
             >;
         };
