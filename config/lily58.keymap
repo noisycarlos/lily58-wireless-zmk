@@ -346,11 +346,11 @@
 
         Misc {
             bindings = <
-&trans      &trans      &TapDanceEmail    &TapDanceNoisycarlos  &kp PRINTSCREEN       &trans                               &kp LC(LG(LA(F6)))  &kp LA(LC(LG(F7)))     &kp LA(LC(LG(F8)))     &kp LA(LC(LG(F9)))   &kp LA(LG(LC(F10)))   &kp RA(F4)
-&mo 5       &trans      &TypeWWB          &TypeFixes            &TapDanceP            &TypeBasecamp                        &kp LG(LC(LA(J)))   &kp LA(LC(LG(L)))      &kp LA(LC(LG(U)))      &kp LC(LG(LA(Y)))    &kp LC(LG(LA(SEMI)))  &mo 5
-&to 6       &TypeAdds   &TapDanceR        &TapDanceS            &kp C_VOL_DN          &kp C_VOL_UP                         &kp LA(LC(LG(M)))   &kp LA(LC(LG(N)))      &kp LA(LC(LG(E)))      &kp LC(LA(LG(I)))    &kp LA(LC(LG(O)))     &kp LA(LG(LC(ENTER)))
-&kp K_PREV  &kp K_NEXT  &kp K_PLAY_PAUSE  &none                 &TapDanceD            &TypeMoves     &kp K_MUTE    &trans  &kp LA(LG(LC(K)))   &kp LA(LC(LG(H)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))  &trans
-                                          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &to 1          &mo 5         &mo 5   &to 1               &kp RG(RC(RA(SPACE)))  &trans
+&trans      &trans      &TapDanceEmail    &TapDanceNoisycarlos  &kp PRINTSCREEN       &trans                                       &kp LC(LG(LA(F6)))     &kp LA(LC(LG(F7)))     &kp LA(LC(LG(F8)))     &kp LA(LC(LG(F9)))   &kp LA(LG(LC(F10)))   &kp RA(F4)
+&mo 5       &trans      &TypeWWB          &TypeFixes            &TapDanceP            &TypeBasecamp                                &kp LG(LC(LA(J)))      &kp LA(LC(LG(L)))      &kp LA(LC(LG(U)))      &kp LC(LG(LA(Y)))    &kp LC(LG(LA(SEMI)))  &mo 5
+&to 6       &TypeAdds   &TapDanceR        &TapDanceS            &kp C_VOL_DN          &kp C_VOL_UP                                 &kp LA(LC(LG(M)))      &kp LA(LC(LG(N)))      &kp LA(LC(LG(E)))      &kp LC(LA(LG(I)))    &kp LA(LC(LG(O)))     &kp LA(LG(LC(ENTER)))
+&kp K_PREV  &kp K_NEXT  &kp K_PLAY_PAUSE  &none                 &TapDanceD            &TypeMoves             &kp K_MUTE    &trans  &kp LA(LG(LC(K)))      &kp LA(LC(LG(H)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))  &trans
+                                          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(LA(LG(SPACE)))  &mo 5         &mo 5   &kp RA(RC(RG(SPACE)))  &kp RG(RC(RA(SPACE)))  &trans
             >;
         };
 
@@ -358,7 +358,7 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
 &bt BT_PRV  &bt BT_NXT    &none         &to 2         &none         &none                         &none         &none         &to 2         &none         &bt BT_PRV    &bt BT_NXT
-&none       &none         &none         &to 7         &to 6         &none                         &none         &to 6         &to 7         &none         &none         &none
+&none       &none         &to 7         &to 1         &to 6         &none                         &none         &to 6         &to 1         &to 7         &none         &none
 &none       &none         &none         &none         &none         &none         &none    &none  &none         &none         &none         &none         &none         &none
                                         &none         &none         &none         &none    &none  &none         &none         &none
             >;
