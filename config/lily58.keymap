@@ -148,6 +148,26 @@
             #binding-cells = <0>;
             bindings = <&kp LC(C)>, <&VimYankLine>;
         };
+
+        DualLayer: DualLayer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "DUALLAYER";
+            bindings = <&mo>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        VimDeleteHoldDoubleTap: VimDeleteHoldDoubleTap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "VIMDELETEHOLDDOUBLETAP";
+            bindings = <&mo>, <&VimDeleteTapDance>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -392,7 +412,7 @@
 &kp GRAVE     &kp N1  &kp N2          &kp N3            &kp N4         &kp N5                                                &kp N6           &kp N7       &kp N8                 &kp N9                &kp N0    &kp EQUAL
 &kp TAB       &kp Q   &DualKey 3 W    &DualKey 2 F      &kp P          &kp B                                                 &kp J            &kp L        &kp U                  &DualKey 3 Y          &kp SEMI  &kp MINUS
 &kp CAPSLOCK  &kp A   &kp R           &kp S             &kp T          &DualKey 4 G                                          &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &kp SQT
-&kp LSHFT     &kp Z   &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D    &mt LEFT_GUI V  &kp ESC             &kp ESC           &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &kp BACKSLASH
+&to 9         &kp Z   &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D    &mt LEFT_GUI V  &kp ESC             &kp ESC           &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &kp BACKSLASH
                                       &sl 2             &SwitchWindow  &kp SPACE       &DualKey 1 ENTER    &DualKey 1 ENTER  &kp BACKSPACE    &kp SPACE    &sl 2
             >;
         };
@@ -495,11 +515,11 @@
 
         VimPrimary {
             bindings = <
-&trans  &trans              &trans         &trans  &kp END             &trans                            &trans         &trans         &trans     &kp HOME   &trans              &trans
-&trans  &trans              &kp LC(RIGHT)  &trans  &kp LC(V)           &kp LC(LEFT)                      &kp F3         &kp LC(RIGHT)  &kp LC(Z)  &VimYank   &trans              &trans
-&trans  &VimInsertNextChar  &kp LS(RIGHT)  &trans  &trans              &kp LC(HOME)                      &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT  &VimInsertNextLine  &trans
-&trans  &trans              &kp DEL        &mo 10  &VimDeleteTapDance  &kt LEFT_SHIFT  &trans    &trans  &kp LS(SPACE)  &to 0          &mo 10     &kp TAB    &VimSearch          &trans
-                                           &trans  &trans              &trans          &trans    &trans  &trans         &trans         &trans
+&trans  &trans              &trans         &trans  &kp END                       &trans                            &trans         &trans           &trans     &kp HOME   &trans              &trans
+&trans  &trans              &kp LC(RIGHT)  &trans  &kp LC(V)                     &kp LC(LEFT)                      &kp F3         &kp LC(RIGHT)    &kp LC(Z)  &VimYank   &trans              &trans
+&trans  &VimInsertNextChar  &kp LS(RIGHT)  &trans  &trans                        &kp LC(HOME)                      &kp LEFT       &kp DOWN         &kp UP     &kp RIGHT  &VimInsertNextLine  &trans
+&trans  &trans              &kp DEL        &mo 10  &VimDeleteHoldDoubleTap 10 0  &kt LEFT_SHIFT  &trans    &trans  &kp LS(SPACE)  &DualLayer 10 0  &mo 10     &kp TAB    &VimSearch          &trans
+                                           &trans  &trans                        &trans          &trans    &trans  &trans         &trans           &trans
             >;
         };
 
