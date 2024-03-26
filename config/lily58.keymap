@@ -360,7 +360,6 @@
             bindings = <&kp END &kp LS(HOME)>;
             label = "VIMSELECTLINE";
         };
-
     };
 
     combos {
@@ -459,7 +458,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
 &bt BT_PRV  &bt BT_NXT    &none         &to 2         &none         &none                         &none         &none         &to 2         &none         &bt BT_PRV    &bt BT_NXT
 &none       &none         &to 7         &to 1         &to 6         &none                         &none         &to 6         &to 1         &to 7         &none         &none
-&none       &none         &none         &none         &none         &none         &none    &none  &none         &none         &none         &none         &none         &none
+&none       &none         &none         &none         &to 9         &none         &none    &none  &none         &to 9         &none         &none         &none         &none
                                         &none         &none         &none         &none    &none  &none         &none         &none
             >;
         };
