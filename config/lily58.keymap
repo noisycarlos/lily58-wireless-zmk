@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 
 &mt { flavor = "tap-preferred"; };
 
@@ -139,6 +140,13 @@
             label = "VIMDELETETAPDANCE";
             #binding-cells = <0>;
             bindings = <&to 0>, <&VimDeleteLine>;
+        };
+
+        VimYank: VimYank {
+            compatible = "zmk,behavior-tap-dance";
+            label = "VIMYANK";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C)>, <&VimYankLine>;
         };
     };
 
@@ -352,6 +360,13 @@
             bindings = <&kp END &kp LS(HOME)>;
             label = "VIMSELECTLINE";
         };
+
+        VimSelect: VimSelect {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(RIGHT) &kp>;
+            label = "VIMSELECT";
+        };
     };
 
     combos {
@@ -487,11 +502,11 @@
 
         VimPrimary {
             bindings = <
-&trans  &trans              &trans         &trans  &kp END    &trans                          &trans         &trans         &trans     &kp HOME   &trans              &trans
-&trans  &trans              &kp LC(RIGHT)  &trans  &kp LC(V)  &kp LC(LEFT)                    &kp F3         &kp LC(RIGHT)  &kp LC(Z)  &trans     &trans              &trans
-&trans  &VimInsertNextChar  &kp LS(RIGHT)  &trans  &trans     &kp LC(HOME)                    &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT  &VimInsertNextLine  &trans
-&trans  &trans              &kp DEL        &mo 10  &kp LC(X)  &trans        &trans    &trans  &kp LS(SPACE)  &to 0          &mo 10     &kp TAB    &VimSearch          &trans
-                                           &trans  &trans     &trans        &trans    &trans  &trans         &trans         &trans
+&trans  &trans              &trans         &trans  &kp END             &trans                            &trans         &trans         &trans     &kp HOME   &trans              &trans
+&trans  &trans              &kp LC(RIGHT)  &trans  &kp LC(V)           &kp LC(LEFT)                      &kp F3         &kp LC(RIGHT)  &kp LC(Z)  &VimYank   &trans              &trans
+&trans  &VimInsertNextChar  &kp LS(RIGHT)  &trans  &trans              &kp LC(HOME)                      &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT  &VimInsertNextLine  &trans
+&trans  &trans              &kp DEL        &mo 10  &VimDeleteTapDance  &kt LEFT_SHIFT  &trans    &trans  &kp LS(SPACE)  &to 0          &mo 10     &kp TAB    &VimSearch          &trans
+                                           &trans  &trans              &trans          &trans    &trans  &trans         &trans         &trans
             >;
         };
 
