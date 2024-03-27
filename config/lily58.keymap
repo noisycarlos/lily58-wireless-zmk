@@ -175,6 +175,13 @@
             #binding-cells = <0>;
             bindings = <&kp LC(C)>, <&kp LC(X)>, <&kp LC(V)>;
         };
+
+        TapDanceTypeA: TapDanceTypeA {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCETYPEA";
+            #binding-cells = <0>;
+            bindings = <&TypeAdds>, <&TypesAdjusts>;
+        };
     };
 
     macros {
@@ -387,6 +394,13 @@
             bindings = <&kp END &kp LS(HOME)>;
             label = "VIMSELECTLINE";
         };
+
+        TypesAdjusts: TypesAdjusts {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp A &kp D &kp J &kp U &kp T &kp S>;
+            label = "TYPESADJUSTS";
+        };
     };
 
     combos {
@@ -416,11 +430,11 @@
 
             display-name = "Base";
             bindings = <
-&kp GRAVE     &kp N1  &kp N2          &kp N3            &kp N4              &kp N5                                                &kp N6           &kp N7       &kp N8                 &kp N9                &kp N0    &kp EQUAL
-&kp TAB       &kp Q   &DualKey 3 W    &DualKey 2 F      &kp P               &kp B                                                 &kp J            &kp L        &kp U                  &DualKey 3 Y          &kp SEMI  &DualKey 11 MINUS
-&kp CAPSLOCK  &kp A   &kp R           &kp S             &kp T               &DualKey 4 G                                          &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &DualKey 11 APOS
-&to 9         &kp Z   &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D         &mt LEFT_GUI V  &kp ESC             &kp ESC           &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &kp BACKSLASH
-                                      &sl 2             &ClipboardTapDance  &kp SPACE       &DualKey 1 ENTER    &DualKey 1 ENTER  &kp BACKSPACE    &kp SPACE    &sl 2
+&kp GRAVE       &kp N1  &kp N2          &kp N3            &kp N4              &kp N5                                                &kp N6           &kp N7       &kp N8                 &kp N9                &kp N0    &kp EQUAL
+&kp TAB         &kp Q   &DualKey 3 W    &DualKey 2 F      &kp P               &kp B                                                 &kp J            &kp L        &kp U                  &DualKey 3 Y          &kp SEMI  &DualKey 11 MINUS
+&kp CAPSLOCK    &kp A   &kp R           &kp S             &kp T               &DualKey 4 G                                          &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &DualKey 11 APOS
+&DualLayer 5 9  &kp Z   &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D         &mt LEFT_GUI V  &kp ESC             &kp ESC           &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &kp BACKSLASH
+                                        &sl 2             &ClipboardTapDance  &kp SPACE       &DualKey 1 ENTER    &DualKey 1 ENTER  &kp BACKSPACE    &kp SPACE    &sl 2
             >;
         };
 
@@ -472,21 +486,21 @@
 
         Misc {
             bindings = <
-&trans      &trans      &TapDanceEmail    &TapDanceNoisycarlos  &kp PRINTSCREEN       &trans                                       &kp LC(LG(LA(F6)))     &kp LA(LC(LG(F7)))     &kp LA(LC(LG(F8)))     &kp LA(LC(LG(F9)))   &kp LA(LG(LC(F10)))   &kp RA(F4)
-&mo 5       &trans      &TypeWWB          &TypeFixes            &TapDanceP            &TypeBasecamp                                &kp LG(LC(LA(J)))      &kp LA(LC(LG(L)))      &kp LA(LC(LG(U)))      &kp LC(LG(LA(Y)))    &kp LC(LG(LA(SEMI)))  &mo 5
-&to 6       &TypeAdds   &TapDanceR        &TapDanceS            &kp C_VOL_DN          &kp C_VOL_UP                                 &kp LA(LC(LG(M)))      &kp LA(LC(LG(N)))      &kp LA(LC(LG(E)))      &kp LC(LA(LG(I)))    &kp LA(LC(LG(O)))     &kp LA(LG(LC(ENTER)))
-&kp K_PREV  &kp K_NEXT  &kp K_PLAY_PAUSE  &none                 &TapDanceD            &TypeMoves             &kp K_MUTE    &trans  &kp LA(LG(LC(K)))      &kp LA(LC(LG(H)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))  &trans
-                                          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(LA(LG(SPACE)))  &mo 5         &mo 5   &kp RA(RC(RG(SPACE)))  &kp RG(RC(RA(SPACE)))  &trans
+&trans      &trans          &TapDanceEmail    &TapDanceNoisycarlos  &kp PRINTSCREEN       &trans                                       &kp LC(LG(LA(F6)))     &kp LA(LC(LG(F7)))     &kp LA(LC(LG(F8)))     &kp LA(LC(LG(F9)))   &kp LA(LG(LC(F10)))   &kp RA(F4)
+&mo 5       &trans          &TypeWWB          &TypeFixes            &TapDanceP            &TypeBasecamp                                &kp LG(LC(LA(J)))      &kp LA(LC(LG(L)))      &kp LA(LC(LG(U)))      &kp LC(LG(LA(Y)))    &kp LC(LG(LA(SEMI)))  &mo 5
+&to 6       &TapDanceTypeA  &TapDanceR        &TapDanceS            &kp C_VOL_DN          &kp C_VOL_UP                                 &kp LA(LC(LG(M)))      &kp LA(LC(LG(N)))      &kp LA(LC(LG(E)))      &kp LC(LA(LG(I)))    &kp LA(LC(LG(O)))     &kp LA(LG(LC(ENTER)))
+&kp K_PREV  &kp K_NEXT      &kp K_PLAY_PAUSE  &none                 &TapDanceD            &TypeMoves             &kp K_MUTE    &trans  &kp LA(LG(LC(K)))      &kp LA(LC(LG(H)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))  &trans
+                                              &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(LA(LG(SPACE)))  &mo 5         &mo 5   &kp RA(RC(RG(SPACE)))  &kp RG(RC(RA(SPACE)))  &trans
             >;
         };
 
         Layers {
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&bt BT_PRV  &bt BT_NXT    &none         &to 2         &none         &none                         &none         &none         &to 2         &none         &bt BT_PRV    &bt BT_NXT
-&none       &none         &to 7         &to 1         &to 6         &none                         &none         &to 6         &to 1         &to 7         &none         &none
+&bt BT_PRV  &bt BT_NXT    &to 3         &to 2         &none         &none                         &none         &none         &to 2         &to 3         &bt BT_PRV    &bt BT_NXT
+&none       &none         &to 7         &to 8         &to 6         &none                         &none         &to 6         &to 8         &to 7         &none         &none
 &none       &none         &none         &none         &to 9         &none         &none    &none  &none         &to 9         &none         &none         &none         &none
-                                        &none         &none         &none         &none    &none  &none         &none         &none
+                                        &none         &none         &none         &to 1    &to 1  &none         &none         &none
             >;
         };
 
@@ -545,8 +559,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans       &trans     &trans              &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans       &UndoRedo  &ClipboardTapDance  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &kp LA(TAB)  &UndoRedo  &kp LC(V)           &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans       &trans     &trans              &trans
-                        &trans  &trans  &trans  &trans    &trans  &to 9   &to 1   &to 2
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans       &none      &trans              &trans
+                        &trans  &trans  &trans  &trans    &sl 5   &to 9   &to 1   &to 2
             >;
         };
     };
