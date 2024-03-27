@@ -203,6 +203,76 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_2>, <&kp F2>;
         };
+
+        NumFn3: NumFn3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMFN3";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_3>, <&kp F3>;
+        };
+
+        NumFn4: NumFn4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMFN4";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_4>, <&kp F4>;
+        };
+
+        NumFn5: NumFn5 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMFN5";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_5>, <&kp F5>;
+        };
+
+        NumFn6: NumFn6 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMFN6";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_6>, <&kp F6>;
+        };
+
+        NumFn7: NumFn7 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMFN7";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_7>, <&kp F7>;
+        };
+
+        NumFn8: NumFn8 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMFN8";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_8>, <&kp F8>;
+        };
+
+        NumFn9: NumFn9 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMFN9";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_9>, <&kp F9>;
+        };
+
+        NumFn10: NumFn10 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMFN10";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_10>, <&kp F10>;
+        };
+
+        NumFn11: NumFn11 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMFN11";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_11>, <&kp F11>;
+        };
+
+        NumFn12: NumFn12 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMFN12";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&kp F12>;
+        };
     };
 
     macros {
@@ -451,8 +521,8 @@
 
             display-name = "Base";
             bindings = <
-&kp GRAVE             &NumFn1  &NumFn2         &kp N3            &kp N4            &kp N5                                                &kp N6           &kp N7       &kp N8                 &kp N9                &kp N0    &kp EQUAL
-&kp TAB               &kp Q    &DualKey 3 W    &DualKey 2 F      &kp P             &kp B                                                 &kp J            &kp L        &kp U                  &DualKey 3 Y          &kp SEMI  &DualKey 11 MINUS
+&kp GRAVE             &NumFn1  &NumFn2         &NumFn3            &NumFn4            &NumFn5                                                &NumFn6           &NumFn7       &NumFn8                 &NumFn9                &NumFn10    &NumFn12
+&kp TAB               &kp Q    &DualKey 3 W    &DualKey 2 F      &kp P             &kp B                                                 &kp J            &kp L        &kp U                  &DualKey 3 Y          &kp SEMI  &NumFn12
 &DualKey 11 CAPSLOCK  &kp A    &kp R           &kp S             &kp T             &DualKey 4 G                                          &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &DualKey 11 APOS
 &DualLayer 5 9        &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D       &mt LEFT_GUI V  &kp ESC             &kp ESC           &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &kp BACKSLASH
                                                &sl 2             &CopyCutTapDance  &kp SPACE       &DualKey 1 ENTER    &DualKey 1 ENTER  &kp BACKSPACE    &kp SPACE    &sl 2
