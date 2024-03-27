@@ -257,14 +257,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NUMFN10";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_10>, <&kp F10>;
+            bindings = <&kp NUMBER_0>, <&kp F10>;
         };
 
         NumFn11: NumFn11 {
             compatible = "zmk,behavior-tap-dance";
             label = "NUMFN11";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_11>, <&kp F11>;
+            bindings = <&kp MINUS>, <&kp F11>;
         };
 
         NumFn12: NumFn12 {
