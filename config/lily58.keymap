@@ -521,7 +521,7 @@
 
             display-name = "Base";
             bindings = <
-&kp GRAVE             &NumFn1  &NumFn2         &NumFn3            &NumFn4            &NumFn5                                                &NumFn6           &NumFn7       &NumFn8                 &NumFn9                &NumFn10    &NumFn12
+&kp GRAVE             &NumFn1  &NumFn2         &NumFn3           &NumFn4           &NumFn5                                               &NumFn6          &NumFn7      &NumFn8                &NumFn9               &NumFn10  &NumFn12
 &kp TAB               &kp Q    &DualKey 3 W    &DualKey 2 F      &kp P             &kp B                                                 &kp J            &kp L        &kp U                  &DualKey 3 Y          &kp SEMI  &NumFn12
 &DualKey 11 CAPSLOCK  &kp A    &kp R           &kp S             &kp T             &DualKey 4 G                                          &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &DualKey 11 APOS
 &DualLayer 5 9        &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D       &mt LEFT_GUI V  &kp ESC             &kp ESC           &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &kp BACKSLASH
@@ -539,11 +539,11 @@
 
             display-name = "Nav";
             bindings = <
-&kp LA(F4)  &DoubleNum01  &DoubleNum23   &DoubleNum45      &DoubleNum67   &DoubleNum89                       &trans         &trans     &trans     &trans         &trans           &trans
-&kp DELETE  &kp LC(F4)    &kp LC(PG_UP)  &kp UP            &kp LC(PG_DN)  &kp LC(LS(T))                      &kp LC(PG_UP)  &kp PG_DN  &kp PG_UP  &kp LC(PG_DN)  &kp PRINTSCREEN  &kp DELETE
-&kp GRAVE   &UndoRedo     &kp LEFT       &kp DOWN          &kp RIGHT      &kp PRCNT                          &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
-&trans      &trans        &trans         &mt LEFT_SHIFT S  &mt LCTRL D    &mt RIGHT_WIN F  &trans    &trans  &kp F          &kp H      &kp HOME   &kp END        &kp RBRC         &kp PIPE
-                                         &to 0             &trans         &trans           &trans    &trans  &kp DELETE     &trans     &to 0
+&kp LA(F4)  &DoubleNum01  &DoubleNum23   &DoubleNum45      &DoubleNum67   &DoubleNum89                       &trans         &trans       &trans     &trans         &trans           &trans
+&kp DELETE  &kp LC(F4)    &kp LC(PG_UP)  &kp UP            &kp LC(PG_DN)  &kp LC(LS(T))                      &kp LC(PG_UP)  &kp PG_DN    &kp PG_UP  &kp LC(PG_DN)  &kp PRINTSCREEN  &kp DELETE
+&kp GRAVE   &UndoRedo     &kp LEFT       &kp DOWN          &kp RIGHT      &kp PRCNT                          &kp LEFT       &kp DOWN     &kp UP     &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
+&trans      &trans        &trans         &mt LEFT_SHIFT S  &mt LCTRL D    &mt RIGHT_WIN F  &trans    &trans  &kp F          &kp H        &kp HOME   &kp END        &kp RBRC         &kp PIPE
+                                         &to 0             &kp LA(TAB)    &trans           &trans    &trans  &kp DELETE     &kp RA(TAB)  &to 0
             >;
         };
 
