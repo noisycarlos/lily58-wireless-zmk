@@ -522,7 +522,7 @@
             display-name = "Base";
             bindings = <
 &kp GRAVE             &NumFn1  &NumFn2         &NumFn3           &NumFn4           &NumFn5                                               &NumFn6          &NumFn7      &NumFn8                &NumFn9               &NumFn10  &NumFn12
-&kp TAB               &kp Q    &DualKey 3 W    &DualKey 2 F      &kp P             &kp B                                                 &kp J            &kp L        &kp U                  &DualKey 3 Y          &kp SEMI  &NumFn12
+&kp TAB               &kp Q    &DualKey 3 W    &DualKey 2 F      &kp P             &kp B                                                 &kp J            &kp L        &kp U                  &DualKey 3 Y          &kp SEMI  &NumFn11
 &DualKey 11 CAPSLOCK  &kp A    &kp R           &kp S             &kp T             &DualKey 4 G                                          &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &DualKey 11 APOS
 &DualLayer 5 9        &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D       &mt LEFT_GUI V  &kp ESC             &kp ESC           &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &kp BACKSLASH
                                                &sl 2             &CopyCutTapDance  &kp SPACE       &DualKey 1 ENTER    &DualKey 1 ENTER  &kp BACKSPACE    &kp SPACE    &sl 2
