@@ -61,7 +61,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCER";
             #binding-cells = <0>;
-            bindings = <&TypeReturn>, <&TypeRefactor>;
+            bindings = <&TypesRails>, <&TypeReturn>, <&TypeRefactor>;
         };
 
         TapDanceP: TapDanceP {
@@ -490,6 +490,13 @@
             #binding-cells = <0>;
             bindings = <&none &kp A &kp D &kp J &kp U &kp S &kp T &kp S>;
             label = "TYPESADJUSTS";
+        };
+
+        TypesRails: TypesRails {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp A &kp I &kp L &kp S &kp SPACE>;
+            label = "TYPESRAILS";
         };
     };
 
