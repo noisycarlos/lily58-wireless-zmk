@@ -498,6 +498,13 @@
             bindings = <&kp R &kp A &kp I &kp L &kp S &kp SPACE>;
             label = "TYPESRAILS";
         };
+
+        TypesRailsDb: TypesRailsDb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp A &kp I &kp L &kp S &kp SPACE &kp D &kp B &kp COLON>;
+            label = "TYPESRAILSDB";
+        };
     };
 
     combos {
@@ -511,6 +518,12 @@
         WindowSwitcherR {
             bindings = <&kp LG(F12)>;
             key-positions = <43 54>;
+        };
+
+        RailsDbActions {
+            bindings = <&TypesRailsDb>;
+            key-positions = <40 26>;
+            layers = <4>;
         };
     };
 
