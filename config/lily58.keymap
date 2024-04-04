@@ -538,7 +538,7 @@
             // | SHIFT |  Z  |  X  |  C   |  D   |  V   |   "["  |  |  "]"  |  K   |  H    |  ,    |  .   |   /   | SHIFT |
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
-            display-name = "Base";
+            display-name = "-";
             bindings = <
 &kp GRAVE  &NumFn1  &NumFn2         &NumFn3           &NumFn4      &NumFn5                                                   &NumFn6          &NumFn7      &NumFn8                &NumFn9               &NumFn10  &NumFn12
 &kp TAB    &kp Q    &DualKey 3 W    &DualKey 2 F      &kp P        &kp B                                                     &kp J            &kp L        &kp U                  &DualKey 3 Y          &kp SEMI  &NumFn11
@@ -689,7 +689,7 @@
                           &trans       &trans         &trans  &trans    &trans  &trans  &trans         &trans
             >;
 
-            label = "Quick Actions";
+            label = "Quick";
         };
     };
 };
