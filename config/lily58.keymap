@@ -617,7 +617,7 @@
                                         &none         &none         &none         &to 1    &to 1  &none         &none         &none
             >;
 
-            label = "LayerHub";
+            label = "Lay/BT";
         };
 
         Nuke {
