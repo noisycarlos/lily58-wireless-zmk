@@ -622,10 +622,10 @@
 
         Nuke {
             bindings = <
-&NukeAddNode  &NukeViewer  &kp UP    &trans            &kp DOWN   &NukeMerge                        &NukeMerge   &kp UP    &trans             &kp DOWN        &trans     &NukeAddNode
+&NukeAddNode  &NukeViewer  &kp UP    &trans            &kp DOWN   &NukeMerge                        &NukeMerge   &kp UP    &trans             &kp DOWN        &trans     &kp D
 &NukeAddNode  &kp Q        &trans    &kp HOME          &kp J      &kp L                             &kp J        &kp L     &kp HOME           &kp Q           &kp I      &kp O
 &NukeChannel  &UndoRedo    &kp LEFT  &kp END           &kp RIGHT  &NukeViewer                       &NukeViewer  &kp LEFT  &kp END            &kp RIGHT       &UndoRedo  &NukeChannel
-&trans        &trans       &trans    &mt LEFT_SHIFT F  &trans     &mt LEFT_GUI K  &trans    &trans  &trans       &trans    &mt RIGHT_SHIFT F  &mt LEFT_ALT X  &kp Z      &trans
+&trans        &trans       &trans    &mt LEFT_SHIFT F  &trans     &mt LEFT_GUI K  &trans    &trans  &trans       &trans    &mt RIGHT_SHIFT F  &mt LEFT_ALT X  &kp Z      &NukeAddNode
                                      &to 0             &trans     &trans          &trans    &trans  &trans       &trans    &to 0
             >;
 
