@@ -47,7 +47,10 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCEEMAIL";
             #binding-cells = <0>;
-            bindings = <&TypesNoisycarlosHey>, <&TypeCarlosKPEmail>;
+            bindings =
+                <&TypesNoisycarlosHey>,
+                <&TypeCarlosKPEmail>,
+                <&TypesAccountsKP>;
         };
 
         TapDanceD: TapDanceD {
@@ -75,7 +78,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCENOISYCARLOS";
             #binding-cells = <0>;
-            bindings = <&TypeNoisycarlos>, <&TypeGithub>;
+            bindings = <&TypeNoisycarlos>, <&TypeGithub>, <&types_gitea_path>;
         };
 
         UndoRedo: UndoRedo {
@@ -272,6 +275,57 @@
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&kp F12>;
         };
+
+        RailsOpenTagTap: RailsOpenTagTap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RAILSOPENTAGTAP";
+            #binding-cells = <0>;
+            bindings = <&RailsOpenTag>, <&RailsOpenTagContent>;
+        };
+
+        CapsWordOrLayer: CapsWordOrLayer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CAPSWORDORLAYER";
+            bindings = <&mo>, <&caps_word>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        NukePointer: NukePointer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUKEPOINTER";
+            #binding-cells = <0>;
+            bindings = <&kp S>, <&kp V>, <&kp N>, <&kp C>;
+        };
+
+        TapDanceC: TapDanceC {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCEC";
+            #binding-cells = <0>;
+            bindings = <&TypeCarlos>, <&TypeClear>;
+        };
+
+        AEPointer: AEPointer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "AEPOINTER";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&kp G>, <&kp Q>;
+        };
+
+        NukeAddNodeDance: NukeAddNodeDance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUKEADDNODEDANCE";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&NukeAddNode>;
+        };
+
+        NukeTapSaveRender: NukeTapSaveRender {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUKETAPSAVERENDER";
+            #binding-cells = <0>;
+            bindings = <&kp LC(S)>, <&kp F7>;
+        };
     };
 
     macros {
@@ -425,14 +479,14 @@
         VimYankLine: VimYankLine {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(END) &kp LC(C) &to 0>;
+            bindings = <&kp HOME &kp LS(END) &kp LC(C)>;
             label = "VIMYANKLINE";
         };
 
         VimDeleteLine: VimDeleteLine {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(END) &kp LC(X) &to 0>;
+            bindings = <&kp HOME &kp LS(END) &kp LC(X)>;
             label = "VIMDELETELINE";
         };
 
@@ -505,6 +559,55 @@
             bindings = <&kp R &kp A &kp I &kp L &kp S &kp SPACE &kp D &kp B &kp COLON>;
             label = "TYPESRAILSDB";
         };
+
+        RailsOpenTag: rails_opentag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp PRCNT>;
+            label = "RAILS_OPENTAG";
+        };
+
+        RailsCloseTag: rails_closetag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PRCNT &kp GT>;
+            label = "RAILS_CLOSETAG";
+        };
+
+        RailsOpenTagContent: RailsOpenTagContent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp PRCNT &kp EQUAL>;
+            label = "RAILSOPENTAGCONTENT";
+        };
+
+        TypeCarlos: TypeCarlos {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(C) &kp A &kp R &kp L &kp O &kp S>;
+            label = "TYPECARLOS";
+        };
+
+        TypeClear: TypeClear {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp L &kp E &kp A &kp R>;
+            label = "TYPECLEAR";
+        };
+
+        TypesAccountsKP: TypesAccountsKP {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp C &kp C &kp O &kp U &kp N &kp T &kp S &kp AT &kp K &kp I &kp N &kp E &kp T &kp I &kp C &kp P &kp O &kp R &kp T &kp A &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "TYPESACCOUNTSKP";
+        };
+
+        types_gitea_path: types_gitea_path {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp G &kp I &kp T &kp DOT &kp N &kp O &kp I &kp S &kp Y &kp S &kp E &kp R &kp V &kp E &kp R &kp DOT &kp S &kp B &kp S &kp FSLH &kp N &kp O &kp I &kp S &kp Y &kp C &kp A &kp R &kp L &kp O &kp S &kp FSLH>;
+            label = "TYPES_GITEA_PATH";
+        };
     };
 
     combos {
@@ -516,7 +619,7 @@
         };
 
         WindowSwitcherR {
-            bindings = <&kp LG(F12)>;
+            bindings = <&kp RG(F12)>;
             key-positions = <43 54>;
         };
 
@@ -525,26 +628,115 @@
             key-positions = <40 26>;
             layers = <4>;
         };
+
+        NukeNextKeyframe {
+            bindings = <&kp LA(RIGHT)>;
+            key-positions = <32 33>;
+            layers = <6>;
+        };
+
+        NukePrevKeyframe {
+            bindings = <&kp LA(LEFT_ARROW)>;
+            key-positions = <32 31>;
+            layers = <6>;
+        };
+
+        NukePrevKeyframeL {
+            bindings = <&kp LA(LEFT_ARROW)>;
+            key-positions = <27 26>;
+            layers = <6>;
+        };
+
+        NukeNextKeyframeL {
+            bindings = <&kp LA(RIGHT)>;
+            key-positions = <27 28>;
+            layers = <6>;
+        };
+
+        AE_NextKeyframeL {
+            bindings = <&kp K>;
+            key-positions = <27 28>;
+            layers = <8>;
+        };
+
+        AE_NextKeyframe_R {
+            bindings = <&kp K>;
+            key-positions = <32 33>;
+            layers = <8>;
+        };
+
+        AE_PrevKeyframeL {
+            bindings = <&kp J>;
+            key-positions = <27 26>;
+            layers = <8>;
+        };
+
+        AE_PrevKeyframeR {
+            bindings = <&kp J>;
+            key-positions = <31 32>;
+            layers = <8>;
+        };
+
+        NukeDuplicateL {
+            bindings = <&kp LA(C)>;
+            key-positions = <38 39>;
+            layers = <6>;
+        };
+
+        NukeDuplicateR {
+            bindings = <&kp RA(C)>;
+            key-positions = <46 47>;
+            layers = <6>;
+        };
+
+        NukeCopyL {
+            bindings = <&kp LC(C)>;
+            key-positions = <40 39>;
+            layers = <6>;
+        };
+
+        NukeCopyR {
+            bindings = <&kp RC(C)>;
+            key-positions = <47 46>;
+            layers = <6>;
+        };
+
+        NukePasteR {
+            bindings = <&kp RC(V)>;
+            key-positions = <45 44>;
+            layers = <6>;
+        };
+
+        NukePasteL {
+            bindings = <&kp LC(V)>;
+            key-positions = <41 40>;
+            layers = <6>;
+        };
+
+        NukeCreateReferenceR {
+            bindings = <&kp RA(K)>;
+            key-positions = <45 47>;
+            layers = <6>;
+        };
+
+        NukeCreateReferenceL {
+            bindings = <&kp LA(K)>;
+            key-positions = <40 38>;
+            layers = <6>;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   =   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  D   |  V   |   "["  |  |  "]"  |  K   |  H    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
-
-            display-name = "-";
+        Qwerty {
+            display-name = "Qwerty";
             bindings = <
-&kp GRAVE  &NumFn1  &NumFn2         &NumFn3           &NumFn4      &NumFn5                                                   &NumFn6          &NumFn7      &NumFn8                &NumFn9               &NumFn10  &NumFn12
-&kp TAB    &kp Q    &DualKey 3 W    &DualKey 2 F      &kp P        &kp B                                                     &kp J            &kp L        &kp U                  &DualKey 3 Y          &kp SEMI  &NumFn11
-&mo 11     &kp A    &kp R           &kp S             &kp T        &DualKey 4 G                                              &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &DualKey 11 APOS
-&mo 5      &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D  &mt LEFT_GUI V  &kp ESC             &kp ESC               &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
-                                    &sl 2             &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &sl 2
+&kp GRAVE              &NumFn1  &NumFn2         &NumFn3           &NumFn4      &NumFn5                                                   &NumFn6          &NumFn7      &NumFn8                &NumFn9               &NumFn10  &NumFn12
+&kp TAB                &kp Q    &DualKey 3 W    &DualKey 2 E      &kp R        &kp T                                                     &kp Y            &kp U        &DualKey 2 I           &DualKey 3 O          &kp P     &NumFn11
+&CapsWordOrLayer 11 0  &kp A    &kp S           &kp D             &kp F        &DualKey 4 G                                              &DualKey 4 H     &kp J        &kp K                  &kp L                 &kp SEMI  &DualKey 11 APOS
+&mo 5                  &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL V  &mt LEFT_GUI B  &kp ESC             &kp ESC               &mt RIGHT_GUI N  &mt RCTRL M  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
+                                                &DualLayer 5 0    &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &DualLayer 5 0
             >;
         };
 
@@ -558,11 +750,11 @@
 
             display-name = "Nav";
             bindings = <
-&kp LA(F4)  &DoubleNum01  &DoubleNum23   &DoubleNum45      &DoubleNum67   &DoubleNum89                       &trans         &trans       &trans     &trans         &trans           &trans
-&kp DELETE  &kp LC(F4)    &kp LC(PG_UP)  &kp UP            &kp LC(PG_DN)  &kp LC(LS(T))                      &kp LC(PG_UP)  &kp PG_DN    &kp PG_UP  &kp LC(PG_DN)  &kp PRINTSCREEN  &kp DELETE
-&kp GRAVE   &UndoRedo     &kp LEFT       &kp DOWN          &kp RIGHT      &kp PRCNT                          &kp LEFT       &kp DOWN     &kp UP     &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
-&trans      &trans        &trans         &mt LEFT_SHIFT S  &mt LCTRL D    &mt RIGHT_WIN F  &trans    &trans  &kp F          &kp H        &kp HOME   &kp END        &kp RBRC         &kp PIPE
-                                         &to 0             &kp LA(TAB)    &trans           &trans    &trans  &kp DELETE     &kp RA(TAB)  &to 0
+&kp LA(F4)      &DoubleNum01  &DoubleNum23   &DoubleNum45      &DoubleNum67   &DoubleNum89                       &trans         &trans       &trans          &trans         &trans           &trans
+&kp DELETE      &kp LC(W)     &kp LC(PG_UP)  &kp UP            &kp LC(PG_DN)  &kp LC(LS(T))                      &kp LC(PG_UP)  &kp PG_DN    &kp PG_UP       &kp LC(PG_DN)  &kp PRINTSCREEN  &kp DELETE
+&kp GRAVE       &UndoRedo     &kp LEFT       &kp DOWN          &kp RIGHT      &kp PRCNT                          &kp LEFT       &kp DOWN     &kp UP          &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
+&DualLayer 5 0  &trans        &trans         &mt LEFT_SHIFT S  &mt LCTRL D    &mt RIGHT_WIN F  &trans    &trans  &kp F          &kp H        &kp HOME        &kp END        &kp RBRC         &DualLayer 5 0
+                                             &DualLayer 5 0    &kp LA(TAB)    &trans           &trans    &trans  &trans         &kp RA(TAB)  &DualLayer 5 0
             >;
         };
 
@@ -576,21 +768,21 @@
 
             display-name = "Num";
             bindings = <
-&kp LA(F4)  &kp F1      &kp F2         &kp F3    &kp F4         &kp F5                              &kp F6           &kp F7           &kp F8           &kp F9           &kp F10       &kp F12
-&trans      &kp LC(F4)  &kp LC(PG_UP)  &kp UP    &kp LC(PG_DN)  &kp LC(LS(T))                       &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL  &kp F11
-&trans      &kp LC(Z)   &kp LEFT       &kp DOWN  &kp RIGHT      &kp LA(LEFT)                        &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &kp K_CALCULATOR
-&kp LC(C)   &kp Z       &kp PG_UP      &none     &kp PG_DN      &kp F          &trans    &trans     &kp KP_SUBTRACT  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &kp LS(LC(KP_NUMLOCK))
-                                       &to 0     &trans         &trans         &trans    &kp ENTER  &kp KP_NUMBER_0  &kp KP_DOT       &to 0
+&kp LA(F4)      &kp F1     &kp F2  &kp F3  &kp F4      &kp F5                          &kp F6           &kp F7           &kp F8           &kp F9           &kp F10       &kp F12
+&trans          &kp EQUAL  &kp N7  &kp N8  &kp N9      &kp FSLH                        &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL  &kp F11
+&kp K_CALC      &kp PLUS   &kp N4  &kp N5  &kp N6      &kp STAR                        &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &kp K_CALCULATOR
+&kp KP_NUMLOCK  &kp RET    &kp N1  &kp N2  &kp N3      &kp MINUS  &trans    &trans     &kp KP_SUBTRACT  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &kp LS(LC(KP_NUMLOCK))
+                                   &trans  &kp PERIOD  &kp N0     &trans    &kp ENTER  &kp KP_NUMBER_0  &kp KP_DOT       &trans
             >;
         };
 
         Symbols {
             bindings = <
-&kp CAPS  &trans  &trans                &kp EXCL   &trans                 &trans                               &trans         &kp LEFT_PARENTHESIS  &trans         &kp RIGHT_PARENTHESIS  &trans             &kp K_SLEEP
+&kp CAPS  &trans  &RailsOpenTagTap      &kp EXCL   &RailsCloseTag         &trans                               &trans         &kp LEFT_PARENTHESIS  &trans         &kp RIGHT_PARENTHESIS  &trans             &kp K_SLEEP
 &trans    &trans  &kp AT_SIGN           &kp HASH   &kp DOLLAR             &kp PERCENT                          &kp CARET      &kp LEFT_BRACE        &kp PIPE       &kp RIGHT_BRACE        &trans             &trans
 &trans    &trans  &kp LEFT_PARENTHESIS  &kp STAR   &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES                    &kp BACKSLASH  &kp LEFT_BRACKET      &kp AMPERSAND  &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans
 &trans    &trans  &kp TILDE             &kp GRAVE  &kp QUESTION           &kp SQT            &trans    &trans  &kp KP_PLUS    &kp MINUS             &kp COLON      &kp EQUAL              &trans             &trans
-                                        &to 0      &trans                 &kp UNDER          &trans    &trans  &kp UNDER      &kp UNDER             &to 0
+                                        &trans     &trans                 &kp UNDER          &trans    &trans  &kp UNDER      &kp UNDER             &trans
             >;
 
             label = "SYMBOLS";
@@ -598,10 +790,10 @@
 
         Misc {
             bindings = <
-&trans      &trans          &TapDanceEmail    &TapDanceNoisycarlos  &kp PRINTSCREEN       &trans                                       &kp LC(LG(LA(F6)))     &kp LA(LC(LG(F7)))     &kp LA(LC(LG(F8)))     &kp LA(LC(LG(F9)))   &kp LA(LG(LC(F10)))   &kp K_SLEEP
+&trans      &none           &TapDanceEmail    &TapDanceNoisycarlos  &kp PRINTSCREEN       &trans                                       &kp LC(LG(LA(A)))      &kp LA(LC(LG(R)))      &kp LA(LC(LG(S)))      &kp LA(LC(LG(T)))    &kp LA(LG(LC(G)))     &none
 &mo 5       &trans          &TypeWWB          &TypeFixes            &TapDanceP            &TypeBasecamp                                &kp LG(LC(LA(J)))      &kp LA(LC(LG(L)))      &kp LA(LC(LG(U)))      &kp LC(LG(LA(Y)))    &kp LC(LG(LA(SEMI)))  &mo 5
-&to 6       &TapDanceTypeA  &TapDanceR        &TapDanceS            &kp C_VOL_DN          &kp C_VOL_UP                                 &kp LA(LC(LG(M)))      &kp LA(LC(LG(N)))      &kp LA(LC(LG(E)))      &kp LC(LA(LG(I)))    &kp LA(LC(LG(O)))     &kp LA(LG(LC(ENTER)))
-&kp K_PREV  &kp K_NEXT      &kp K_PLAY_PAUSE  &none                 &TapDanceD            &TypeMoves             &kp K_MUTE    &trans  &kp LA(LG(LC(K)))      &kp LA(LC(LG(H)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))  &trans
+&to 6       &TapDanceTypeA  &TapDanceR        &TapDanceS            &kp C_VOL_DN          &kp C_VOL_UP                                 &kp LA(LC(LG(M)))      &kp LA(LC(LG(N)))      &kp LA(LC(LG(E)))      &kp LC(LA(LG(I)))    &kp LA(LC(LG(O)))     &kp LA(LC(LG(ENTER)))
+&kp K_PREV  &kp K_NEXT      &kp K_PLAY_PAUSE  &TapDanceC            &TapDanceD            &TypeMoves             &kp K_MUTE    &trans  &kp LA(LG(LC(K)))      &kp LA(LC(LG(H)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))  &trans
                                               &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(LA(LG(SPACE)))  &mo 5         &mo 5   &kp RA(RC(RG(SPACE)))  &kp RG(RC(RA(SPACE)))  &trans
             >;
 
@@ -610,11 +802,11 @@
 
         Layers {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&bt BT_PRV  &bt BT_NXT    &to 3         &to 2         &none         &none                         &none         &none         &to 2         &to 3         &bt BT_PRV    &bt BT_NXT
-&none       &none         &to 7         &to 8         &to 6         &none                         &none         &to 6         &to 8         &to 7         &none         &none
-&none       &none         &none         &none         &to 9         &none         &none    &none  &none         &to 9         &none         &none         &none         &none
-                                        &none         &none         &none         &to 1    &to 1  &none         &none         &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                   &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&bt BT_PRV  &bt BT_NXT    &to 3         &to 2         &tog 0        &to 12                         &to 12         &tog 0        &to 2         &to 3         &bt BT_PRV    &bt BT_NXT
+&none       &kp LC(A)     &to 7         &to 8         &to 6         &to 9                          &to 9          &to 6         &to 8         &to 7         &kp RC(A)     &none
+&none       &none         &kp LC(X)     &kp LC(C)     &kp LC(V)     &kp LC(LS(V))  &none    &none  &kp RC(RS(V))  &kp RC(V)     &kp RC(C)     &kp RC(X)     &none         &none
+                                        &trans        &none         &none          &to 1    &to 1  &none          &none         &trans
             >;
 
             label = "Lay/BT";
@@ -622,11 +814,11 @@
 
         Nuke {
             bindings = <
-&NukeAddNode  &NukeViewer  &kp UP    &trans            &kp DOWN   &NukeMerge                        &NukeMerge   &kp UP    &trans             &kp DOWN        &trans     &kp D
-&NukeAddNode  &kp Q        &trans    &kp HOME          &kp J      &kp L                             &kp J        &kp L     &kp HOME           &kp Q           &kp I      &kp O
-&NukeChannel  &UndoRedo    &kp LEFT  &kp END           &kp RIGHT  &NukeViewer                       &NukeViewer  &kp LEFT  &kp END            &kp RIGHT       &UndoRedo  &NukeChannel
-&trans        &trans       &trans    &mt LEFT_SHIFT F  &trans     &mt LEFT_GUI K  &trans    &trans  &trans       &trans    &mt RIGHT_SHIFT F  &mt LEFT_ALT X  &kp Z      &NukeAddNode
-                                     &to 0             &trans     &trans          &trans    &trans  &trans       &trans    &to 0
+&NukeAddNode       &NukeTapSaveRender  &kp HOME  &NukePointer         &kp END      &NukeMerge                          &NukeMerge        &kp HOME             &NukePointer       &kp END          &NukeTapSaveRender  &kp D
+&NukeAddNodeDance  &kp Q               &trans    &DualKey 2 UP_ARROW  &kp J        &kp L                               &kp J             &kp L                &kp UP_ARROW       &kp Q            &kp I               &kp O
+&NukeChannel       &UndoRedo           &kp LEFT  &kp DOWN             &kp RIGHT    &NukeViewer                         &NukeViewer       &kp LEFT             &kp DOWN           &kp RIGHT        &UndoRedo           &NukeChannel
+&to 0              &trans              &trans    &mt LEFT_SHIFT F     &mt LCTRL D  &mt LEFT_GUI K    &trans    &trans  &kp K             &mt RIGHT_CONTROL H  &mt RIGHT_SHIFT F  &mt RIGHT_ALT X  &kp Z               &to 0
+                                                 &DualLayer 5 0       &trans       &DualKey 0 SPACE  &trans    &trans  &DualKey 0 SPACE  &trans               &DualLayer 5 0
             >;
 
             label = "Nuke";
@@ -638,7 +830,7 @@
 &kp TAB  &kp Q      &kp P       &kp F         &kp L        &trans                      &trans    &kp L        &kp F              &kp P            &kp Q      &kp TAB
 &trans   &kp O      &kp R       &kp S         &kp E        &kp M                       &kp M     &kp E        &kp S              &kp R            &kp O      &trans
 &trans   &UndoRedo  &mt LALT X  &mt LSHIFT C  &mt LCTRL I  &kp LGUI  &trans    &trans  &kp LGUI  &mt RCTRL I  &mt RIGHT_SHIFT C  &mt RIGHT_ALT X  &UndoRedo  &trans
-                                &to 0         &trans       &trans    &trans    &trans  &trans    &trans       &to 0
+                                &trans        &trans       &trans    &trans    &trans  &trans    &trans       &trans
             >;
 
             label = "F360";
@@ -646,11 +838,11 @@
 
         AfterEffects {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&kp LS(LA(LC(V)))  &trans         &kp HOME   &AEPointer            &kp END            &kp LC(B)                          &kp LC(B)  &kp HOME         &AEPointer           &kp END        &kp LS(LC(N0))  &kp RC(RA(RS(V)))
+&trans             &kp LS(LC(H))  &trans     &kp LC(UP)            &trans             &kp KP_NUMBER_0                    &trans     &kp KP_NUMBER_0  &kp LC(UP)           &kp RC(RS(H))  &kp B           &kp N
+&none              &UndoRedo      &kp PG_UP  &kp LC(DOWN)          &kp PG_DN          &trans                             &trans     &kp PG_UP        &kp RC(DOWN)         &kp PG_DN      &UndoRedo       &none
+&trans             &trans         &trans     &mt LEFT_SHIFT SLASH  &kp RA(RS(RC(V)))  &kp SPACE        &trans    &trans  &kp SPACE  &kp SLASH        &mt LEFT_SHIFT FSLH  &trans         &trans          &trans
+                                             &trans                &trans             &trans           &trans    &trans  &trans     &trans           &trans
             >;
 
             label = "AE";
@@ -682,14 +874,34 @@
 
         QuickActions {
             bindings = <
-&trans  &trans    &trans  &trans       &trans         &trans                    &trans  &trans         &trans       &trans     &trans                   &trans
-&trans  &trans    &trans  &trans       &trans         &trans                    &trans  &trans         &trans       &UndoRedo  &CopyCutTapDance         &trans
-&trans  &kp CAPS  &trans  &kp LA(TAB)  &kp LA(GRAVE)  &trans                    &trans  &kp RA(GRAVE)  &kp LA(TAB)  &UndoRedo  &PasteSelectAllTapDance  &trans
-&trans  &trans    &trans  &trans       &trans         &trans  &trans    &trans  &trans  &trans         &trans       &none      &trans                   &trans
-                          &trans       &trans         &trans  &trans    &trans  &trans  &trans         &trans
+&trans  &trans            &trans                   &trans       &trans         &trans                    &trans  &trans         &trans       &trans     &trans                   &trans
+&trans  &CopyCutTapDance  &PasteSelectAllTapDance  &trans       &trans         &trans                    &trans  &trans         &trans       &UndoRedo  &CopyCutTapDance         &trans
+&trans  &kp CAPS          &trans                   &kp LA(TAB)  &kp LA(GRAVE)  &trans                    &trans  &kp RA(GRAVE)  &kp LA(TAB)  &UndoRedo  &PasteSelectAllTapDance  &trans
+&trans  &trans            &trans                   &trans       &kp LC(V)      &trans  &trans    &trans  &trans  &trans         &trans       &none      &trans                   &trans
+                                                   &trans       &trans         &trans  &trans    &trans  &trans  &trans         &trans
             >;
 
             label = "Quick";
+        };
+
+        Colemak {
+            // ------------------------------------------------------------------------------------------------------------
+            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   =   |
+            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
+            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | SHIFT |  Z  |  X  |  C   |  D   |  V   |   "["  |  |  "]"  |  K   |  H    |  ,    |  .   |   /   | SHIFT |
+            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+
+            display-name = "-";
+            bindings = <
+&kp GRAVE              &NumFn1  &NumFn2         &NumFn3           &NumFn4      &NumFn5                                                   &NumFn6          &NumFn7      &NumFn8                &NumFn9               &NumFn10  &NumFn12
+&kp TAB                &kp Q    &DualKey 3 W    &DualKey 2 F      &kp P        &kp B                                                     &kp J            &kp L        &DualKey 2 U           &DualKey 3 Y          &kp SEMI  &NumFn11
+&CapsWordOrLayer 11 0  &kp A    &kp R           &kp S             &kp T        &DualKey 4 G                                              &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &DualKey 11 APOS
+&mo 5                  &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D  &mt LEFT_GUI V  &kp ESC             &kp ESC               &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
+                                                &mo 5             &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &mo 5
+            >;
+
+            label = "Colemak";
         };
     };
 };
