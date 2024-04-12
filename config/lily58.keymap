@@ -272,6 +272,13 @@
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&kp F12>;
         };
+
+        RailsOpenTagTap: RailsOpenTagTap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RAILSOPENTAGTAP";
+            #binding-cells = <0>;
+            bindings = <&RailsOpenTag>, <&RailsOpenTagContent>;
+        };
     };
 
     macros {
@@ -505,6 +512,27 @@
             bindings = <&kp R &kp A &kp I &kp L &kp S &kp SPACE &kp D &kp B &kp COLON>;
             label = "TYPESRAILSDB";
         };
+
+        RailsOpenTag: rails_opentag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp PRCNT>;
+            label = "RAILS_OPENTAG";
+        };
+
+        RailsCloseTag: rails_closetag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PRCNT &kp GT>;
+            label = "RAILS_CLOSETAG";
+        };
+
+        RailsOpenTagContent: RailsOpenTagContent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp PRCNT &kp EQUAL>;
+            label = "RAILSOPENTAGCONTENT";
+        };
     };
 
     combos {
@@ -586,7 +614,7 @@
 
         Symbols {
             bindings = <
-&kp CAPS  &trans  &trans                &kp EXCL   &trans                 &trans                               &trans         &kp LEFT_PARENTHESIS  &trans         &kp RIGHT_PARENTHESIS  &trans             &kp K_SLEEP
+&kp CAPS  &trans  &RailsOpenTagTap      &kp EXCL   &RailsCloseTag         &trans                               &trans         &kp LEFT_PARENTHESIS  &trans         &kp RIGHT_PARENTHESIS  &trans             &kp K_SLEEP
 &trans    &trans  &kp AT_SIGN           &kp HASH   &kp DOLLAR             &kp PERCENT                          &kp CARET      &kp LEFT_BRACE        &kp PIPE       &kp RIGHT_BRACE        &trans             &trans
 &trans    &trans  &kp LEFT_PARENTHESIS  &kp STAR   &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES                    &kp BACKSLASH  &kp LEFT_BRACKET      &kp AMPERSAND  &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans
 &trans    &trans  &kp TILDE             &kp GRAVE  &kp QUESTION           &kp SQT            &trans    &trans  &kp KP_PLUS    &kp MINUS             &kp COLON      &kp EQUAL              &trans             &trans
