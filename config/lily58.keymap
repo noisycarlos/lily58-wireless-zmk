@@ -537,7 +537,13 @@
         Type_1P: Type_1P {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(A) &kp N3 &kp MINUS &kp N9 &kp N3 &kp LS(G) &kp LS(T) &kp LS(R) &kp LS(M) &kp MINUS &kp N8 &kp LS(B) &kp N6 &kp N2 &kp LS(Y) &kp LS(N) &kp MINUS &kp LS(M) &kp N6 &kp LS(A) &kp N6 &kp LS(W) &kp MINUS &kp N2 &kp LS(G) &kp LS(Z) &kp LS(H) &kp LS(E) &kp MINUS &kp N9 &kp LS(J) &kp N2 &kp N7 &kp LS(A) &kp MINUS &kp N9 &kp LS(N) &kp LS(P) &kp N7 &kp N4>;
+            bindings =
+                <&none &kp LS(A) &kp N3 &kp MINUS &kp N9 &kp N3 &kp LS(G) &kp LS(T) &kp LS(R) &kp LS(M) &kp MINUS &kp N8 &kp LS(B) &kp N6 &kp N2 &kp LS(Y) &kp LS(N) &kp MINUS &kp LS(M) &kp N6 &kp LS(A) &kp N6 &kp LS(W)>,
+                <&macro_wait_time 500>,
+                <&kp MINUS>,
+                <&macro_tap>,
+                <&kp N2 &kp LS(G) &kp LS(Z) &kp LS(H) &kp LS(E) &kp MINUS &kp N9 &kp LS(J) &kp N2 &kp N7 &kp LS(A) &kp MINUS &kp N9 &kp LS(N) &kp LS(P) &kp N7 &kp N4>;
+
             label = "TYPE_1P";
         };
     };
