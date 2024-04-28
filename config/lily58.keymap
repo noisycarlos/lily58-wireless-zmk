@@ -286,7 +286,7 @@
             bindings = <&mo>, <&caps_word>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <(-1)>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -712,7 +712,7 @@
 &trans  &trans              &kp LC(RIGHT)  &trans  &kp LC(V)                     &kp LC(LEFT)                      &kp F3         &kp LC(RIGHT)    &kp LC(Z)  &VimYank   &trans              &trans
 &trans  &VimInsertNextChar  &kp LS(RIGHT)  &trans  &trans                        &kp LC(HOME)                      &kp LEFT       &kp DOWN         &kp UP     &kp RIGHT  &VimInsertNextLine  &trans
 &trans  &trans              &kp DEL        &mo 10  &VimDeleteHoldDoubleTap 10 0  &kp LEFT_SHIFT  &trans    &trans  &kp LS(SPACE)  &DualLayer 10 0  &mo 10     &kp TAB    &VimSearch          &trans
-                                           &trans  &trans                        &trans          &trans    &trans  &trans         &trans           &trans
+                                           &trans  &trans                        &trans          &trans    &trans  &trans         &trans           &to 0
             >;
 
             label = "VIM";
