@@ -560,9 +560,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&none &kp LG(F12)>,
                 <&macro_wait_time 1000>,
-                <&kp LC(A) &kp DELETE>;
+                <&kp LG(F12) &kp LC(A) &kp DELETE>;
 
             label = "KRUNNERCLEAR";
         };
