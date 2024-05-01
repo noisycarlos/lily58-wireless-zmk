@@ -555,6 +555,13 @@
 
             label = "TYPE_1P";
         };
+
+        KRunnerClear: KRunnerClear {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LG(F12) &kp LC(A)>;
+            label = "KRUNNERCLEAR";
+        };
     };
 
     combos {
@@ -566,7 +573,7 @@
         };
 
         WindowSwitcherR {
-            bindings = <&kp LG(F12)>;
+            bindings = <&KRunnerClear>;
             key-positions = <43 54>;
         };
 
