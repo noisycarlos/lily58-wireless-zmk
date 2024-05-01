@@ -592,6 +592,18 @@
             key-positions = <40 26>;
             layers = <4>;
         };
+
+        NukeNextKeyframe {
+            bindings = <&kp LA(RIGHT)>;
+            key-positions = <32 33>;
+            layers = <6>;
+        };
+
+        NukePrevKeyframe {
+            bindings = <&kp LA(LEFT_ARROW)>;
+            key-positions = <32 31>;
+            layers = <6>;
+        };
     };
 
     keymap {
@@ -691,7 +703,7 @@
             bindings = <
 &NukeAddNode  &kp F7     &kp HOME  &NukePointer         &kp END    &NukeMerge                        &NukeMerge   &kp HOME  &NukePointer       &kp END         &kp F7     &kp D
 &NukeAddNode  &kp Q      &trans    &DualKey 2 UP_ARROW  &kp J      &kp L                             &kp J        &kp L     &kp UP_ARROW       &kp Q           &kp I      &kp O
-&NukeChannel  &UndoRedo  &kp LEFT  &mt LEFT_ALT DOWN    &kp RIGHT  &NukeViewer                       &NukeViewer  &kp LEFT  &mt LEFT_ALT DOWN  &kp RIGHT       &UndoRedo  &NukeChannel
+&NukeChannel  &UndoRedo  &kp LEFT  &mt LEFT_ALT DOWN    &kp RIGHT  &NukeViewer                       &NukeViewer  &kp LEFT  &kp DOWN           &kp RIGHT       &UndoRedo  &NukeChannel
 &trans        &trans     &trans    &mt LEFT_SHIFT F     &trans     &mt LEFT_GUI K  &trans    &trans  &trans       &trans    &mt RIGHT_SHIFT F  &mt LEFT_ALT X  &kp Z      &NukeAddNode
                                    &to 0                &trans     &trans          &trans    &trans  &trans       &trans    &to 0
             >;
