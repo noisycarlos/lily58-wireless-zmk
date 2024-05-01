@@ -559,7 +559,12 @@
         KRunnerClear: KRunnerClear {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LG(F12)>, <&macro_wait_time 500>, <&kp LC(A)>;
+            bindings =
+                <&none &kp LG(F12)>,
+                <&macro_wait_time 1000>,
+                <&kp LC(A)>,
+                <&macro_wait_time 200>,
+                <&kp DELETE>;
 
             label = "KRUNNERCLEAR";
         };
