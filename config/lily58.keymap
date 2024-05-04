@@ -302,24 +302,6 @@
             #binding-cells = <0>;
             bindings = <&TypeCarlos>, <&TypeClear>;
         };
-
-        AE_PointerTapDance: AE_PointerTapDance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "AE_POINTERTAPDANCE";
-            #binding-cells = <0>;
-            bindings = <&kp V>, <&kp G>, <&kp Q>;
-        };
-
-        AE_Channel: AE_Channel {
-            compatible = "zmk,behavior-tap-dance";
-            label = "AE_CHANNEL";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LA(NUMBER_4)>,
-                <&kp LA(NUMBER_1)>,
-                <&kp LA(Q)>,
-                <&kp LA(NUMBER_3)>;
-        };
     };
 
     macros {
@@ -654,6 +636,30 @@
             bindings = <&kp LA(RIGHT)>;
             key-positions = <27 28>;
             layers = <6>;
+        };
+
+        AE_PrevKeyframeL {
+            bindings = <&kp K>;
+            key-positions = <27 28>;
+            layers = <8>;
+        };
+
+        AE_NextKey_R {
+            bindings = <&kp K>;
+            key-positions = <32 33>;
+            layers = <8>;
+        };
+
+        AE_PrevKeyframeL {
+            bindings = <&kp J>;
+            key-positions = <27 26>;
+            layers = <8>;
+        };
+
+        AE_PrevKeyframeR {
+            bindings = <&kp J>;
+            key-positions = <31 32>;
+            layers = <8>;
         };
     };
 
