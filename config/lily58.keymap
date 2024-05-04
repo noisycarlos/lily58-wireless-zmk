@@ -638,13 +638,13 @@
             layers = <6>;
         };
 
-        AE_PrevKeyframeL {
+        AE_NextKeyframeL {
             bindings = <&kp K>;
             key-positions = <27 28>;
             layers = <8>;
         };
 
-        AE_NextKey_R {
+        AE_NextKeyframe_R {
             bindings = <&kp K>;
             key-positions = <32 33>;
             layers = <8>;
