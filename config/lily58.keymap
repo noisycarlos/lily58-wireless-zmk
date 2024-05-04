@@ -295,6 +295,13 @@
             #binding-cells = <0>;
             bindings = <&kp S>, <&kp V>, <&kp N>, <&kp C>;
         };
+
+        TapDanceC: TapDanceC {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCEC";
+            #binding-cells = <0>;
+            bindings = <&TypeCarlos>, <&TypeClear>;
+        };
     };
 
     macros {
@@ -571,6 +578,20 @@
                 <&kp LG(F12) &kp LC(A) &kp DELETE>;
 
             label = "KRUNNERCLEAR";
+        };
+
+        TypeCarlos: TypeCarlos {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(C) &kp A &kp R &kp L &kp O &kp S>;
+            label = "TYPECARLOS";
+        };
+
+        TypeClear: TypeClear {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp L &kp E &kp A &kp R>;
+            label = "TYPECLEAR";
         };
     };
 
