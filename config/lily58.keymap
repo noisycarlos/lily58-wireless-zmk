@@ -778,9 +778,9 @@
             bindings = <
 &kp LS(LA(LC(V)))  &trans         &kp HOME   &AE_PointerTapDance   &kp END            &kp LC(B)                          &kp LC(B)  &kp HOME         &AE_PointerTapDance  &kp END        &kp LS(LC(N0))  &kp RC(RA(RS(V)))
 &trans             &kp LS(LC(H))  &trans     &kp LC(UP)            &trans             &kp KP_NUMBER_0                    &trans     &kp KP_NUMBER_0  &kp LC(UP)           &kp RC(RS(H))  &kp B           &kp N
-&AE_Channel        &UndoRedo      &kp PG_DN  &kp LC(DOWN)          &kp PG_UP          &trans                             &trans     &kp PG_DN        &kp RC(DOWN)         &kp PG_UP      &UndoRedo       &AE_Channel
-&trans             &trans         &trans     &mt LEFT_SHIFT SLASH  &kp RA(RS(RC(V)))  &trans           &trans    &trans  &trans     &kp SLASH        &mt LEFT_SHIFT FSLH  &trans         &trans          &trans
-                                             &trans                &trans             &trans           &trans    &trans  &trans     &trans           &trans
+&AE_Channel        &UndoRedo      &kp PG_UP  &kp LC(DOWN)          &kp PG_DN          &trans                             &trans     &kp PG_UP        &kp RC(DOWN)         &kp PG_DN      &UndoRedo       &AE_Channel
+&trans             &trans         &trans     &mt LEFT_SHIFT SLASH  &kp RA(RS(RC(V)))  &kp SPACE        &trans    &trans  &kp SPACE  &kp SLASH        &mt LEFT_SHIFT FSLH  &trans         &trans          &trans
+                                             &to 0                 &trans             &trans           &trans    &trans  &trans     &trans           &to 0
             >;
 
             label = "AE";
