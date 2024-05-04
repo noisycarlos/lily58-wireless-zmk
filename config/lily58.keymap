@@ -302,6 +302,24 @@
             #binding-cells = <0>;
             bindings = <&TypeCarlos>, <&TypeClear>;
         };
+
+        AE_PointerTapDance: AE_PointerTapDance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "AE_POINTERTAPDANCE";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&kp G>, <&kp Q>;
+        };
+
+        AE_Channel: AE_Channel {
+            compatible = "zmk,behavior-tap-dance";
+            label = "AE_CHANNEL";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LA(NUMBER_4)>,
+                <&kp LA(NUMBER_1)>,
+                <&kp LA(Q)>,
+                <&kp LA(NUMBER_3)>;
+        };
     };
 
     macros {
@@ -758,11 +776,11 @@
 
         AfterEffects {
             bindings = <
-&trans  &trans         &kp HOME   &kp V           &kp END    &trans                             &trans  &kp HOME         &kp V            &kp END        &kp LS(LC(N0))  &trans
-&trans  &kp LS(LC(H))  &trans     &kp LC(UP)      &trans     &kp KP_NUMBER_0                    &trans  &kp KP_NUMBER_0  &kp LC(UP)       &kp RC(RS(H))  &kp B           &kp N
-&trans  &UndoRedo      &kp PG_UP  &kp LC(DOWN)    &kp PG_DN  &trans                             &trans  &kp PG_DN        &kp RC(DOWN)     &kp PG_UP      &UndoRedo       &trans
-&trans  &trans         &trans     &kp LEFT_SHIFT  &kp SLASH  &trans           &trans    &trans  &trans  &kp SLASH        &kp RIGHT_SHIFT  &trans         &trans          &trans
-                                  &trans          &trans     &trans           &trans    &trans  &trans  &trans           &trans
+&kp LS(LA(LC(V)))  &trans         &kp HOME   &AE_PointerTapDance   &kp END            &kp LC(B)                          &kp LC(B)  &kp HOME         &AE_PointerTapDance  &kp END        &kp LS(LC(N0))  &kp RC(RA(RS(V)))
+&trans             &kp LS(LC(H))  &trans     &kp LC(UP)            &trans             &kp KP_NUMBER_0                    &trans     &kp KP_NUMBER_0  &kp LC(UP)           &kp RC(RS(H))  &kp B           &kp N
+&AE_Channel        &UndoRedo      &kp PG_DN  &kp LC(DOWN)          &kp PG_UP          &trans                             &trans     &kp PG_DN        &kp RC(DOWN)         &kp PG_UP      &UndoRedo       &AE_Channel
+&trans             &trans         &trans     &mt LEFT_SHIFT SLASH  &kp RA(RS(RC(V)))  &trans           &trans    &trans  &trans     &kp SLASH        &mt LEFT_SHIFT FSLH  &trans         &trans          &trans
+                                             &trans                &trans             &trans           &trans    &trans  &trans     &trans           &trans
             >;
 
             label = "AE";
