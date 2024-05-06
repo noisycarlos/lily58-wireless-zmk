@@ -302,6 +302,13 @@
             #binding-cells = <0>;
             bindings = <&TypeCarlos>, <&TypeClear>;
         };
+
+        AEPointer: AEPointer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "AEPOINTER";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&kp G>, <&kp Q>;
+        };
     };
 
     macros {
@@ -782,9 +789,9 @@
 
         AfterEffects {
             bindings = <
-&kp LS(LA(LC(V)))  &trans         &kp HOME   &AE_PointerTapDance   &kp END            &kp LC(B)                          &kp LC(B)  &kp HOME         &AE_PointerTapDance  &kp END        &kp LS(LC(N0))  &kp RC(RA(RS(V)))
+&kp LS(LA(LC(V)))  &trans         &kp HOME   &AEPointer            &kp END            &kp LC(B)                          &kp LC(B)  &kp HOME         &AEPointer           &kp END        &kp LS(LC(N0))  &kp RC(RA(RS(V)))
 &trans             &kp LS(LC(H))  &trans     &kp LC(UP)            &trans             &kp KP_NUMBER_0                    &trans     &kp KP_NUMBER_0  &kp LC(UP)           &kp RC(RS(H))  &kp B           &kp N
-&AE_Channel        &UndoRedo      &kp PG_UP  &kp LC(DOWN)          &kp PG_DN          &trans                             &trans     &kp PG_UP        &kp RC(DOWN)         &kp PG_DN      &UndoRedo       &AE_Channel
+&none              &UndoRedo      &kp PG_UP  &kp LC(DOWN)          &kp PG_DN          &trans                             &trans     &kp PG_UP        &kp RC(DOWN)         &kp PG_DN      &UndoRedo       &none
 &trans             &trans         &trans     &mt LEFT_SHIFT SLASH  &kp RA(RS(RC(V)))  &kp SPACE        &trans    &trans  &kp SPACE  &kp SLASH        &mt LEFT_SHIFT FSLH  &trans         &trans          &trans
                                              &to 0                 &trans             &trans           &trans    &trans  &trans     &trans           &to 0
             >;
