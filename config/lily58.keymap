@@ -589,9 +589,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(F12)>,
-                <&macro_wait_time 500>,
-                <&kp LC(A)>,
                 <&macro_wait_time 250>,
+                <&kp LC(A)>,
+                <&macro_wait_time 50>,
                 <&kp DELETE>;
 
             label = "KRUNNERCLEAR";
