@@ -589,9 +589,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(F12)>,
-                <&macro_wait_time 1000>,
-                <&kp LC(A)>,
                 <&macro_wait_time 500>,
+                <&kp LC(A)>,
+                <&macro_wait_time 250>,
                 <&kp DELETE>;
 
             label = "KRUNNERCLEAR";
@@ -616,7 +616,7 @@
         compatible = "zmk,combos";
 
         WindowSwitcherL {
-            bindings = <&kp LG(F12)>;
+            bindings = <&KRunnerClear>;
             key-positions = <53 42>;
         };
 
