@@ -697,7 +697,7 @@
 &kp TAB                &kp Q    &DualKey 3 W    &DualKey 2 F      &kp P        &kp B                                                     &kp J            &kp L        &DualKey 2 U           &DualKey 3 Y          &kp SEMI  &NumFn11
 &CapsWordOrLayer 11 0  &kp A    &kp R           &kp S             &kp T        &DualKey 4 G                                              &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &DualKey 11 APOS
 &mo 5                  &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D  &mt LEFT_GUI V  &kp ESC             &kp ESC               &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
-                                                &mo 5             &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &mo 5
+                                                &DualLayer 5 0    &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &DualLayer 5 0
             >;
         };
 
@@ -715,7 +715,7 @@
 &kp DELETE  &kp LC(W)     &kp LC(PG_UP)  &kp UP            &kp LC(PG_DN)  &kp LC(LS(T))                      &kp LC(PG_UP)  &kp PG_DN    &kp PG_UP  &kp LC(PG_DN)  &kp PRINTSCREEN  &kp DELETE
 &kp GRAVE   &UndoRedo     &kp LEFT       &kp DOWN          &kp RIGHT      &kp PRCNT                          &kp LEFT       &kp DOWN     &kp UP     &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
 &trans      &trans        &trans         &mt LEFT_SHIFT S  &mt LCTRL D    &mt RIGHT_WIN F  &trans    &trans  &kp F          &kp H        &kp HOME   &kp END        &kp RBRC         &kp PIPE
-                                         &to 0             &kp LA(TAB)    &trans           &trans    &trans  &kp DELETE     &kp RA(TAB)  &to 0
+                                         &trans            &kp LA(TAB)    &trans           &trans    &trans  &kp DELETE     &kp RA(TAB)  &trans
             >;
         };
 
@@ -733,7 +733,7 @@
 &trans          &kp EQUAL  &kp N7  &kp N8  &kp N9      &kp FSLH                        &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL  &kp F11
 &kp K_CALC      &kp PLUS   &kp N4  &kp N5  &kp N6      &kp STAR                        &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &kp K_CALCULATOR
 &kp KP_NUMLOCK  &kp RET    &kp N1  &kp N2  &kp N3      &kp MINUS  &trans    &trans     &kp KP_SUBTRACT  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &kp LS(LC(KP_NUMLOCK))
-                                   &to 0   &kp PERIOD  &kp N0     &trans    &kp ENTER  &kp KP_NUMBER_0  &kp KP_DOT       &to 0
+                                   &trans  &kp PERIOD  &kp N0     &trans    &kp ENTER  &kp KP_NUMBER_0  &kp KP_DOT       &trans
             >;
         };
 
@@ -743,7 +743,7 @@
 &trans    &trans  &kp AT_SIGN           &kp HASH   &kp DOLLAR             &kp PERCENT                          &kp CARET      &kp LEFT_BRACE        &kp PIPE       &kp RIGHT_BRACE        &trans             &trans
 &trans    &trans  &kp LEFT_PARENTHESIS  &kp STAR   &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES                    &kp BACKSLASH  &kp LEFT_BRACKET      &kp AMPERSAND  &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans
 &trans    &trans  &kp TILDE             &kp GRAVE  &kp QUESTION           &kp SQT            &trans    &trans  &kp KP_PLUS    &kp MINUS             &kp COLON      &kp EQUAL              &trans             &trans
-                                        &to 0      &trans                 &kp UNDER          &trans    &trans  &kp UNDER      &kp UNDER             &to 0
+                                        &trans     &trans                 &kp UNDER          &trans    &trans  &kp UNDER      &kp UNDER             &trans
             >;
 
             label = "SYMBOLS";
@@ -755,7 +755,7 @@
 &mo 5       &trans          &TypeWWB          &TypeFixes            &TapDanceP            &TypeBasecamp                                &kp LG(LC(LA(J)))      &kp LA(LC(LG(L)))      &kp LA(LC(LG(U)))      &kp LC(LG(LA(Y)))    &kp LC(LG(LA(SEMI)))  &mo 5
 &to 6       &TapDanceTypeA  &TapDanceR        &TapDanceS            &kp C_VOL_DN          &kp C_VOL_UP                                 &kp LA(LC(LG(M)))      &kp LA(LC(LG(N)))      &kp LA(LC(LG(E)))      &kp LC(LA(LG(I)))    &kp LA(LC(LG(O)))     &kp LA(LC(LG(ENTER)))
 &kp K_PREV  &kp K_NEXT      &kp K_PLAY_PAUSE  &TapDanceC            &TapDanceD            &TypeMoves             &kp K_MUTE    &trans  &kp LA(LG(LC(K)))      &kp LA(LC(LG(H)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))  &trans
-                                              &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(LA(LG(SPACE)))  &mo 5         &mo 5   &kp RA(RC(RG(SPACE)))  &kp RG(RC(RA(SPACE)))  &to 0
+                                              &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(LA(LG(SPACE)))  &mo 5         &mo 5   &kp RA(RC(RG(SPACE)))  &kp RG(RC(RA(SPACE)))  &trans
             >;
 
             label = "Misc";
@@ -767,7 +767,7 @@
 &bt BT_PRV  &bt BT_NXT    &to 3         &to 2         &to 12        &none                         &none         &to 12        &to 2         &to 3         &bt BT_PRV    &bt BT_NXT
 &none       &none         &to 7         &to 8         &to 6         &none                         &none         &to 6         &to 8         &to 7         &none         &none
 &none       &none         &none         &to 0         &to 9         &none         &none    &none  &none         &to 9         &to 0         &none         &none         &none
-                                        &none         &none         &none         &to 1    &to 1  &none         &none         &none
+                                        &trans        &none         &none         &to 1    &to 1  &none         &none         &trans
             >;
 
             label = "Lay/BT";
@@ -779,7 +779,7 @@
 &NukeAddNodeDance  &kp Q      &trans    &DualKey 2 UP_ARROW  &kp J      &kp L                               &kp J             &kp L     &kp UP_ARROW       &kp Q           &kp I      &kp O
 &NukeChannel       &UndoRedo  &kp LEFT  &kp DOWN             &kp RIGHT  &NukeViewer                         &NukeViewer       &kp LEFT  &kp DOWN           &kp RIGHT       &UndoRedo  &NukeChannel
 &trans             &trans     &trans    &mt LEFT_SHIFT F     &trans     &mt LEFT_GUI K    &trans    &trans  &trans            &trans    &mt RIGHT_SHIFT F  &mt LEFT_ALT X  &kp Z      &NukeAddNode
-                                        &to 0                &trans     &DualKey 0 SPACE  &trans    &trans  &DualKey 0 SPACE  &trans    &to 0
+                                        &trans               &trans     &DualKey 0 SPACE  &trans    &trans  &DualKey 0 SPACE  &trans    &trans
             >;
 
             label = "Nuke";
@@ -791,7 +791,7 @@
 &kp TAB  &kp Q      &kp P       &kp F         &kp L        &trans                      &trans    &kp L        &kp F              &kp P            &kp Q      &kp TAB
 &trans   &kp O      &kp R       &kp S         &kp E        &kp M                       &kp M     &kp E        &kp S              &kp R            &kp O      &trans
 &trans   &UndoRedo  &mt LALT X  &mt LSHIFT C  &mt LCTRL I  &kp LGUI  &trans    &trans  &kp LGUI  &mt RCTRL I  &mt RIGHT_SHIFT C  &mt RIGHT_ALT X  &UndoRedo  &trans
-                                &to 0         &trans       &trans    &trans    &trans  &trans    &trans       &to 0
+                                &trans        &trans       &trans    &trans    &trans  &trans    &trans       &trans
             >;
 
             label = "F360";
@@ -803,7 +803,7 @@
 &trans             &kp LS(LC(H))  &trans     &kp LC(UP)            &trans             &kp KP_NUMBER_0                    &trans     &kp KP_NUMBER_0  &kp LC(UP)           &kp RC(RS(H))  &kp B           &kp N
 &none              &UndoRedo      &kp PG_UP  &kp LC(DOWN)          &kp PG_DN          &trans                             &trans     &kp PG_UP        &kp RC(DOWN)         &kp PG_DN      &UndoRedo       &none
 &trans             &trans         &trans     &mt LEFT_SHIFT SLASH  &kp RA(RS(RC(V)))  &kp SPACE        &trans    &trans  &kp SPACE  &kp SLASH        &mt LEFT_SHIFT FSLH  &trans         &trans          &trans
-                                             &to 0                 &trans             &trans           &trans    &trans  &trans     &trans           &to 0
+                                             &trans                &trans             &trans           &trans    &trans  &trans     &trans           &trans
             >;
 
             label = "AE";
@@ -815,7 +815,7 @@
 &trans  &trans              &kp LC(RIGHT)  &trans  &kp LC(V)                     &kp LC(LEFT)                      &kp F3         &kp LC(RIGHT)    &kp LC(Z)  &VimYank   &trans              &trans
 &trans  &VimInsertNextChar  &kp LS(RIGHT)  &trans  &trans                        &kp LC(HOME)                      &kp LEFT       &kp DOWN         &kp UP     &kp RIGHT  &VimInsertNextLine  &trans
 &trans  &trans              &kp DEL        &mo 10  &VimDeleteHoldDoubleTap 10 0  &kp LEFT_SHIFT  &trans    &trans  &kp LS(SPACE)  &DualLayer 10 0  &mo 10     &kp TAB    &VimSearch          &trans
-                                           &trans  &trans                        &trans          &trans    &trans  &trans         &trans           &to 0
+                                           &trans  &trans                        &trans          &trans    &trans  &trans         &trans           &trans
             >;
 
             label = "VIM";
@@ -852,7 +852,7 @@
 &kp TAB    &kp Q    &DualKey 3 W    &DualKey 2 E      &kp R        &kp T                                                     &kp Y            &kp U        &kp I                  &DualKey 3 O          &kp P     &NumFn11
 &mo 11     &kp A    &kp S           &kp D             &kp F        &DualKey 4 G                                              &DualKey 4 H     &kp J        &kp K                  &kp L                 &kp SEMI  &DualKey 11 APOS
 &mo 5      &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL V  &mt LEFT_GUI B  &kp ESC             &kp ESC               &mt RIGHT_GUI N  &mt RCTRL M  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
-                                    &mo 5             &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &mo 5
+                                    &DualLayer 5 12   &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &DualLayer 5 12
             >;
         };
     };
