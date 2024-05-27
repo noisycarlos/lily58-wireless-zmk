@@ -316,6 +316,13 @@
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&NukeAddNode>;
         };
+
+        NukeTapSaveRender: NukeTapSaveRender {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUKETAPSAVERENDER";
+            #binding-cells = <0>;
+            bindings = <&kp LC(S)>, <&kp F7>;
+        };
     };
 
     macros {
@@ -775,11 +782,11 @@
 
         Nuke {
             bindings = <
-&NukeAddNode       &kp F7     &kp HOME  &NukePointer         &kp END    &NukeMerge                          &NukeMerge        &kp HOME  &NukePointer       &kp END         &kp F7     &kp D
-&NukeAddNodeDance  &kp Q      &trans    &DualKey 2 UP_ARROW  &kp J      &kp L                               &kp J             &kp L     &kp UP_ARROW       &kp Q           &kp I      &kp O
-&NukeChannel       &UndoRedo  &kp LEFT  &kp DOWN             &kp RIGHT  &NukeViewer                         &NukeViewer       &kp LEFT  &kp DOWN           &kp RIGHT       &UndoRedo  &NukeChannel
-&trans             &trans     &trans    &mt LEFT_SHIFT F     &trans     &mt LEFT_GUI K    &trans    &trans  &trans            &trans    &mt RIGHT_SHIFT F  &mt LEFT_ALT X  &kp Z      &NukeAddNode
-                                        &DualLayer 5 0       &trans     &DualKey 0 SPACE  &trans    &trans  &DualKey 0 SPACE  &trans    &DualLayer 5 0
+&NukeAddNode       &NukeTapSaveRender  &kp HOME  &NukePointer         &kp END    &NukeMerge                          &NukeMerge        &kp HOME  &NukePointer       &kp END         &NukeTapSaveRender  &kp D
+&NukeAddNodeDance  &kp Q               &trans    &DualKey 2 UP_ARROW  &kp J      &kp L                               &kp J             &kp L     &kp UP_ARROW       &kp Q           &kp I               &kp O
+&NukeChannel       &UndoRedo           &kp LEFT  &kp DOWN             &kp RIGHT  &NukeViewer                         &NukeViewer       &kp LEFT  &kp DOWN           &kp RIGHT       &UndoRedo           &NukeChannel
+&trans             &trans              &trans    &mt LEFT_SHIFT F     &trans     &mt LEFT_GUI K    &trans    &trans  &trans            &trans    &mt RIGHT_SHIFT F  &mt LEFT_ALT X  &kp Z               &NukeAddNode
+                                                 &DualLayer 5 0       &trans     &DualKey 0 SPACE  &trans    &trans  &DualKey 0 SPACE  &trans    &DualLayer 5 0
             >;
 
             label = "Nuke";
