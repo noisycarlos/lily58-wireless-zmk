@@ -771,7 +771,7 @@
         Layers {
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&bt BT_PRV  &bt BT_NXT    &to 3         &to 2         &to 12        &none                         &none         &to 12        &to 2         &to 3         &bt BT_PRV    &bt BT_NXT
+&bt BT_PRV  &bt BT_NXT    &to 3         &to 2         &tog 12       &none                         &none         &tog 12       &to 2         &to 3         &bt BT_PRV    &bt BT_NXT
 &none       &none         &to 7         &to 8         &to 6         &none                         &none         &to 6         &to 8         &to 7         &none         &none
 &none       &none         &none         &to 0         &to 9         &none         &none    &none  &none         &to 9         &to 0         &none         &none         &none
                                         &trans        &none         &none         &to 1    &to 1  &none         &none         &trans
@@ -856,8 +856,8 @@
             display-name = "Qwerty";
             bindings = <
 &kp GRAVE              &NumFn1  &NumFn2         &NumFn3           &NumFn4      &NumFn5                                                   &NumFn6          &NumFn7      &NumFn8                &NumFn9               &NumFn10  &NumFn12
-&kp TAB                &kp Q    &DualKey 3 W    &DualKey 2 E      &kp R        &kp T                                                     &kp Y            &kp U        &DualKey 2 I           &DualKey 3 O          &kp P  &NumFn11
-&CapsWordOrLayer 11 0  &kp A    &kp S           &kp D             &kp F        &DualKey 4 G                                              &DualKey 4 H     &kp J        &kp K                  &kp L                 &kp SEMI     &DualKey 11 APOS
+&kp TAB                &kp Q    &DualKey 3 W    &DualKey 2 E      &kp R        &kp T                                                     &kp Y            &kp U        &DualKey 2 I           &DualKey 3 O          &kp P     &NumFn11
+&CapsWordOrLayer 11 0  &kp A    &kp S           &kp D             &kp F        &DualKey 4 G                                              &DualKey 4 H     &kp J        &kp K                  &kp L                 &kp SEMI  &DualKey 11 APOS
 &to 0                  &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL V  &mt LEFT_GUI B  &kp ESC             &kp ESC               &mt RIGHT_GUI M  &mt RCTRL N  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
                                                 &DualLayer 5 0    &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &DualLayer 5 0
             >;
