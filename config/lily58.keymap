@@ -721,6 +721,18 @@
             key-positions = <41 40>;
             layers = <6>;
         };
+
+        NukeCreateReferenceR {
+            bindings = <&kp RA(K)>;
+            key-positions = <45 47>;
+            layers = <6>;
+        };
+
+        NukeCreateReferenceL {
+            bindings = <&kp LA(K)>;
+            key-positions = <40 38>;
+            layers = <6>;
+        };
     };
 
     keymap {
