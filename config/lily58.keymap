@@ -685,6 +685,42 @@
             key-positions = <31 32>;
             layers = <8>;
         };
+
+        NukeDuplicateL {
+            bindings = <&kp LA(C)>;
+            key-positions = <38 39>;
+            layers = <6>;
+        };
+
+        NukeDuplicateR {
+            bindings = <&kp RA(C)>;
+            key-positions = <46 47>;
+            layers = <6>;
+        };
+
+        NukeCopyL {
+            bindings = <&kp LC(C)>;
+            key-positions = <40 39>;
+            layers = <6>;
+        };
+
+        NukeCopyR {
+            bindings = <&kp RC(C)>;
+            key-positions = <47 46>;
+            layers = <6>;
+        };
+
+        NukePasteR {
+            bindings = <&kp RC(V)>;
+            key-positions = <45 44>;
+            layers = <6>;
+        };
+
+        NukePasteL {
+            bindings = <&kp LC(V)>;
+            key-positions = <41 40>;
+            layers = <6>;
+        };
     };
 
     keymap {
