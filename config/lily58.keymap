@@ -47,7 +47,10 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCEEMAIL";
             #binding-cells = <0>;
-            bindings = <&TypesNoisycarlosHey>, <&TypeCarlosKPEmail>;
+            bindings =
+                <&TypesNoisycarlosHey>,
+                <&TypeCarlosKPEmail>,
+                <&TypesAccountsKP>;
         };
 
         TapDanceD: TapDanceD {
@@ -581,13 +584,7 @@
         Type_1P: Type_1P {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&none &kp LS(A) &kp N3 &kp MINUS &kp N9 &kp N3 &kp LS(G) &kp LS(T) &kp LS(R) &kp LS(M) &kp MINUS &kp N8 &kp LS(B) &kp N6 &kp N2 &kp LS(Y) &kp LS(N) &kp MINUS &kp LS(M) &kp N6 &kp LS(A) &kp N6 &kp LS(W)>,
-                <&macro_wait_time 500>,
-                <&kp MINUS>,
-                <&macro_tap>,
-                <&kp N2 &kp LS(G) &kp LS(Z) &kp LS(H) &kp LS(E) &kp MINUS &kp N9 &kp LS(J) &kp N2 &kp N7 &kp LS(A) &kp MINUS &kp N9 &kp LS(N) &kp LS(P) &kp N7 &kp N4>;
-
+            bindings = <&none &kp LS(A) &kp N3 &kp MINUS &kp N9 &kp N3 &kp LS(G) &kp LS(T) &kp LS(R) &kp LS(M) &kp MINUS &kp N8 &kp LS(B) &kp N6 &kp N2 &kp LS(Y) &kp LS(N) &kp MINUS &kp LS(M) &kp N6 &kp LS(A) &kp N6 &kp LS(W) &kp MINUS &kp N2 &kp LS(G) &kp LS(Z) &kp LS(H) &kp LS(E) &kp MINUS &kp N9 &kp LS(J) &kp N2 &kp N7 &kp LS(A) &kp MINUS &kp N9 &kp LS(N) &kp LS(P) &kp N7 &kp N4>;
             label = "TYPE_1P";
         };
 
@@ -616,6 +613,13 @@
             #binding-cells = <0>;
             bindings = <&kp C &kp L &kp E &kp A &kp R>;
             label = "TYPECLEAR";
+        };
+
+        TypesAccountsKP: TypesAccountsKP {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp C &kp C &kp O &kp U &kp N &kp T &kp S &kp AT &kp K &kp I &kp N &kp E &kp T &kp I &kp C &kp P &kp O &kp R &kp T &kp A &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "TYPESACCOUNTSKP";
         };
     };
 
@@ -806,7 +810,7 @@
 
         Misc {
             bindings = <
-&trans      &Type_1P        &TapDanceEmail    &TapDanceNoisycarlos  &kp PRINTSCREEN       &trans                                       &kp LC(LG(LA(A)))      &kp LA(LC(LG(R)))      &kp LA(LC(LG(S)))      &kp LA(LC(LG(T)))    &kp LA(LG(LC(G)))     &kp K_SLEEP
+&trans      &Type_1P        &TapDanceEmail    &TapDanceNoisycarlos  &kp PRINTSCREEN       &trans                                       &kp LC(LG(LA(A)))      &kp LA(LC(LG(R)))      &kp LA(LC(LG(S)))      &kp LA(LC(LG(T)))    &kp LA(LG(LC(G)))     &none
 &mo 5       &trans          &TypeWWB          &TypeFixes            &TapDanceP            &TypeBasecamp                                &kp LG(LC(LA(J)))      &kp LA(LC(LG(L)))      &kp LA(LC(LG(U)))      &kp LC(LG(LA(Y)))    &kp LC(LG(LA(SEMI)))  &mo 5
 &to 6       &TapDanceTypeA  &TapDanceR        &TapDanceS            &kp C_VOL_DN          &kp C_VOL_UP                                 &kp LA(LC(LG(M)))      &kp LA(LC(LG(N)))      &kp LA(LC(LG(E)))      &kp LC(LA(LG(I)))    &kp LA(LC(LG(O)))     &kp LA(LC(LG(ENTER)))
 &kp K_PREV  &kp K_NEXT      &kp K_PLAY_PAUSE  &TapDanceC            &TapDanceD            &TypeMoves             &kp K_MUTE    &trans  &kp LA(LG(LC(K)))      &kp LA(LC(LG(H)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))  &trans
