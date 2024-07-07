@@ -451,70 +451,70 @@
         NukeAddNode: NukeAddNode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp TAB &to 0>;
+            bindings = <&kp TAB &to 12>;
             label = "NukeAddNode";
         };
 
         VimInsertNextChar: VimInsertNextChar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT &to 0>;
+            bindings = <&kp RIGHT &to 12>;
             label = "VIMINSERTNEXTCHAR";
         };
 
         VimInsertNextLine: VimInsertNextLine {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp END &kp ENTER &to 0>;
+            bindings = <&kp END &kp ENTER &to 12>;
             label = "VIMINSERTNEXTLINE";
         };
 
         VimSearch: VimSearch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(F) &to 0>;
+            bindings = <&kp LC(F) &to 12>;
             label = "VIMSEARCH";
         };
 
         VimYankLine: VimYankLine {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(END) &kp LC(C) &to 0>;
+            bindings = <&kp HOME &kp LS(END) &kp LC(C) &to 12>;
             label = "VIMYANKLINE";
         };
 
         VimDeleteLine: VimDeleteLine {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(END) &kp LC(X) &to 0>;
+            bindings = <&kp HOME &kp LS(END) &kp LC(X) &to 12>;
             label = "VIMDELETELINE";
         };
 
         VimInsertAtLineEnd: VimInsertAtLineEnd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp END &to 0>;
+            bindings = <&kp END &to 12>;
             label = "VIMINSERTATLINEEND";
         };
 
         VimChangeToLineEnd: VimChangeToLineEnd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(END) &kp BACKSPACE &to 0>;
+            bindings = <&kp LS(END) &kp BACKSPACE &to 12>;
             label = "VIMCHANGETOLINEEND";
         };
 
         VimInsertAtLineStart: VimInsertAtLineStart {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &to 0>;
+            bindings = <&kp HOME &to 12>;
             label = "VIMINSERTATLINESTART";
         };
 
         VimInsertLineAbove: VimInsertLineAbove {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp ENTER &kp UP_ARROW &to 0>;
+            bindings = <&kp HOME &kp ENTER &kp UP_ARROW &to 12>;
             label = "VIMINSERTLINEABOVE";
         };
 
@@ -528,7 +528,7 @@
         VimChangeLine: VimChangeLine {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(END) &kp LC(X) &to 0>;
+            bindings = <&kp HOME &kp LS(END) &kp LC(X) &to 12>;
             label = "VIMCHANGELINE";
         };
 
@@ -742,21 +742,14 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   =   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  D   |  V   |   "["  |  |  "]"  |  K   |  H    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
-
-            display-name = "-";
+        Qwerty {
+            display-name = "Qwerty";
             bindings = <
 &kp GRAVE              &NumFn1  &NumFn2         &NumFn3           &NumFn4      &NumFn5                                                   &NumFn6          &NumFn7      &NumFn8                &NumFn9               &NumFn10  &NumFn12
-&kp TAB                &kp Q    &DualKey 3 W    &DualKey 2 F      &kp P        &kp B                                                     &kp J            &kp L        &DualKey 2 U           &DualKey 3 Y          &kp SEMI  &NumFn11
-&CapsWordOrLayer 11 0  &kp A    &kp R           &kp S             &kp T        &DualKey 4 G                                              &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &DualKey 11 APOS
-&mo 5                  &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D  &mt LEFT_GUI V  &kp ESC             &kp ESC               &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
-                                                &DualLayer 5 0    &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &DualLayer 5 0
+&kp TAB                &kp Q    &DualKey 3 W    &DualKey 2 E      &kp R        &kp T                                                     &kp Y            &kp U        &DualKey 2 I           &DualKey 3 O          &kp P     &NumFn11
+&CapsWordOrLayer 11 0  &kp A    &kp S           &kp D             &kp F        &DualKey 4 G                                              &DualKey 4 H     &kp J        &kp K                  &kp L                 &kp SEMI  &DualKey 11 APOS
+&mo 5                  &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL V  &mt LEFT_GUI B  &kp ESC             &kp ESC               &mt RIGHT_GUI N  &mt RCTRL M  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
+                                                &DualLayer 5 12   &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &DualLayer 5 12
             >;
         };
 
@@ -770,11 +763,11 @@
 
             display-name = "Nav";
             bindings = <
-&kp LA(F4)      &DoubleNum01  &DoubleNum23   &DoubleNum45      &DoubleNum67   &DoubleNum89                       &trans         &trans       &trans          &trans         &trans           &trans
-&kp DELETE      &kp LC(W)     &kp LC(PG_UP)  &kp UP            &kp LC(PG_DN)  &kp LC(LS(T))                      &kp LC(PG_UP)  &kp PG_DN    &kp PG_UP       &kp LC(PG_DN)  &kp PRINTSCREEN  &kp DELETE
-&kp GRAVE       &UndoRedo     &kp LEFT       &kp DOWN          &kp RIGHT      &kp PRCNT                          &kp LEFT       &kp DOWN     &kp UP          &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
-&DualLayer 5 0  &trans        &trans         &mt LEFT_SHIFT S  &mt LCTRL D    &mt RIGHT_WIN F  &trans    &trans  &kp F          &kp H        &kp HOME        &kp END        &kp RBRC         &DualLayer 5 0
-                                             &DualLayer 5 0    &kp LA(TAB)    &trans           &trans    &trans  &trans         &kp RA(TAB)  &DualLayer 5 0
+&kp LA(F4)       &DoubleNum01  &DoubleNum23   &DoubleNum45      &DoubleNum67   &DoubleNum89                       &trans         &trans       &trans           &trans         &trans           &trans
+&kp DELETE       &kp LC(W)     &kp LC(PG_UP)  &kp UP            &kp LC(PG_DN)  &kp LC(LS(T))                      &kp LC(PG_UP)  &kp PG_DN    &kp PG_UP        &kp LC(PG_DN)  &kp PRINTSCREEN  &kp DELETE
+&kp GRAVE        &UndoRedo     &kp LEFT       &kp DOWN          &kp RIGHT      &kp PRCNT                          &kp LEFT       &kp DOWN     &kp UP           &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
+&DualLayer 5 12  &trans        &trans         &mt LEFT_SHIFT S  &mt LCTRL D    &mt RIGHT_WIN F  &trans    &trans  &kp F          &kp H        &kp HOME         &kp END        &kp RBRC         &DualLayer 5 12
+                                              &DualLayer 5 12   &kp LA(TAB)    &trans           &trans    &trans  &trans         &kp RA(TAB)  &DualLayer 5 12
             >;
         };
 
@@ -823,9 +816,9 @@
         Layers {
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&bt BT_PRV  &bt BT_NXT    &to 3         &to 2         &tog 12       &none                         &none         &tog 12       &to 2         &to 3         &bt BT_PRV    &bt BT_NXT
+&bt BT_PRV  &bt BT_NXT    &to 3         &to 2         &tog 0        &none                         &none         &tog 0        &to 2         &to 3         &bt BT_PRV    &bt BT_NXT
 &none       &none         &to 7         &to 8         &to 6         &none                         &none         &to 6         &to 8         &to 7         &none         &none
-&none       &none         &none         &to 0         &to 9         &none         &none    &none  &none         &to 9         &to 0         &none         &none         &none
+&none       &none         &none         &to 12        &to 9         &none         &none    &none  &none         &to 9         &to 12        &none         &none         &none
                                         &trans        &none         &none         &to 1    &to 1  &none         &none         &trans
             >;
 
@@ -834,11 +827,11 @@
 
         Nuke {
             bindings = <
-&NukeAddNode       &NukeTapSaveRender  &kp HOME  &NukePointer         &kp END    &NukeMerge                          &NukeMerge        &kp HOME  &NukePointer       &kp END         &NukeTapSaveRender  &kp D
-&NukeAddNodeDance  &kp Q               &trans    &DualKey 2 UP_ARROW  &kp J      &kp L                               &kp J             &kp L     &kp UP_ARROW       &kp Q           &kp I               &kp O
-&NukeChannel       &UndoRedo           &kp LEFT  &kp DOWN             &kp RIGHT  &NukeViewer                         &NukeViewer       &kp LEFT  &kp DOWN           &kp RIGHT       &UndoRedo           &NukeChannel
-&to 0              &trans              &trans    &mt LEFT_SHIFT F     &trans     &mt LEFT_GUI K    &trans    &trans  &trans            &trans    &mt RIGHT_SHIFT F  &mt LEFT_ALT X  &kp Z               &to 0
-                                                 &DualLayer 5 0       &trans     &DualKey 0 SPACE  &trans    &trans  &DualKey 0 SPACE  &trans    &DualLayer 5 0
+&NukeAddNode       &NukeTapSaveRender  &kp HOME  &NukePointer         &kp END    &NukeMerge                           &NukeMerge         &kp HOME  &NukePointer       &kp END         &NukeTapSaveRender  &kp D
+&NukeAddNodeDance  &kp Q               &trans    &DualKey 2 UP_ARROW  &kp J      &kp L                                &kp J              &kp L     &kp UP_ARROW       &kp Q           &kp I               &kp O
+&NukeChannel       &UndoRedo           &kp LEFT  &kp DOWN             &kp RIGHT  &NukeViewer                          &NukeViewer        &kp LEFT  &kp DOWN           &kp RIGHT       &UndoRedo           &NukeChannel
+&to 12             &trans              &trans    &mt LEFT_SHIFT F     &trans     &mt LEFT_GUI K     &trans    &trans  &trans             &trans    &mt RIGHT_SHIFT F  &mt LEFT_ALT X  &kp Z               &to 12
+                                                 &DualLayer 5 12      &trans     &DualKey 12 SPACE  &trans    &trans  &DualKey 12 SPACE  &trans    &DualLayer 5 12
             >;
 
             label = "Nuke";
@@ -870,11 +863,11 @@
 
         VimPrimary {
             bindings = <
-&trans  &trans              &trans         &trans  &kp END                       &trans                            &trans         &trans           &trans     &kp HOME   &trans              &trans
-&trans  &trans              &kp LC(RIGHT)  &trans  &kp LC(V)                     &kp LC(LEFT)                      &kp F3         &kp LC(RIGHT)    &kp LC(Z)  &VimYank   &trans              &trans
-&trans  &VimInsertNextChar  &kp LS(RIGHT)  &trans  &trans                        &kp LC(HOME)                      &kp LEFT       &kp DOWN         &kp UP     &kp RIGHT  &VimInsertNextLine  &trans
-&trans  &trans              &kp DEL        &mo 10  &VimDeleteHoldDoubleTap 10 0  &kp LEFT_SHIFT  &trans    &trans  &kp LS(SPACE)  &DualLayer 10 0  &mo 10     &kp TAB    &VimSearch          &trans
-                                           &trans  &trans                        &trans          &trans    &trans  &trans         &trans           &trans
+&trans  &trans              &trans         &trans  &kp END                       &trans                            &trans         &trans            &trans     &kp HOME   &trans              &trans
+&trans  &trans              &kp LC(RIGHT)  &trans  &kp LC(V)                     &kp LC(LEFT)                      &kp F3         &kp LC(RIGHT)     &kp LC(Z)  &VimYank   &trans              &trans
+&trans  &VimInsertNextChar  &kp LS(RIGHT)  &trans  &trans                        &kp LC(HOME)                      &kp LEFT       &kp DOWN          &kp UP     &kp RIGHT  &VimInsertNextLine  &trans
+&trans  &trans              &kp DEL        &mo 10  &VimDeleteHoldDoubleTap 10 0  &kp LEFT_SHIFT  &trans    &trans  &kp LS(SPACE)  &DualLayer 10 12  &mo 10     &kp TAB    &VimSearch          &trans
+                                           &trans  &trans                        &trans          &trans    &trans  &trans         &trans            &trans
             >;
 
             label = "VIM";
@@ -904,15 +897,24 @@
             label = "Quick";
         };
 
-        Qwerty {
-            display-name = "Qwerty";
+        Colemak {
+            // ------------------------------------------------------------------------------------------------------------
+            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   =   |
+            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
+            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | SHIFT |  Z  |  X  |  C   |  D   |  V   |   "["  |  |  "]"  |  K   |  H    |  ,    |  .   |   /   | SHIFT |
+            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+
+            display-name = "-";
             bindings = <
 &kp GRAVE              &NumFn1  &NumFn2         &NumFn3           &NumFn4      &NumFn5                                                   &NumFn6          &NumFn7      &NumFn8                &NumFn9               &NumFn10  &NumFn12
-&kp TAB                &kp Q    &DualKey 3 W    &DualKey 2 E      &kp R        &kp T                                                     &kp Y            &kp U        &DualKey 2 I           &DualKey 3 O          &kp P     &NumFn11
-&CapsWordOrLayer 11 0  &kp A    &kp S           &kp D             &kp F        &DualKey 4 G                                              &DualKey 4 H     &kp J        &kp K                  &kp L                 &kp SEMI  &DualKey 11 APOS
-&to 0                  &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL V  &mt LEFT_GUI B  &kp ESC             &kp ESC               &mt RIGHT_GUI N  &mt RCTRL M  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
-                                                &DualLayer 5 0    &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &DualLayer 5 0
+&kp TAB                &kp Q    &DualKey 3 W    &DualKey 2 F      &kp P        &kp B                                                     &kp J            &kp L        &DualKey 2 U           &DualKey 3 Y          &kp SEMI  &NumFn11
+&CapsWordOrLayer 11 0  &kp A    &kp R           &kp S             &kp T        &DualKey 4 G                                              &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &DualKey 11 APOS
+&mo 5                  &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D  &mt LEFT_GUI V  &kp ESC             &kp ESC               &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
+                                                &DualLayer 5 12   &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &DualLayer 5 12
             >;
+
+            label = "Colemak";
         };
     };
 };
