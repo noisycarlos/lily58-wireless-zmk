@@ -749,7 +749,7 @@
 &kp TAB                &kp Q    &DualKey 3 W    &DualKey 2 E      &kp R        &kp T                                                     &kp Y            &kp U        &DualKey 2 I           &DualKey 3 O          &kp P     &NumFn11
 &CapsWordOrLayer 11 0  &kp A    &kp S           &kp D             &kp F        &DualKey 4 G                                              &DualKey 4 H     &kp J        &kp K                  &kp L                 &kp SEMI  &DualKey 11 APOS
 &mo 5                  &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL V  &mt LEFT_GUI B  &kp ESC             &kp ESC               &mt RIGHT_GUI N  &mt RCTRL M  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
-                                                &DualLayer 5 12   &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &DualLayer 5 12
+                                                &DualLayer 5 0    &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &DualLayer 5 0
             >;
         };
 
@@ -763,11 +763,11 @@
 
             display-name = "Nav";
             bindings = <
-&kp LA(F4)       &DoubleNum01  &DoubleNum23   &DoubleNum45      &DoubleNum67   &DoubleNum89                       &trans         &trans       &trans           &trans         &trans           &trans
-&kp DELETE       &kp LC(W)     &kp LC(PG_UP)  &kp UP            &kp LC(PG_DN)  &kp LC(LS(T))                      &kp LC(PG_UP)  &kp PG_DN    &kp PG_UP        &kp LC(PG_DN)  &kp PRINTSCREEN  &kp DELETE
-&kp GRAVE        &UndoRedo     &kp LEFT       &kp DOWN          &kp RIGHT      &kp PRCNT                          &kp LEFT       &kp DOWN     &kp UP           &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
-&DualLayer 5 12  &trans        &trans         &mt LEFT_SHIFT S  &mt LCTRL D    &mt RIGHT_WIN F  &trans    &trans  &kp F          &kp H        &kp HOME         &kp END        &kp RBRC         &DualLayer 5 12
-                                              &DualLayer 5 12   &kp LA(TAB)    &trans           &trans    &trans  &trans         &kp RA(TAB)  &DualLayer 5 12
+&kp LA(F4)      &DoubleNum01  &DoubleNum23   &DoubleNum45      &DoubleNum67   &DoubleNum89                       &trans         &trans       &trans          &trans         &trans           &trans
+&kp DELETE      &kp LC(W)     &kp LC(PG_UP)  &kp UP            &kp LC(PG_DN)  &kp LC(LS(T))                      &kp LC(PG_UP)  &kp PG_DN    &kp PG_UP       &kp LC(PG_DN)  &kp PRINTSCREEN  &kp DELETE
+&kp GRAVE       &UndoRedo     &kp LEFT       &kp DOWN          &kp RIGHT      &kp PRCNT                          &kp LEFT       &kp DOWN     &kp UP          &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
+&DualLayer 5 0  &trans        &trans         &mt LEFT_SHIFT S  &mt LCTRL D    &mt RIGHT_WIN F  &trans    &trans  &kp F          &kp H        &kp HOME        &kp END        &kp RBRC         &DualLayer 5 0
+                                             &DualLayer 5 0    &kp LA(TAB)    &trans           &trans    &trans  &trans         &kp RA(TAB)  &DualLayer 5 0
             >;
         };
 
@@ -827,11 +827,11 @@
 
         Nuke {
             bindings = <
-&NukeAddNode       &NukeTapSaveRender  &kp HOME  &NukePointer         &kp END    &NukeMerge                           &NukeMerge         &kp HOME  &NukePointer       &kp END         &NukeTapSaveRender  &kp D
-&NukeAddNodeDance  &kp Q               &trans    &DualKey 2 UP_ARROW  &kp J      &kp L                                &kp J              &kp L     &kp UP_ARROW       &kp Q           &kp I               &kp O
-&NukeChannel       &UndoRedo           &kp LEFT  &kp DOWN             &kp RIGHT  &NukeViewer                          &NukeViewer        &kp LEFT  &kp DOWN           &kp RIGHT       &UndoRedo           &NukeChannel
-&to 12             &trans              &trans    &mt LEFT_SHIFT F     &trans     &mt LEFT_GUI K     &trans    &trans  &trans             &trans    &mt RIGHT_SHIFT F  &mt LEFT_ALT X  &kp Z               &to 12
-                                                 &DualLayer 5 12      &trans     &DualKey 12 SPACE  &trans    &trans  &DualKey 12 SPACE  &trans    &DualLayer 5 12
+&NukeAddNode       &NukeTapSaveRender  &kp HOME  &NukePointer         &kp END    &NukeMerge                          &NukeMerge        &kp HOME  &NukePointer       &kp END         &NukeTapSaveRender  &kp D
+&NukeAddNodeDance  &kp Q               &trans    &DualKey 2 UP_ARROW  &kp J      &kp L                               &kp J             &kp L     &kp UP_ARROW       &kp Q           &kp I               &kp O
+&NukeChannel       &UndoRedo           &kp LEFT  &kp DOWN             &kp RIGHT  &NukeViewer                         &NukeViewer       &kp LEFT  &kp DOWN           &kp RIGHT       &UndoRedo           &NukeChannel
+&to 12             &trans              &trans    &mt LEFT_SHIFT F     &trans     &mt LEFT_GUI K    &trans    &trans  &trans            &trans    &mt RIGHT_SHIFT F  &mt LEFT_ALT X  &kp Z               &to 12
+                                                 &DualLayer 5 0       &trans     &DualKey 0 SPACE  &trans    &trans  &DualKey 0 SPACE  &trans    &DualLayer 5 0
             >;
 
             label = "Nuke";
@@ -911,7 +911,7 @@
 &kp TAB                &kp Q    &DualKey 3 W    &DualKey 2 F      &kp P        &kp B                                                     &kp J            &kp L        &DualKey 2 U           &DualKey 3 Y          &kp SEMI  &NumFn11
 &CapsWordOrLayer 11 0  &kp A    &kp R           &kp S             &kp T        &DualKey 4 G                                              &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &DualKey 11 APOS
 &mo 5                  &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D  &mt LEFT_GUI V  &kp ESC             &kp ESC               &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
-                                                &DualLayer 5 12   &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &DualLayer 5 12
+                                                &mo 5             &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &mo 5
             >;
 
             label = "Colemak";
