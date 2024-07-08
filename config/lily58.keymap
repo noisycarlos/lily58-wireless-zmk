@@ -723,7 +723,7 @@
         NukePasteL {
             bindings = <&kp LC(V)>;
             key-positions = <41 40>;
-            layers = <6>;
+            layers = <0 6>;
         };
 
         NukeCreateReferenceR {
@@ -887,11 +887,11 @@
 
         QuickActions {
             bindings = <
-&trans  &trans    &trans  &trans       &trans         &trans                    &trans  &trans         &trans       &trans     &trans                   &trans
-&trans  &trans    &trans  &trans       &trans         &trans                    &trans  &trans         &trans       &UndoRedo  &CopyCutTapDance         &trans
-&trans  &kp CAPS  &trans  &kp LA(TAB)  &kp LA(GRAVE)  &trans                    &trans  &kp RA(GRAVE)  &kp LA(TAB)  &UndoRedo  &PasteSelectAllTapDance  &trans
-&trans  &trans    &trans  &trans       &trans         &trans  &trans    &trans  &trans  &trans         &trans       &none      &trans                   &trans
-                          &trans       &trans         &trans  &trans    &trans  &trans  &trans         &trans
+&trans  &trans            &trans                   &trans       &trans         &trans                    &trans  &trans         &trans       &trans     &trans                   &trans
+&trans  &CopyCutTapDance  &PasteSelectAllTapDance  &trans       &trans         &trans                    &trans  &trans         &trans       &UndoRedo  &CopyCutTapDance         &trans
+&trans  &kp CAPS          &trans                   &kp LA(TAB)  &kp LA(GRAVE)  &trans                    &trans  &kp RA(GRAVE)  &kp LA(TAB)  &UndoRedo  &PasteSelectAllTapDance  &trans
+&trans  &trans            &trans                   &trans       &kp LC(V)      &trans  &trans    &trans  &trans  &trans         &trans       &none      &trans                   &trans
+                                                   &trans       &trans         &trans  &trans    &trans  &trans  &trans         &trans
             >;
 
             label = "Quick";
