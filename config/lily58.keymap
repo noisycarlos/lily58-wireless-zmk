@@ -723,7 +723,7 @@
         NukePasteL {
             bindings = <&kp LC(V)>;
             key-positions = <41 40>;
-            layers = <0 6>;
+            layers = <6>;
         };
 
         NukeCreateReferenceR {
@@ -815,11 +815,11 @@
 
         Layers {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&bt BT_PRV  &bt BT_NXT    &to 3         &to 2         &tog 0        &none                         &none         &tog 0        &to 2         &to 3         &bt BT_PRV    &bt BT_NXT
-&none       &none         &to 7         &to 8         &to 6         &none                         &none         &to 6         &to 8         &to 7         &none         &none
-&none       &none         &none         &to 12        &to 9         &none         &none    &none  &none         &to 9         &to 12        &none         &none         &none
-                                        &trans        &none         &none         &to 1    &to 1  &none         &none         &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                   &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&bt BT_PRV  &bt BT_NXT    &to 3         &to 2         &tog 0        &to 12                         &to 12         &tog 0        &to 2         &to 3         &bt BT_PRV    &bt BT_NXT
+&none       &kp LC(A)     &to 7         &to 8         &to 6         &to 9                          &to 9          &to 6         &to 8         &to 7         &kp RC(A)     &none
+&none       &none         &kp LC(X)     &kp LC(C)     &kp LC(V)     &kp LC(LS(V))  &none    &none  &kp RC(RS(V))  &kp RC(V)     &kp RC(C)     &kp RC(X)     &none         &none
+                                        &trans        &none         &none          &to 1    &to 1  &none          &none         &trans
             >;
 
             label = "Lay/BT";
