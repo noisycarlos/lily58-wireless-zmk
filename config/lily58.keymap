@@ -451,70 +451,70 @@
         NukeAddNode: NukeAddNode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp TAB &to 12>;
+            bindings = <&kp TAB &to 0>;
             label = "NukeAddNode";
         };
 
         VimInsertNextChar: VimInsertNextChar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT &to 12>;
+            bindings = <&kp RIGHT &to 0>;
             label = "VIMINSERTNEXTCHAR";
         };
 
         VimInsertNextLine: VimInsertNextLine {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp END &kp ENTER &to 12>;
+            bindings = <&kp END &kp ENTER &to 0>;
             label = "VIMINSERTNEXTLINE";
         };
 
         VimSearch: VimSearch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(F) &to 12>;
+            bindings = <&kp LC(F) &to 0>;
             label = "VIMSEARCH";
         };
 
         VimYankLine: VimYankLine {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(END) &kp LC(C) &to 12>;
+            bindings = <&kp HOME &kp LS(END) &kp LC(C)>;
             label = "VIMYANKLINE";
         };
 
         VimDeleteLine: VimDeleteLine {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(END) &kp LC(X) &to 12>;
+            bindings = <&kp HOME &kp LS(END) &kp LC(X)>;
             label = "VIMDELETELINE";
         };
 
         VimInsertAtLineEnd: VimInsertAtLineEnd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp END &to 12>;
+            bindings = <&kp END &to 0>;
             label = "VIMINSERTATLINEEND";
         };
 
         VimChangeToLineEnd: VimChangeToLineEnd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(END) &kp BACKSPACE &to 12>;
+            bindings = <&kp LS(END) &kp BACKSPACE &to 0>;
             label = "VIMCHANGETOLINEEND";
         };
 
         VimInsertAtLineStart: VimInsertAtLineStart {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &to 12>;
+            bindings = <&kp HOME &to 0>;
             label = "VIMINSERTATLINESTART";
         };
 
         VimInsertLineAbove: VimInsertLineAbove {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp ENTER &kp UP_ARROW &to 12>;
+            bindings = <&kp HOME &kp ENTER &kp UP_ARROW &to 0>;
             label = "VIMINSERTLINEABOVE";
         };
 
@@ -528,7 +528,7 @@
         VimChangeLine: VimChangeLine {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(END) &kp LC(X) &to 12>;
+            bindings = <&kp HOME &kp LS(END) &kp LC(X) &to 0>;
             label = "VIMCHANGELINE";
         };
 
@@ -588,19 +588,6 @@
             label = "TYPE_1P";
         };
 
-        KRunnerClear: KRunnerClear {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LG(F12)>,
-                <&macro_wait_time 250>,
-                <&kp LC(A)>,
-                <&macro_wait_time 50>,
-                <&kp DELETE>;
-
-            label = "KRUNNERCLEAR";
-        };
-
         TypeCarlos: TypeCarlos {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -627,12 +614,12 @@
         compatible = "zmk,combos";
 
         WindowSwitcherL {
-            bindings = <&KRunnerClear>;
+            bindings = <&kp LG(F12)>;
             key-positions = <53 42>;
         };
 
         WindowSwitcherR {
-            bindings = <&KRunnerClear>;
+            bindings = <&kp RG(F12)>;
             key-positions = <43 54>;
         };
 
