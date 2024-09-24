@@ -732,10 +732,10 @@
         Qwerty {
             display-name = "Qwerty";
             bindings = <
-&kp GRAVE              &NumFn1  &NumFn2         &NumFn3           &NumFn4      &NumFn5                                                   &NumFn6          &NumFn7      &NumFn8                &NumFn9               &NumFn10  &NumFn12
-&kp TAB                &kp Q    &DualKey 3 W    &DualKey 2 E      &kp R        &kp T                                                     &kp Y            &kp U        &DualKey 2 I           &DualKey 3 O          &kp P     &NumFn11
-&CapsWordOrLayer 11 0  &kp A    &kp S           &kp D             &kp F        &DualKey 4 G                                              &DualKey 4 H     &kp J        &kp K                  &kp L                 &kp SEMI  &DualKey 11 APOS
-&mo 5                  &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL V  &mt LEFT_GUI B  &kp ESC             &kp ESC               &mt RIGHT_GUI N  &mt RCTRL M  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
+&kp GRAVE              &NumFn1  &NumFn2         &NumFn3           &NumFn4      &NumFn5                                                   &NumFn6          &NumFn7      &NumFn8           &NumFn9              &NumFn10  &NumFn12
+&kp TAB                &kp Q    &DualKey 3 W    &DualKey 2 E      &kp R        &kp T                                                     &kp Y            &kp U        &DualKey 2 I      &DualKey 3 O         &kp P     &NumFn11
+&CapsWordOrLayer 11 0  &kp A    &kp S           &kp D             &kp F        &DualKey 4 G                                              &DualKey 4 H     &kp J        &kp K             &kp L                &kp SEMI  &DualKey 11 APOS
+&mo 5                  &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL V  &mt LEFT_GUI B  &kp ESC             &kp ESC               &mt RIGHT_GUI N  &mt LCTRL M  &mt LSHIFT COMMA  &mt LEFT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
                                                 &DualLayer 5 0    &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &DualLayer 5 0
             >;
         };
