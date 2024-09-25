@@ -78,7 +78,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCENOISYCARLOS";
             #binding-cells = <0>;
-            bindings = <&TypeNoisycarlos>, <&TypeGithub>, <&types_gitea_path>;
+            bindings = <&TypeNoisycarlos>, <&Full_GiteaPath>, <&TypeGithub>;
         };
 
         UndoRedo: UndoRedo {
@@ -605,8 +605,16 @@
         types_gitea_path: types_gitea_path {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp G &kp I &kp T &kp DOT &kp N &kp O &kp I &kp S &kp Y &kp S &kp E &kp R &kp V &kp E &kp R &kp DOT &kp S &kp B &kp S &kp FSLH &kp N &kp O &kp I &kp S &kp Y &kp C &kp A &kp R &kp L &kp O &kp S &kp FSLH>;
+            bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp G &kp I &kp T &kp DOT &kp N &kp O &kp I &kp S &kp Y &kp S &kp E &kp R &kp V &kp E &kp R &kp DOT &kp S &kp B &kp S &kp FSLH>;
             label = "TYPES_GITEA_PATH";
+        };
+
+        Full_GiteaPath: Full_GiteaPath {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&types_gitea_path>, <&macro_press>, <&TypeNoisycarlos>;
+
+            label = "FULL_GITEAPATH";
         };
     };
 
