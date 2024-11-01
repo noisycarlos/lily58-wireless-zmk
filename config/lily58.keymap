@@ -627,7 +627,7 @@
         };
 
         WindowSwitcherR {
-            bindings = <&kp RIGHT_WIN>;
+            bindings = <&kp LEFT_WIN>;
             key-positions = <43 54>;
         };
 
