@@ -822,11 +822,11 @@
 
         Nuke {
             bindings = <
-&NukeAddNode       &NukeTapSaveRender  &kp HOME  &NukePointer         &kp END      &NukeMerge                          &NukeMerge        &kp HOME             &NukePointer       &kp END          &NukeTapSaveRender  &kp D
-&NukeAddNodeDance  &kp Q               &trans    &DualKey 2 UP_ARROW  &kp J        &kp L                               &kp J             &kp L                &kp UP_ARROW       &kp Q            &kp I               &kp O
-&NukeChannel       &UndoRedo           &kp LEFT  &kp DOWN             &kp RIGHT    &NukeViewer                         &NukeViewer       &kp LEFT             &kp DOWN           &kp RIGHT        &UndoRedo           &NukeChannel
-&to 0              &trans              &trans    &mt LEFT_SHIFT F     &mt LCTRL D  &DualKey 2 K      &trans    &trans  &kp K             &mt RIGHT_CONTROL H  &mt RIGHT_SHIFT F  &mt RIGHT_ALT X  &kp Z               &to 0
-                                                 &DualLayer 5 0       &trans       &DualKey 0 SPACE  &trans    &trans  &DualKey 0 SPACE  &trans               &DualLayer 5 0
+&NukeAddNode       &NukeTapSaveRender  &kp HOME  &NukePointer      &kp END      &NukeMerge                          &NukeMerge        &kp HOME             &NukePointer       &kp END    &NukeTapSaveRender  &kp D
+&NukeAddNodeDance  &kp Q               &trans    &kp UP_ARROW      &kp J        &kp L                               &kp J             &kp L                &kp UP_ARROW       &kp Q      &kp I               &kp O
+&NukeChannel       &UndoRedo           &kp LEFT  &kp DOWN          &kp RIGHT    &NukeViewer                         &NukeViewer       &kp LEFT             &kp DOWN           &kp RIGHT  &UndoRedo           &NukeChannel
+&to 0              &trans              &mo 2     &mt LEFT_SHIFT F  &mt LCTRL D  &kp K             &trans    &trans  &kp K             &mt RIGHT_CONTROL H  &mt RIGHT_SHIFT F  &mo 2      &kp Z               &to 0
+                                                 &DualLayer 5 0    &trans       &DualKey 0 SPACE  &trans    &trans  &DualKey 0 SPACE  &trans               &DualLayer 5 0
             >;
 
             label = "Nuke";
