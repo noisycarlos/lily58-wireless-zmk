@@ -776,11 +776,11 @@
 
             display-name = "Num";
             bindings = <
-&kp LA(F4)      &kp F1     &kp F2  &kp F3  &kp F4      &kp F5                          &kp F6           &kp F7           &kp F8           &kp F9           &kp F10       &kp F12
-&trans          &kp EQUAL  &kp N7  &kp N8  &kp N9      &kp FSLH                        &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL  &kp F11
-&kp K_CALC      &kp PLUS   &kp N4  &kp N5  &kp N6      &kp STAR                        &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &kp K_CALCULATOR
-&kp KP_NUMLOCK  &kp RET    &kp N1  &kp N2  &kp N3      &kp MINUS  &trans    &trans     &kp KP_SUBTRACT  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &kp LS(LC(KP_NUMLOCK))
-                                   &trans  &kp PERIOD  &kp N0     &trans    &kp ENTER  &kp KP_NUMBER_0  &kp KP_DOT       &trans
+&kp LA(F4)      &kp F1     &kp F2  &kp F3             &kp F4      &kp F5                          &kp F6           &kp F7           &kp F8           &kp F9           &kp F10       &kp F12
+&trans          &kp EQUAL  &kp N7  &kp N8             &kp N9      &kp FSLH                        &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL  &kp F11
+&kp K_CALC      &kp PLUS   &kp N4  &kp N5             &kp N6      &kp STAR                        &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &kp K_CALCULATOR
+&kp KP_NUMLOCK  &kp RET    &kp N1  &mt LEFT_SHIFT N2  &kp N3      &kp MINUS  &trans    &trans     &kp KP_SUBTRACT  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &kp LS(LC(KP_NUMLOCK))
+                                   &trans             &kp PERIOD  &kp N0     &trans    &kp ENTER  &kp KP_NUMBER_0  &kp KP_DOT       &trans
             >;
         };
 
@@ -825,7 +825,7 @@
 &NukeAddNode       &NukeTapSaveRender  &kp HOME  &NukePointer         &kp END      &NukeMerge                          &NukeMerge        &kp HOME             &NukePointer       &kp END          &NukeTapSaveRender  &kp D
 &NukeAddNodeDance  &kp Q               &trans    &DualKey 2 UP_ARROW  &kp J        &kp L                               &kp J             &kp L                &kp UP_ARROW       &kp Q            &kp I               &kp O
 &NukeChannel       &UndoRedo           &kp LEFT  &kp DOWN             &kp RIGHT    &NukeViewer                         &NukeViewer       &kp LEFT             &kp DOWN           &kp RIGHT        &UndoRedo           &NukeChannel
-&to 0              &trans              &trans    &mt LEFT_SHIFT F     &mt LCTRL D  &mt LEFT_GUI K    &trans    &trans  &kp K             &mt RIGHT_CONTROL H  &mt RIGHT_SHIFT F  &mt RIGHT_ALT X  &kp Z               &to 0
+&to 0              &trans              &trans    &mt LEFT_SHIFT F     &mt LCTRL D  &DualKey 2 K      &trans    &trans  &kp K             &mt RIGHT_CONTROL H  &mt RIGHT_SHIFT F  &mt RIGHT_ALT X  &kp Z               &to 0
                                                  &DualLayer 5 0       &trans       &DualKey 0 SPACE  &trans    &trans  &DualKey 0 SPACE  &trans               &DualLayer 5 0
             >;
 
