@@ -913,13 +913,13 @@
         };
 
         Nuke_Numbers {
-            display-name = "Num";
+            display-name = "NukeNum";
             bindings = <
 &NukeAddNode       &kp F1     &kp I     &NukePointer      &kp O      &NukeMerge                        &NukeMerge   &kp I            &NukePointer                &kp O            &NukeTapSaveRender  &kp D
 &NukeAddNodeDance  &kp Q      &kp HOME  &kp UP_ARROW      &kp END    &NukeViewer                       &NukeViewer  &kp KP_NUMBER_7  &kp KP_NUMBER_8             &kp KP_NUMBER_9  &kp Q               &kp F11
 &NukeChannel       &UndoRedo  &kp LEFT  &kp DOWN_ARROW    &kp RIGHT  &kp H                             &kp H        &kp KP_NUMBER_4  &kp KP_NUMBER_5             &kp KP_NUMBER_6  &UndoRedo           &NukeChannel
 &to 0              &kp Z      &kp J     &mt LEFT_SHIFT K  &kp L      &to 6        &trans    &trans     &to 6        &kp KP_NUMBER_1  &mt LEFT_SHIFT KP_NUMBER_2  &kp KP_NUMBER_3  &kp Z               &to 0
-                                        &trans            &trans     &trans       &trans    &kp ENTER  &trans       &trans           &trans
+                                        &trans            &trans     &trans       &trans    &kp ENTER  &kp KP_N0    &kp KP_DOT       &trans
             >;
         };
     };
