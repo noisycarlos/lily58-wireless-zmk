@@ -280,7 +280,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "RAILSOPENTAGTAP";
             #binding-cells = <0>;
-            bindings = <&RailsOpenTag>, <&RailsOpenTagContent>;
+            bindings = <&RailsOpenTag>, <&RailsOpenTagContent>, <&RailsComment>;
         };
 
         CapsWordOrLayer: CapsWordOrLayer {
@@ -577,21 +577,21 @@
         RailsOpenTag: rails_opentag {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LT &kp PRCNT>;
+            bindings = <&kp LT &kp PRCNT &kp SPACE>;
             label = "RAILS_OPENTAG";
         };
 
         RailsCloseTag: rails_closetag {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PRCNT &kp GT>;
+            bindings = <&kp SPACE &kp PRCNT &kp GT>;
             label = "RAILS_CLOSETAG";
         };
 
         RailsOpenTagContent: RailsOpenTagContent {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LT &kp PRCNT &kp EQUAL>;
+            bindings = <&kp LT &kp PRCNT &kp EQUAL &kp SPACE>;
             label = "RAILSOPENTAGCONTENT";
         };
 
@@ -629,6 +629,13 @@
             bindings = <&types_gitea_path>, <&macro_press>, <&TypeNoisycarlos>;
 
             label = "FULL_GITEAPATH";
+        };
+
+        RailsComment: RailsComment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp PRCNT &kp HASH &kp SPACE>;
+            label = "RAILSCOMMENT";
         };
     };
 
