@@ -317,7 +317,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NUKEADDNODEDANCE";
             #binding-cells = <0>;
-            bindings = <&kp TAB>, <&NukeAddNode>;
+            bindings = <&kp TAB>, <&NukeAddNode>, <&DoubleTab>;
         };
 
         NukeTapSaveRender: NukeTapSaveRender {
@@ -637,6 +637,13 @@
             bindings = <&kp LT &kp PRCNT &kp HASH &kp SPACE>;
             label = "RAILSCOMMENT";
         };
+
+        DoubleTab: DoubleTab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp TAB>;
+            label = "DOUBLETAB";
+        };
     };
 
     combos {
@@ -843,11 +850,11 @@
 
         Nuke {
             bindings = <
-&NukeAddNode       &kp D      &kp I           &NukePointer      &kp O        &NukeMerge                          &NukeMerge        &kp I                &NukePointer       &kp O           &NukeTapSaveRender  &kp D
-&NukeAddNodeDance  &kp Q      &kp HOME        &kp UP_ARROW      &kp END      &to 13                              &to 13            &NukeHomeEnd         &kp UP_ARROW       &kp Q           &kp HOME            &kp END
-&NukeChannel       &UndoRedo  &kp LEFT        &kp DOWN          &kp RIGHT    &NukeViewer                         &NukeViewer       &kp LEFT             &kp DOWN           &kp RIGHT       &UndoRedo           &NukeChannel
-&to 0              &trans     &mt LEFT_ALT J  &mt LEFT_SHIFT K  &mt LCTRL L  &NukeFit          &trans    &trans  &NukeFit          &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp Z               &to 0
-                                              &DualLayer 5 0    &trans       &DualKey 0 SPACE  &trans    &trans  &DualKey 0 SPACE  &trans               &DualLayer 5 0
+&NukeAddNode       &kp D      &kp I           &to 13            &kp O        &NukeMerge                      &NukeMerge    &kp I                &to 13             &kp O           &NukeTapSaveRender  &kp D
+&NukeAddNodeDance  &kp Q      &kp HOME        &kp UP_ARROW      &kp END      &NukePointer                    &NukePointer  &kp HOME             &kp UP_ARROW       &kp END         &kp Q               &NukeAddNode
+&NukeChannel       &UndoRedo  &kp LEFT        &kp DOWN          &kp RIGHT    &NukeViewer                     &NukeViewer   &kp LEFT             &kp DOWN           &kp RIGHT       &UndoRedo           &NukeChannel
+&to 0              &trans     &mt LEFT_ALT J  &mt LEFT_SHIFT K  &mt LCTRL L  &NukeFit      &trans    &trans  &NukeFit      &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp Z               &to 0
+                                              &to 0             &trans       &kp SPACE     &trans    &trans  &kp SPACE     &trans               &to 0
             >;
 
             label = "Nuke";
@@ -936,11 +943,11 @@
         Nuke_Numbers {
             display-name = "NukeNum";
             bindings = <
-&NukeAddNode       &kp F1     &kp I     &NukePointer      &kp O      &NukeMerge                        &NukeMerge   &kp I            &NukePointer                &kp O            &NukeTapSaveRender  &kp D
-&NukeAddNodeDance  &kp Q      &kp HOME  &kp UP_ARROW      &kp END    &to 6                             &to 6        &kp KP_NUMBER_7  &kp KP_NUMBER_8             &kp KP_NUMBER_9  &kp Q               &NukeHomeEnd
-&NukeChannel       &UndoRedo  &kp LEFT  &kp DOWN_ARROW    &kp RIGHT  &NukeViewer                       &NukeViewer  &kp KP_NUMBER_4  &mt LEFT_SHIFT LOCKING_NUM  &kp KP_NUMBER_6  &UndoRedo           &NukeChannel
-&to 0              &kp Z      &kp J     &mt LEFT_SHIFT K  &kp L      &NukeFit     &trans    &trans     &NukeFit     &kp KP_NUMBER_1  &kp KP_NUMBER_2             &kp KP_NUMBER_3  &kp Z               &to 0
-                                        &trans            &trans     &trans       &trans    &kp ENTER  &kp KP_N0    &kp KP_DOT       &trans
+&NukeAddNode       &kp F1     &kp I     &to 6             &kp O      &NukeMerge                        &NukeMerge    &kp I            &to 6                       &kp O            &NukeTapSaveRender  &kp D
+&NukeAddNodeDance  &kp Q      &kp HOME  &kp UP_ARROW      &kp END    &NukeViewer                       &NukePointer  &kp KP_NUMBER_7  &kp KP_NUMBER_8             &kp KP_NUMBER_9  &kp Q               &NukeHomeEnd
+&NukeChannel       &UndoRedo  &kp LEFT  &kp DOWN_ARROW    &kp RIGHT  &NukeViewer                       &NukeViewer   &kp KP_NUMBER_4  &mt LEFT_SHIFT LOCKING_NUM  &kp KP_NUMBER_6  &UndoRedo           &NukeChannel
+&to 0              &kp Z      &kp J     &mt LEFT_SHIFT K  &kp L      &NukeFit     &trans    &trans     &NukeFit      &kp KP_NUMBER_1  &kp KP_NUMBER_2             &kp KP_NUMBER_3  &kp Z               &to 0
+                                        &trans            &trans     &trans       &trans    &kp ENTER  &kp KP_N0     &kp KP_DOT       &trans
             >;
         };
     };
