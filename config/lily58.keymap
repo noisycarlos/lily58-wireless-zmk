@@ -650,12 +650,12 @@
         compatible = "zmk,combos";
 
         WindowSwitcherL {
-            bindings = <&kp LEFT_WIN>;
+            bindings = <&kp LG(F12)>;
             key-positions = <53 42>;
         };
 
         WindowSwitcherR {
-            bindings = <&kp LEFT_WIN>;
+            bindings = <&kp LG(F12)>;
             key-positions = <43 54>;
         };
 
