@@ -340,6 +340,13 @@
             #binding-cells = <0>;
             bindings = <&kp HOME>, <&kp END>;
         };
+
+        Plasticity_R_mods_tap_dance: Plasticity_R_mods_tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PLASTICITY_R_MODS_TAP_DANCE";
+            #binding-cells = <0>;
+            bindings = <&kp R>, <&kp LS(R)>, <&kp LS(LA(R))>;
+        };
     };
 
     macros {
@@ -860,16 +867,16 @@
             label = "Nuke";
         };
 
-        Fusion360 {
+        Plasticity {
             bindings = <
-&trans   &trans     &trans      &trans        &trans       &trans                      &trans    &trans       &trans             &trans           &trans     &trans
-&kp TAB  &kp Q      &kp P       &kp F         &kp L        &trans                      &trans    &kp L        &kp F              &kp P            &kp Q      &kp TAB
-&trans   &kp O      &kp R       &kp S         &kp E        &kp M                       &kp M     &kp E        &kp S              &kp R            &kp O      &trans
-&trans   &UndoRedo  &mt LALT X  &mt LSHIFT C  &mt LCTRL I  &kp LGUI  &trans    &trans  &kp LGUI  &mt RCTRL I  &mt RIGHT_SHIFT C  &mt RIGHT_ALT X  &UndoRedo  &trans
-                                &trans        &trans       &trans    &trans    &trans  &trans    &trans       &trans
+&trans   &trans     &trans      &trans        &trans                        &trans                    &trans  &trans                        &trans             &trans           &trans     &trans
+&kp TAB  &kp Q      &kp W       &kp E         &Plasticity_R_mods_tap_dance  &kp T                     &kp T   &Plasticity_R_mods_tap_dance  &kp E              &kp W            &kp Q      &kp TAB
+&trans   &kp A      &kp S       &kp D         &kp F                         &kp G                     &kp G   &kp F                         &kp D              &kp S            &kp A      &trans
+&to 0    &UndoRedo  &mt LALT X  &mt LSHIFT C  &mt LCTRL V                   &kp B   &trans    &trans  &kp B   &mt LCTRL V                   &mt RIGHT_SHIFT C  &mt RIGHT_ALT X  &UndoRedo  &to 0
+                                &trans        &trans                        &trans  &trans    &trans  &trans  &trans                        &trans
             >;
 
-            label = "F360";
+            label = "Plasticity";
         };
 
         AfterEffects {
