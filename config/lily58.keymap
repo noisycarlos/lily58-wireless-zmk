@@ -869,11 +869,11 @@
 
         Plasticity {
             bindings = <
-&trans   &trans     &trans      &trans        &trans                        &trans                    &trans  &trans                        &trans             &trans           &trans     &trans
-&kp TAB  &kp Q      &kp W       &kp E         &Plasticity_R_mods_tap_dance  &kp T                     &kp T   &Plasticity_R_mods_tap_dance  &kp E              &kp W            &kp Q      &kp TAB
-&trans   &kp A      &kp S       &kp D         &kp F                         &kp G                     &kp G   &kp F                         &kp D              &kp S            &kp A      &trans
-&to 0    &UndoRedo  &mt LALT X  &mt LSHIFT C  &mt LCTRL V                   &kp B   &trans    &trans  &kp B   &mt LCTRL V                   &mt RIGHT_SHIFT C  &mt RIGHT_ALT X  &UndoRedo  &to 0
-                                &trans        &trans                        &trans  &trans    &trans  &trans  &trans                        &trans
+&trans     &trans     &trans      &trans        &trans                        &trans                    &kp N5  &kp NUMBER_4                  &kp NUMBER_3  &kp NUMBER_2    &kp NUMBER_1  &kp EQUAL
+&kp TAB    &kp Q      &kp W       &kp E         &Plasticity_R_mods_tap_dance  &kp T                     &kp T   &Plasticity_R_mods_tap_dance  &kp E         &kp W           &kp Q         &kp TAB
+&UndoRedo  &kp A      &kp S       &kp D         &kp F                         &kp G                     &kp G   &kp F                         &kp D         &kp S           &kp A         &UndoRedo
+&to 0      &kp SLASH  &mt LALT X  &mt LSHIFT C  &mt LCTRL V                   &kp B   &trans    &trans  &kp B   &mt LCTRL V                   &mt LSHIFT C  &mt LEFT_ALT X  &kp SLASH     &to 0
+                                  &trans        &trans                        &trans  &trans    &trans  &trans  &trans                        &trans
             >;
 
             label = "Plasticity";
