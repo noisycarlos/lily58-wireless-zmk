@@ -359,7 +359,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NUKEADDPREDEFINEDNODESTAP";
             #binding-cells = <0>;
-            bindings = <&kp T>, <&kp O>, <&kp C>, <&kp G>, <&kp P>;
+            bindings = <&kp T>, <&kp O>, <&kp B>, <&kp C>, <&kp G>, <&kp P>;
 
             tapping-term-ms = <300>;
         };
@@ -680,7 +680,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp TAB>,
-                <&macro_wait_time 300>,
+                <&wait 300>,
                 <&kp K &kp E &kp Y &kp M &kp I &kp X &kp ENTER>;
 
             label = "NUKEKEYMIX";
