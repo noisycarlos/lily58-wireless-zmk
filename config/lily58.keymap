@@ -680,7 +680,6 @@
             #binding-cells = <0>;
             bindings =
                 <&kp TAB>,
-                <&wait 300>,
                 <&kp K &kp E &kp Y &kp M &kp I &kp X &kp ENTER>;
 
             label = "NUKEKEYMIX";
