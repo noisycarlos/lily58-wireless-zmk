@@ -678,10 +678,7 @@
         NukeKeymix: NukeKeymix {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp TAB>,
-                <&kp K &kp E &kp Y &kp M &kp I &kp X &kp ENTER>;
-
+            bindings = <&kp TAB &kp K &kp E &kp Y &kp M &kp I &kp X &kp ENTER>;
             label = "NUKEKEYMIX";
         };
     };
@@ -812,7 +809,7 @@
 &kp TAB               &kp Q    &DualKey 3 W    &DualKey 2 E      &kp R        &kp T                                                     &kp Y           &kp U        &DualKey 2 I      &DualKey 3 O         &kp P     &NumFn11
 &CapsWordOrLayer 9 0  &kp A    &kp S           &kp D             &kp F        &DualKey 4 G                                              &DualKey 4 H    &kp J        &kp K             &kp L                &kp SEMI  &DualKey 9 APOS
 &mo 5                 &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL V  &mt LEFT_GUI B  &kp ESC             &kp ESC               &mt LEFT_GUI N  &mt LCTRL M  &mt LSHIFT COMMA  &mt LEFT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
-                                               &DualLayer 5 0    &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE       &kp ENTER    &DualLayer 5 0
+                                               &kp CAPSLOCK      &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE       &kp ENTER    &kp CAPSLOCK
             >;
         };
 
@@ -879,7 +876,7 @@
         Layers {
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                   &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&bt BT_PRV  &bt BT_NXT    &to 3         &to 2         &to 7         &to 10                         &to 10         &to 7         &to 2         &to 3         &bt BT_PRV    &bt BT_NXT
+&bt BT_PRV  &bt BT_NXT    &to 3         &to 2         &to 7         &to 0                          &to 0          &to 7         &to 2         &to 3         &bt BT_PRV    &bt BT_NXT
 &none       &kp LC(A)     &to 7         &to 8         &to 6         &to 0                          &to 0          &to 6         &to 8         &to 7         &kp RC(A)     &none
 &none       &none         &kp LC(X)     &kp LC(C)     &kp LC(V)     &kp LC(LS(V))  &none    &none  &kp RC(RS(V))  &kp RC(V)     &kp RC(C)     &kp RC(X)     &none         &none
                                         &trans        &none         &none          &to 1    &to 1  &none          &none         &trans
@@ -890,7 +887,7 @@
 
         Nuke {
             bindings = <
-&NukeAddNode       &kp D      &kp I           &to 11            &kp O        &NukeMerge                                    &NukeMerge                  &kp I                &to 11             &kp O           &NukeTapSaveRender  &kp D
+&NukeAddNode       &kp D      &kp I           &to 10            &kp O        &NukeMerge                                    &NukeMerge                  &kp I                &to 10             &kp O           &NukeTapSaveRender  &kp D
 &NukeAddNodeDance  &kp Q      &kp HOME        &kp UP_ARROW      &kp END      &NukeAddPredefinedNodesTap                    &NukeAddPredefinedNodesTap  &kp HOME             &kp UP_ARROW       &kp END         &kp Q               &NukeAddNodeDance
 &NukeChannel       &UndoRedo  &kp LEFT        &kp DOWN          &kp RIGHT    &NukeViewer                                   &NukeViewer                 &kp LEFT             &kp DOWN           &kp RIGHT       &UndoRedo           &NukeChannel
 &to 0              &trans     &mt LEFT_ALT J  &mt LEFT_SHIFT K  &mt LCTRL L  &NukeFit                    &trans    &trans  &NukeFit                    &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp Z               &to 0
@@ -934,26 +931,6 @@
             >;
 
             label = "Quick";
-        };
-
-        Colemak {
-            // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   =   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  D   |  V   |   "["  |  |  "]"  |  K   |  H    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
-
-            display-name = "-";
-            bindings = <
-&kp GRAVE             &NumFn1  &NumFn2         &NumFn3           &NumFn4      &NumFn5                                                   &NumFn6          &NumFn7      &NumFn8                &NumFn9               &NumFn10  &NumFn12
-&kp TAB               &kp Q    &DualKey 3 W    &DualKey 2 F      &kp P        &kp B                                                     &kp J            &kp L        &DualKey 2 U           &DualKey 3 Y          &kp SEMI  &NumFn11
-&CapsWordOrLayer 9 0  &kp A    &kp R           &kp S             &kp T        &DualKey 4 G                                              &DualKey 4 M     &kp N        &kp E                  &kp I                 &kp O     &DualKey 9 APOS
-&mo 5                 &kp Z    &mt LEFT_ALT X  &mt LEFT_SHIFT C  &mt LCTRL D  &mt LEFT_GUI V  &kp ESC             &kp ESC               &mt RIGHT_GUI K  &mt RCTRL H  &mt RIGHT_SHIFT COMMA  &mt RIGHT_ALT PERIOD  &kp FSLH  &DualKey 5 BACKSLASH
-                                               &mo 5             &kp DELETE   &kp SPACE       &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER    &mo 5
-            >;
-
-            label = "Colemak";
         };
 
         Nuke_Numbers {
