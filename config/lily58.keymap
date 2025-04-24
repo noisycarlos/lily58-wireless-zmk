@@ -863,11 +863,11 @@
 
         Misc {
             bindings = <
-&trans      &none           &TapDanceEmail    &TapDanceNoisycarlos  &kp PRINTSCREEN       &trans                                       &kp LC(LG(LA(A)))      &kp LA(LC(LG(S)))      &kp LA(LC(LG(D)))      &kp LA(LC(LG(F)))    &kp LA(LG(LC(G)))          &none
-&mo 5       &trans          &TypeWWB          &TypeFixes            &TapDanceP            &TypeBasecamp                                &kp LG(LC(LA(Y)))      &kp LA(LC(LG(U)))      &kp LA(LC(LG(I)))      &kp LC(LG(LA(O)))    &kp LC(LG(LA(P)))          &mo 5
-&to 6       &TapDanceTypeA  &TapDanceR        &TapDanceS            &kp C_VOL_DN          &kp C_VOL_UP                                 &kp LA(LC(LG(H)))      &kp LA(LC(LG(J)))      &kp LA(LC(LG(K)))      &kp LC(LA(LG(L)))    &kp LA(LC(LG(SEMICOLON)))  &kp LA(LC(LG(ENTER)))
-&kp K_PREV  &kp K_NEXT      &kp K_PLAY_PAUSE  &TapDanceC            &TapDanceD            &TypeMoves             &kp K_MUTE    &trans  &kp LA(LG(LC(N)))      &kp LA(LC(LG(M)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))       &trans
-                                              &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(LA(LG(SPACE)))  &mo 5         &mo 5   &kp RA(RC(RG(SPACE)))  &kp RG(RC(RA(SPACE)))  &trans
+&trans  &none           &TapDanceEmail  &TapDanceNoisycarlos  &kp PRINTSCREEN       &trans                                       &kp LC(LG(LA(A)))      &kp LA(LC(LG(S)))      &kp LA(LC(LG(D)))      &kp LA(LC(LG(F)))    &kp LA(LG(LC(G)))          &none
+&mo 5   &trans          &TypeWWB        &TypeFixes            &TapDanceP            &TypeBasecamp                                &kp LG(LC(LA(Y)))      &kp LA(LC(LG(U)))      &kp LA(LC(LG(I)))      &kp LC(LG(LA(O)))    &kp LC(LG(LA(P)))          &mo 5
+&to 6   &TapDanceTypeA  &TapDanceR      &TapDanceS            &kp C_VOL_DN          &kp C_VOL_UP                                 &kp LA(LC(LG(H)))      &kp LA(LC(LG(J)))      &kp LA(LC(LG(K)))      &kp LC(LA(LG(L)))    &kp LA(LC(LG(SEMICOLON)))  &kp LA(LC(LG(ENTER)))
+&none   &none           &none           &kp K_PREV            &kp K_PLAY_PAUSE      &kp K_NEXT             &kp K_MUTE    &trans  &kp LA(LG(LC(N)))      &kp LA(LC(LG(M)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))       &trans
+                                        &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(LA(LG(SPACE)))  &mo 5         &mo 5   &kp RA(RC(RG(SPACE)))  &kp RG(RC(RA(SPACE)))  &trans
             >;
 
             label = "Misc";
