@@ -71,7 +71,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCEP";
             #binding-cells = <0>;
-            bindings = <&TypeImplements>, <&TypeUpdates>;
+            bindings = <&TypeImplements>, <&TypeUpdates>, <&Type_ReadBarn>;
         };
 
         TapDanceNoisycarlos: TapDanceNoisycarlos {
@@ -680,6 +680,13 @@
             #binding-cells = <0>;
             bindings = <&kp TAB &kp K &kp E &kp Y &kp M &kp I &kp X &kp ENTER>;
             label = "NUKEKEYMIX";
+        };
+
+        Type_ReadBarn: Type_ReadBarn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(R) &kp E &kp A &kp D &kp LS(B) &kp A &kp R &kp N>;
+            label = "TYPE_READBARN";
         };
     };
 
