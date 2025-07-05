@@ -374,16 +374,11 @@
                 <&kp LA(PRINTSCREEN)>;
         };
 
-        MicrophoneTapDance: MicrophoneTapDance {
+        SpeechShortcuts: SpeechShortcuts {
             compatible = "zmk,behavior-tap-dance";
-            label = "MICROPHONETAPDANCE";
+            label = "SPEECHSHORTCUTS";
             #binding-cells = <0>;
-            bindings =
-                <&kp LC(LS(F15))>,
-                <&kp LA(LS(F22))>,
-                <&kp F13>,
-                <&kp LC(LS(F13))>,
-                <&kp LS(LA(F13))>;
+            bindings = <&kp LC(LS(F3))>, <&kp LA(LS(F3))>, <&kp LS(LC(F2))>;
         };
     };
 
@@ -892,7 +887,7 @@
 
         Misc {
             bindings = <
-&trans  &none           &TapDanceEmail  &TapDanceNoisycarlos  &PrintScreenTapDance  &MicrophoneTapDance                            &kp LC(LG(LA(A)))      &kp LA(LC(LG(S)))      &kp LA(LC(LG(D)))      &kp LA(LC(LG(F)))    &kp LA(LG(LC(G)))          &none
+&trans  &none           &TapDanceEmail  &TapDanceNoisycarlos  &PrintScreenTapDance  &SpeechShortcuts                               &kp LC(LG(LA(A)))      &kp LA(LC(LG(S)))      &kp LA(LC(LG(D)))      &kp LA(LC(LG(F)))    &kp LA(LG(LC(G)))          &none
 &mo 5   &trans          &TypeWWB        &TypeFixes            &TapDanceP            &TypeBasecamp                                  &kp LG(LC(LA(Y)))      &kp LA(LC(LG(U)))      &kp LA(LC(LG(I)))      &kp LC(LG(LA(O)))    &kp LC(LG(LA(P)))          &mo 5
 &to 6   &TapDanceTypeA  &TapDanceR      &TapDanceS            &kp C_VOLUME_UP       &none                                          &kp LA(LC(LG(H)))      &kp LA(LC(LG(J)))      &kp LA(LC(LG(K)))      &kp LC(LA(LG(L)))    &kp LA(LC(LG(SEMICOLON)))  &kp LA(LC(LG(ENTER)))
 &none   &none           &kp K_PREV      &kp K_PLAY_PAUSE      &kp K_NEXT            &none                  &kp K_MUTE      &trans  &kp LA(LG(LC(N)))      &kp LA(LC(LG(M)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))       &trans
