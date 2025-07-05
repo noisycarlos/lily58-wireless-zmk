@@ -378,7 +378,12 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MICROPHONETAPDANCE";
             #binding-cells = <0>;
-            bindings = <&kp F19>, <&kp F20>, <&kp F21>, <&kp F22>;
+            bindings =
+                <&kp LC(LS(F15))>,
+                <&kp LA(LS(F22))>,
+                <&kp F13>,
+                <&kp LC(LS(F13))>,
+                <&kp LS(LA(F13))>;
         };
     };
 
