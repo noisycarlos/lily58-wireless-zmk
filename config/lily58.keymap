@@ -741,13 +741,13 @@
         NukePrevKeyframeL {
             bindings = <&kp LA(LEFT_ARROW)>;
             key-positions = <27 26>;
-            layers = <6>;
+            layers = <6 10>;
         };
 
         NukeNextKeyframeL {
             bindings = <&kp LA(RIGHT)>;
             key-positions = <27 28>;
-            layers = <6>;
+            layers = <6 10>;
         };
 
         AE_NextKeyframeL {
@@ -777,7 +777,7 @@
         NukeDuplicateL {
             bindings = <&kp LA(C)>;
             key-positions = <38 39>;
-            layers = <6>;
+            layers = <6 10>;
         };
 
         NukeDuplicateR {
@@ -789,7 +789,7 @@
         NukeCopyL {
             bindings = <&kp LC(C)>;
             key-positions = <40 39>;
-            layers = <6>;
+            layers = <6 10>;
         };
 
         NukeCopyR {
@@ -807,7 +807,7 @@
         NukePasteL {
             bindings = <&kp LC(V)>;
             key-positions = <41 40>;
-            layers = <6>;
+            layers = <6 10>;
         };
 
         NukeCreateReferenceR {
@@ -964,7 +964,7 @@
 &NukeAddNodeDance  &kp Q      &kp HOME  &kp UP_ARROW      &kp END    &NukeViewer                       &NukePointer  &kp KP_NUMBER_7  &kp KP_NUMBER_8             &kp KP_NUMBER_9  &kp Q               &NukeHomeEnd
 &NukeChannel       &UndoRedo  &kp LEFT  &kp DOWN_ARROW    &kp RIGHT  &NukeViewer                       &NukeViewer   &kp KP_NUMBER_4  &mt LEFT_SHIFT LOCKING_NUM  &kp KP_NUMBER_6  &UndoRedo           &NukeChannel
 &to 0              &kp Z      &kp J     &mt LEFT_SHIFT K  &kp L      &NukeFit     &trans    &trans     &NukeFit      &kp KP_NUMBER_1  &kp KP_NUMBER_2             &kp KP_NUMBER_3  &kp Z               &to 0
-                                        &trans            &trans     &trans       &trans    &kp ENTER  &kp KP_N0     &kp KP_DOT       &trans
+                                        &to 0             &trans     &trans       &trans    &kp ENTER  &kp KP_N0     &kp KP_DOT       &to 0
             >;
         };
     };
