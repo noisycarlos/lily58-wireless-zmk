@@ -935,11 +935,11 @@
 
         Nuke {
             bindings = <
-&NukeAddNode       &kp D      &kp I           &to 10            &kp O        &NukeMerge                                    &NukeMerge                  &kp I                &to 10             &kp O           &NukeTapSaveRender  &kp D
-&NukeAddNodeDance  &kp Q      &kp HOME        &kp UP_ARROW      &kp END      &NukeAddPredefinedNodesTap                    &NukeAddPredefinedNodesTap  &kp HOME             &kp UP_ARROW       &kp END         &kp Q               &NukeAddNodeDance
-&NukeChannel       &UndoRedo  &kp LEFT        &kp DOWN          &kp RIGHT    &NukeViewerLayer 5 0                          &NukeViewer                 &kp LEFT             &kp DOWN           &kp RIGHT       &UndoRedo           &NukeChannel
-&to 0              &trans     &mt LEFT_ALT J  &mt LEFT_SHIFT K  &mt LCTRL L  &NukeFit                    &trans    &trans  &NukeFit                    &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp Z               &to 0
-                                              &to 0             &trans       &kp SPACE                   &trans    &trans  &kp SPACE                   &trans               &to 0
+&NukeAddNode       &kp D      &kp I           &to 10            &kp O           &NukeMerge                                    &NukeMerge                  &kp I                &to 10             &kp O           &NukeTapSaveRender  &kp D
+&NukeAddNodeDance  &kp Q      &kp HOME        &kp UP_ARROW      &DualKey 5 END  &NukeAddPredefinedNodesTap                    &NukeAddPredefinedNodesTap  &kp HOME             &kp UP_ARROW       &kp END         &kp Q               &NukeAddNodeDance
+&NukeChannel       &UndoRedo  &kp LEFT        &kp DOWN          &kp RIGHT       &NukeViewer                                   &NukeViewer                 &kp LEFT             &kp DOWN           &kp RIGHT       &UndoRedo           &NukeChannel
+&to 0              &trans     &mt LEFT_ALT J  &mt LEFT_SHIFT K  &mt LCTRL L     &NukeFit                    &trans    &trans  &NukeFit                    &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp Z               &to 0
+                                              &to 0             &trans          &kp SPACE                   &trans    &trans  &kp SPACE                   &trans               &to 0
             >;
 
             label = "Nuke";
