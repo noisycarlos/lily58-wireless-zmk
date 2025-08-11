@@ -380,6 +380,13 @@
             #binding-cells = <0>;
             bindings = <&kp LC(LS(F3))>, <&kp LA(LS(F3))>, <&kp LS(LC(F2))>;
         };
+
+        GoToNukeMachineTap: GoToNukeMachineTap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GOTONUKEMACHINETAP";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>, <&Goto_Nuke_Machine>;
+        };
     };
 
     macros {
@@ -705,6 +712,13 @@
             bindings = <&none &kp LS(R) &kp E &kp A &kp D &kp LS(B) &kp A &kp R &kp N>;
             label = "TYPE_READBARN";
         };
+
+        Goto_Nuke_Machine: Goto_Nuke_Machine {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 6>;
+            label = "GOTO_NUKE_MACHINE";
+        };
     };
 
     combos {
@@ -899,11 +913,11 @@
 
         Layers {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                   &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&bt BT_PRV  &bt BT_NXT    &to 3         &to 2         &none         &to 8                          &to 8          &none         &to 2         &to 3         &bt BT_PRV    &bt BT_NXT
-&none       &kp LC(A)     &to 7         &to 6         &to 6         &to 0                          &to 0          &to 6         &to 6         &to 7         &kp RC(A)     &none
-&none       &none         &kp LC(X)     &kp LC(C)     &kp LC(V)     &kp LC(LS(V))  &none    &none  &kp RC(RS(V))  &kp RC(V)     &kp RC(C)     &kp RC(X)     &none         &none
-                                        &trans        &none         &none          &to 1    &to 1  &none          &none         &trans
+&bt BT_CLR  &bt BT_SEL 0  &GoToNukeMachineTap  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                   &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&bt BT_PRV  &bt BT_NXT    &to 3                &to 2         &none         &to 8                          &to 8          &none         &to 2         &to 3         &bt BT_PRV    &bt BT_NXT
+&none       &kp LC(A)     &to 7                &to 6         &to 6         &to 0                          &to 0          &to 6         &to 6         &to 7         &kp RC(A)     &none
+&none       &none         &kp LC(X)            &kp LC(C)     &kp LC(V)     &kp LC(LS(V))  &none    &none  &kp RC(RS(V))  &kp RC(V)     &kp RC(C)     &kp RC(X)     &none         &none
+                                               &trans        &none         &none          &to 1    &to 1  &none          &none         &trans
             >;
 
             label = "Lay/BT";
