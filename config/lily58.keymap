@@ -962,8 +962,8 @@
 &kp LS(LA(LC(V)))  &trans         &kp HOME   &AEPointer            &kp END            &kp LC(B)                          &kp LC(B)  &kp HOME         &AEPointer           &kp END        &kp LS(LC(N0))  &kp RC(RA(RS(V)))
 &trans             &kp LS(LC(H))  &trans     &kp LC(UP)            &trans             &kp KP_NUMBER_0                    &trans     &kp KP_NUMBER_0  &kp LC(UP)           &kp RC(RS(H))  &kp B           &kp N
 &none              &UndoRedo      &kp PG_UP  &kp LC(DOWN)          &kp PG_DN          &trans                             &trans     &kp PG_UP        &kp RC(DOWN)         &kp PG_DN      &UndoRedo       &none
-&trans             &trans         &trans     &mt LEFT_SHIFT SLASH  &kp RA(RS(RC(V)))  &kp SPACE        &trans    &trans  &kp SPACE  &kp SLASH        &mt LEFT_SHIFT FSLH  &trans         &trans          &trans
-                                             &trans                &trans             &trans           &trans    &trans  &trans     &trans           &trans
+&to 0              &trans         &trans     &mt LEFT_SHIFT SLASH  &kp RA(RS(RC(V)))  &kp SPACE        &trans    &trans  &kp SPACE  &kp SLASH        &mt LEFT_SHIFT FSLH  &trans         &trans          &to 0
+                                             &to 0                 &trans             &trans           &trans    &trans  &trans     &trans           &to 0
             >;
 
             label = "AE";
