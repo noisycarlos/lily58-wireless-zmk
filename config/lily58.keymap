@@ -871,11 +871,11 @@
 
             display-name = "Nav";
             bindings = <
-&kp LA(F4)       &DoubleNum01  &DoubleNum23   &DoubleNum45      &DoubleNum67   &DoubleNum89                       &trans         &trans       &trans     &trans         &trans           &trans
-&kp C_VOLUME_UP  &kp LC(W)     &kp LC(PG_UP)  &kp UP            &kp LC(PG_DN)  &kp LC(LS(T))                      &kp LC(PG_UP)  &kp PG_DN    &kp PG_UP  &kp LC(PG_DN)  &kp PRINTSCREEN  &kp DELETE
-&kp C_VOL_UP     &UndoRedo     &kp LEFT       &kp DOWN          &kp RIGHT      &kp PRCNT                          &kp LEFT       &kp DOWN     &kp UP     &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
-&to 0            &kp K_MUTE    &trans         &mt LEFT_SHIFT S  &mt LCTRL D    &mt RIGHT_WIN F  &trans    &trans  &kp F          &kp H        &kp HOME   &kp END        &kp RBRC         &to 0
-                                              &to 0             &kp LA(TAB)    &trans           &trans    &trans  &trans         &kp RA(TAB)  &to 0
+&kp LA(F4)         &DoubleNum01  &DoubleNum23   &DoubleNum45      &DoubleNum67   &DoubleNum89                       &trans         &trans       &trans     &trans         &trans           &trans
+&kp C_VOLUME_UP    &kp LC(W)     &kp LC(PG_UP)  &kp UP            &kp LC(PG_DN)  &kp LC(LS(T))                      &kp LC(PG_UP)  &kp PG_DN    &kp PG_UP  &kp LC(PG_DN)  &kp PRINTSCREEN  &kp DELETE
+&kp C_VOLUME_DOWN  &UndoRedo     &kp LEFT       &kp DOWN          &kp RIGHT      &kp PRCNT                          &kp LEFT       &kp DOWN     &kp UP     &kp RIGHT      &kp SCROLLLOCK   &kp C_PAUSE
+&to 0              &kp K_MUTE    &trans         &mt LEFT_SHIFT S  &mt LCTRL D    &mt RIGHT_WIN F  &trans    &trans  &kp F          &kp H        &kp HOME   &kp END        &kp RBRC         &to 0
+                                                &to 0             &kp LA(TAB)    &trans           &trans    &trans  &trans         &kp RA(TAB)  &to 0
             >;
         };
 
