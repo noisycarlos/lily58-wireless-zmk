@@ -409,7 +409,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NUKE_LAYER_OR_BT_SWAP";
             #binding-cells = <0>;
-            bindings = <&to 10>, <&bt BT_SEL 2>, <&bt BT_SEL 0>;
+            bindings = <&to 10>, <&switch_bt_profile_2>, <&switch_profile_0>;
         };
     };
 
@@ -749,6 +749,20 @@
             #binding-cells = <0>;
             bindings = <&kp TAB &kp B &kp A &kp C &kp K &kp D &kp R &kp O &kp P &kp RET>;
             label = "NUKE_BACKDROP";
+        };
+
+        switch_bt_profile_2: switch_bt_profile_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &bt BT_SEL 2>;
+            label = "SWITCH_BT_PROFILE_2";
+        };
+
+        switch_profile_0: switch_profile_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &bt BT_SEL 0>;
+            label = "SWITCH_PROFILE_0";
         };
     };
 
