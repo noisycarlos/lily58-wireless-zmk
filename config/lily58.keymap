@@ -404,6 +404,13 @@
             #binding-cells = <0>;
             bindings = <&NukeAddNode>, <&nuke_backdrop>;
         };
+
+        nuke_layer_or_bt_swap: nuke_layer_or_bt_swap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUKE_LAYER_OR_BT_SWAP";
+            #binding-cells = <0>;
+            bindings = <&to 10>, <&bt BT_SEL 2>, <&bt BT_SEL 0>;
+        };
     };
 
     macros {
@@ -949,11 +956,11 @@
 
         Nuke {
             bindings = <
-&nuke_tab_backdrop_tapdance  &kp D      &kp I           &to 10            &kp O           &NukeMerge                                    &NukeMerge                  &kp I                &to 10             &kp O           &NukeTapSaveRender  &kp D
-&NukeAddNodeDance            &kp Q      &kp HOME        &kp UP_ARROW      &DualKey 5 END  &NukeAddPredefinedNodesTap                    &NukeAddPredefinedNodesTap  &kp HOME             &kp UP_ARROW       &kp END         &kp Q               &NukeAddNodeDance
-&NukeChannel                 &UndoRedo  &kp LEFT        &kp DOWN          &kp RIGHT       &NukeViewer                                   &NukeViewer                 &kp LEFT             &kp DOWN           &kp RIGHT       &UndoRedo           &NukeChannel
-&to 0                        &trans     &mt LEFT_ALT J  &mt LEFT_SHIFT K  &mt LCTRL L     &NukeFit                    &trans    &trans  &NukeFit                    &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp Z               &to 0
-                                                        &to 0             &trans          &kp SPACE                   &trans    &trans  &kp SPACE                   &trans               &to 0
+&nuke_tab_backdrop_tapdance  &kp D      &kp I           &nuke_layer_or_bt_swap  &kp O           &NukeMerge                                    &NukeMerge                  &kp I                &to 10             &kp O           &NukeTapSaveRender  &kp D
+&NukeAddNodeDance            &kp Q      &kp HOME        &kp UP_ARROW            &DualKey 5 END  &NukeAddPredefinedNodesTap                    &NukeAddPredefinedNodesTap  &kp HOME             &kp UP_ARROW       &kp END         &kp Q               &NukeAddNodeDance
+&NukeChannel                 &UndoRedo  &kp LEFT        &kp DOWN                &kp RIGHT       &NukeViewer                                   &NukeViewer                 &kp LEFT             &kp DOWN           &kp RIGHT       &UndoRedo           &NukeChannel
+&to 0                        &trans     &mt LEFT_ALT J  &mt LEFT_SHIFT K        &mt LCTRL L     &NukeFit                    &trans    &trans  &NukeFit                    &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp Z               &to 0
+                                                        &to 0                   &trans          &kp SPACE                   &trans    &trans  &kp SPACE                   &trans               &to 0
             >;
 
             label = "Nuke";
