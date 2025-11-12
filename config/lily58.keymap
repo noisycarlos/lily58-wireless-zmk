@@ -1006,11 +1006,11 @@
 
         QuickActions {
             bindings = <
-&trans  &trans          &trans      &trans       &trans         &trans                    &trans  &trans         &trans       &trans     &trans          &trans
-&trans  &kp SCROLLLOCK  &kp INSERT  &trans       &trans         &trans                    &trans  &trans         &trans       &kp INS    &kp SCROLLLOCK  &trans
-&trans  &kp CAPS        &trans      &kp LA(TAB)  &kp LA(GRAVE)  &trans                    &trans  &kp RA(GRAVE)  &kp LA(TAB)  &UndoRedo  &kp CAPSLOCK    &trans
-&trans  &kp LC(A)       &kp LC(X)   &kp LC(C)    &kp LC(V)      &trans  &trans    &trans  &trans  &kp LC(V)      &kp LC(C)    &kp LC(X)  &kp LC(A)       &trans
-                                    &trans       &trans         &trans  &trans    &trans  &trans  &trans         &trans
+&trans           &trans          &trans      &trans       &trans         &trans                    &trans  &trans         &trans       &trans     &trans          &trans
+&kp LA(TAB)      &kp SCROLLLOCK  &kp INSERT  &trans       &trans         &trans                    &trans  &trans         &trans       &kp INS    &kp SCROLLLOCK  &kp LA(TAB)
+&trans           &kp CAPS        &trans      &kp LA(TAB)  &kp LA(GRAVE)  &trans                    &trans  &kp RA(GRAVE)  &kp LA(TAB)  &UndoRedo  &kp CAPSLOCK    &trans
+&kp LS(LA(TAB))  &kp LC(A)       &kp LC(X)   &kp LC(C)    &kp LC(V)      &trans  &trans    &trans  &trans  &kp LC(V)      &kp LC(C)    &kp LC(X)  &kp LC(A)       &kp LS(LA(TAB))
+                                             &trans       &trans         &trans  &trans    &trans  &trans  &trans         &trans
             >;
 
             label = "Quick";
