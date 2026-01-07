@@ -880,6 +880,11 @@
             key-positions = <40 38>;
             layers = <6>;
         };
+
+        WindowSwitcher {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <53 54>;
+        };
     };
 
     keymap {
