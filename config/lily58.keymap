@@ -894,7 +894,7 @@
             display-name = "Qwerty";
             bindings = <
 &kp GRAVE             &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3   &mt F4 NUMBER_4  &mt F5 NUMBER_5                                            &mt F6 NUMBER_6  &mt F7 N7     &mt F8 N8         &mt F9 N9            &mt F10 N0  &mt F12 EQUAL
-&kp TAB               &kp Q            &DualKey 3 W     &DualKey 2 E      &DualKey 5 R     &kp T                                                      &kp Y            &DualKey 5 U  &DualKey 2 I      &DualKey 3 O         &kp P       &NumFn11
+&kp TAB               &kp Q            &DualKey 3 W     &DualKey 2 E      &DualKey 5 R     &kp T                                                      &kp Y            &DualKey 5 U  &DualKey 2 I      &DualKey 3 O         &kp P       &mt F11 MINUS
 &CapsWordOrLayer 9 0  &kp A            &kp S            &kp D             &kp F            &DualKey 4 G                                               &DualKey 4 H     &kp J         &kp K             &kp L                &kp SEMI    &DualKey 9 APOS
 &mo 5                 &kp Z            &mt LEFT_ALT X   &mt LEFT_SHIFT C  &mt LCTRL V      &mt LEFT_GUI B   &kp ESC             &kp ESC               &mt LEFT_GUI N   &mt LCTRL M   &mt LSHIFT COMMA  &mt LEFT_ALT PERIOD  &kp FSLH    &DualKey 5 BACKSLASH
                                                         &mo 5             &kp DELETE       &kp SPACE        &DualKey 1 ENTER    &DualKey 1 BACKSPACE  &kp SPACE        &kp ENTER     &mo 5
