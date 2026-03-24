@@ -1011,10 +1011,10 @@
 
         AfterEffects {
             bindings = <
-&AE_search  &trans         &kp B               &kp TAB               &kp N            &kp LC(B)                             &kp LC(B)           &kp B            &kp TAB               &kp N               &kp LS(LC(N0))  &kp RC(RA(RS(V)))
-&trans      &kp LS(LC(H))  &kp LS(HOME)        &kp LC(UP)            &kp LS(END)      &kp KP_NUMBER_0                       &trans              &kp LS(HOME)     &kp LC(UP)            &kp LS(END)         &kp LS(LC(H))   &kp N
-&none       &UndoRedo      &kp PG_UP           &kp LC(DOWN)          &kp PG_DN        &trans                                &trans              &kp PG_UP        &kp RC(DOWN)          &kp PG_DN           &UndoRedo       &none
-&to 0       &trans         &mt LEFT_ALT SPACE  &mt LEFT_SHIFT SPACE  &mt LCTRL KP_N0  &mt QUESTION SLASH  &trans    &trans  &mt QUESTION SLASH  &mt LCTRL SPACE  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT KP_N0  &trans          &to 0
+&AE_search  &trans         &kp B               &mt LA(LC(B)) TAB     &kp N            &mt R S                               &mt R S             &kp B            &mt LC(LA(B)) TAB     &kp N               &kp MINUS      &kp EQUAL
+&trans      &kp LS(LC(H))  &kp LS(HOME)        &kp LC(UP)            &kp LS(END)      &mt G Q                               &mt G Q             &kp LS(HOME)     &kp LC(UP)            &kp LS(END)         &kp LS(LC(H))  &kp PERIOD
+&none       &UndoRedo      &kp PG_UP           &kp LC(DOWN)          &kp PG_DN        &mt T V                               &mt T V             &kp PG_UP        &kp LC(DOWN)          &kp PG_DN           &UndoRedo      &kp COMMA
+&to 0       &trans         &mt LEFT_ALT SPACE  &mt LEFT_SHIFT SPACE  &mt LCTRL KP_N0  &mt QUESTION SLASH  &trans    &trans  &mt QUESTION SLASH  &mt LCTRL SPACE  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT KP_N0  &trans         &to 0
                                                &to 0                 &trans           &trans              &trans    &trans  &trans              &trans           &to 0
             >;
 
