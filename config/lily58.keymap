@@ -694,7 +694,7 @@
         types_gitea_path: types_gitea_path {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp G &kp I &kp T &kp DOT &kp N &kp O &kp I &kp S &kp Y &kp S &kp E &kp R &kp V &kp E &kp R &kp DOT &kp S &kp B &kp S &kp FSLH>;
+            bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp G &kp I &kp T &kp DOT &kp N &kp O &kp I &kp S &kp Y &kp S &kp E &kp R &kp V &kp E &kp R &kp DOT &kp C &kp C &kp FSLH>;
             label = "TYPES_GITEA_PATH";
         };
 
