@@ -776,6 +776,20 @@
             label = "AE_SEARCH";
             wait-ms = <500>;
         };
+
+        types_email_carlosaldana: types_email_carlosaldana {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp C &kp A &kp R &kp L &kp O &kp S &kp AT &kp C &kp A &kp R &kp L &kp O &kp S &kp A &kp L &kp D &kp A &kp N &kp A &kp DOT &kp C &kp O &kp M>;
+            label = "TYPES_EMAIL_CARLOSALDANA";
+        };
+
+        types_kp_domain: types_kp_domain {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K &kp I &kp N &kp E &kp T &kp I &kp C &kp P &kp O &kp R &kp T &kp A &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "TYPES_KP_DOMAIN";
+        };
     };
 
     combos {
@@ -937,6 +951,30 @@
         Chord_Fixes {
             bindings = <&TypeFixes>;
             key-positions = <28 38 20>;
+            layers = <0>;
+        };
+
+        Chord_string {
+            bindings = <&TypeString>;
+            key-positions = <26 17 44>;
+            layers = <0>;
+        };
+
+        Chord_Implements {
+            bindings = <&TypeImplements>;
+            key-positions = <20 15 45>;
+            layers = <0>;
+        };
+
+        chord_kp_domain {
+            bindings = <&types_kp_domain>;
+            key-positions = <32 22 2>;
+            layers = <0>;
+        };
+
+        chord_email_carlosaldana {
+            bindings = <&types_email_carlosaldana>;
+            key-positions = <39 25 44>;
             layers = <0>;
         };
     };
