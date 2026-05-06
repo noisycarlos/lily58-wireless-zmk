@@ -75,7 +75,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCEP";
             #binding-cells = <0>;
-            bindings = <&TypeImplements>, <&TypeUpdates>, <&Type_ReadBarn>;
+            bindings = <&TypeUpdates>, <&TypeImplements>;
         };
 
         TapDanceNoisycarlos: TapDanceNoisycarlos {
@@ -897,6 +897,42 @@
             bindings = <&kp LG(F12)>;
             key-positions = <52 55>;
         };
+
+        Chord_Return {
+            bindings = <&TypeReturn>;
+            key-positions = <16 17 44>;
+            layers = <0>;
+        };
+
+        Chord_Moves {
+            bindings = <&TypeMoves>;
+            key-positions = <45 40 25>;
+            layers = <0>;
+        };
+
+        Chord_Updates {
+            bindings = <&TypeUpdates>;
+            key-positions = <27 19 22>;
+            layers = <0>;
+        };
+
+        Chord_Deletes {
+            bindings = <&TypeDeletes>;
+            key-positions = <27 33 17>;
+            layers = <0>;
+        };
+
+        Chord_Adds {
+            bindings = <&TypeAdds>;
+            key-positions = <25 26 27>;
+            layers = <0>;
+        };
+
+        Chord_Adjusts {
+            bindings = <&TypesAdjusts>;
+            key-positions = <25 27 31>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -965,7 +1001,7 @@
             bindings = <
 &trans  &none           &TapDanceEmail  &TapDanceNoisycarlos  &PrintScreenTapDance  &SpeechShortcuts                               &kp LC(LG(LA(A)))      &kp LA(LC(LG(S)))      &kp LA(LC(LG(D)))      &kp LA(LC(LG(F)))    &kp LA(LG(LC(G)))          &none
 &mo 5   &trans          &TypeWWB        &TypeFixes            &TapDanceP            &TypeBasecamp                                  &kp LG(LC(LA(Y)))      &kp LA(LC(LG(U)))      &kp LA(LC(LG(I)))      &kp LC(LG(LA(O)))    &kp LC(LG(LA(P)))          &mo 5
-&to 6   &TapDanceTypeA  &TapDanceR      &TapDanceS            &kp C_VOLUME_UP       &none                                          &kp LA(LC(LG(H)))      &kp LA(LC(LG(J)))      &kp LA(LC(LG(K)))      &kp LC(LA(LG(L)))    &kp LA(LC(LG(SEMICOLON)))  &kp LA(LC(LG(ENTER)))
+&to 6   &TapDanceTypeA  &TapDanceS      &TapDanceS            &kp C_VOLUME_UP       &none                                          &kp LA(LC(LG(H)))      &kp LA(LC(LG(J)))      &kp LA(LC(LG(K)))      &kp LC(LA(LG(L)))    &kp LA(LC(LG(SEMICOLON)))  &kp LA(LC(LG(ENTER)))
 &none   &none           &kp K_PREV      &kp K_PLAY_PAUSE      &kp K_NEXT            &none                  &kp K_MUTE      &trans  &kp LA(LG(LC(N)))      &kp LA(LC(LG(M)))      &kp LA(LG(LC(COMMA)))  &kp LA(LC(LG(DOT)))  &kp LG(LC(LA(FSLH)))       &trans
                                         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(LA(LG(SPACE)))  &kp C_VOL_DN    &mo 5   &kp RA(RC(RG(SPACE)))  &kp RG(RC(RA(SPACE)))  &trans
             >;
