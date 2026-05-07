@@ -968,7 +968,7 @@
 
         chord_kp_domain {
             bindings = <&types_kp_domain>;
-            key-positions = <32 22 2>;
+            key-positions = <32 22 14>;
             layers = <0>;
         };
 
