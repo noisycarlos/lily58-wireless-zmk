@@ -797,6 +797,13 @@
             bindings = <&none &kp B &kp E &kp G &kp I &kp N &kp S>;
             label = "TYPES_BEGINS";
         };
+
+        types_stats: types_stats {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp T &kp A &kp T &kp S>;
+            label = "TYPES_STATS";
+        };
     };
 
     combos {
@@ -988,6 +995,12 @@
         chord_begins {
             bindings = <&types_begins>;
             key-positions = <20 41 29>;
+            layers = <0>;
+        };
+
+        Chord_stats {
+            bindings = <&types_stats>;
+            key-positions = <26 25 17>;
             layers = <0>;
         };
     };
