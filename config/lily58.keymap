@@ -1003,6 +1003,78 @@
             key-positions = <26 25 17>;
             layers = <0>;
         };
+
+        NukeDotL {
+            bindings = <&kp PERIOD>;
+            key-positions = <5 4>;
+            layers = <6>;
+        };
+
+        NukeDotR {
+            bindings = <&kp PERIOD>;
+            key-positions = <6 7>;
+            layers = <6>;
+        };
+
+        NukeKeymixR {
+            bindings = <&NukeKeymix>;
+            key-positions = <6 7 18>;
+            layers = <6>;
+        };
+
+        NukeKeymixL {
+            bindings = <&NukeKeymix>;
+            key-positions = <5 4 17>;
+            layers = <6>;
+        };
+
+        NukeRotoR {
+            bindings = <&kp O>;
+            key-positions = <20 21>;
+            layers = <6>;
+        };
+
+        NukeRotoL {
+            bindings = <&kp O>;
+            key-positions = <14 15>;
+            layers = <6>;
+        };
+
+        NukePaintL {
+            bindings = <&kp P>;
+            key-positions = <15 16>;
+            layers = <6>;
+        };
+
+        NukePaintR {
+            bindings = <&kp P>;
+            key-positions = <20 19>;
+            layers = <6>;
+        };
+
+        NukeGradeR {
+            bindings = <&kp G>;
+            key-positions = <30 31>;
+            layers = <6>;
+        };
+
+        NukeGradeL {
+            bindings = <&kp G>;
+            key-positions = <29 28>;
+            layers = <6>;
+        };
+
+        NukeBlurL {
+            bindings = <&kp B>;
+            key-positions = <41 40>;
+            layers = <6>;
+        };
+
+        NukeBlurR {
+            bindings = <&kp B>;
+            key-positions = <44 45>;
+            layers = <6>;
+        };
     };
 
     keymap {
@@ -1047,11 +1119,11 @@
 
             display-name = "Num";
             bindings = <
-&kp LA(F4)      &kp F1     &kp F2  &kp F3             &kp F4      &kp F5                          &kp F6           &kp F7           &kp F8           &kp F9           &kp F10       &kp F12
-&trans          &kp EQUAL  &kp N7  &kp N8             &kp N9      &kp FSLH                        &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL  &kp F11
-&kp K_CALC      &kp PLUS   &kp N4  &kp N5             &kp N6      &kp STAR                        &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &kp K_CALCULATOR
-&kp KP_NUMLOCK  &kp RET    &kp N1  &mt LEFT_SHIFT N2  &kp N3      &kp MINUS  &trans    &trans     &kp KP_SUBTRACT  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &kp LS(LC(KP_NUMLOCK))
-                                   &to 0              &kp PERIOD  &kp N0     &trans    &kp ENTER  &kp KP_NUMBER_0  &kp KP_DOT       &to 0
+&kp LA(F4)  &kp F1     &kp F2  &kp F3             &kp F4      &kp F5                          &kp F6           &kp F7           &kp F8           &kp F9           &kp F10       &kp F12
+&trans      &kp EQUAL  &kp N7  &kp N8             &kp N9      &kp FSLH                        &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL  &kp F11
+&kp K_CALC  &kp PLUS   &kp N4  &kp N5             &kp N6      &kp STAR                        &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &kp K_CALCULATOR
+&to 0       &kp RET    &kp N1  &mt LEFT_SHIFT N2  &kp N3      &kp MINUS  &trans    &trans     &kp KP_SUBTRACT  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &kp LS(LC(KP_NUMLOCK))
+                               &to 0              &kp PERIOD  &kp N0     &trans    &kp ENTER  &kp KP_NUMBER_0  &kp KP_DOT       &to 0
             >;
         };
 
