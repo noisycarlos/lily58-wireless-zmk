@@ -885,30 +885,6 @@
             layers = <6>;
         };
 
-        NukeCopyL {
-            bindings = <&kp LC(C)>;
-            key-positions = <40 39>;
-            layers = <6 10>;
-        };
-
-        NukeCopyR {
-            bindings = <&kp RC(C)>;
-            key-positions = <47 46>;
-            layers = <6>;
-        };
-
-        NukePasteR {
-            bindings = <&kp RC(V)>;
-            key-positions = <45 44>;
-            layers = <6>;
-        };
-
-        NukePasteL {
-            bindings = <&kp LC(V)>;
-            key-positions = <41 40>;
-            layers = <6 10>;
-        };
-
         NukeCreateReferenceR {
             bindings = <&kp RA(K)>;
             key-positions = <45 47>;
@@ -1201,11 +1177,11 @@
 
         QuickActions {
             bindings = <
-&trans           &trans          &trans      &trans       &trans         &trans                    &trans  &trans         &trans       &trans     &trans          &trans
-&kp LA(TAB)      &kp SCROLLLOCK  &kp INSERT  &trans       &trans         &trans                    &trans  &trans         &trans       &kp INS    &kp SCROLLLOCK  &kp LA(TAB)
-&trans           &kp CAPS        &trans      &kp LA(TAB)  &kp LA(GRAVE)  &trans                    &trans  &kp RA(GRAVE)  &kp LA(TAB)  &UndoRedo  &kp CAPSLOCK    &trans
-&kp LS(LA(TAB))  &kp LC(A)       &kp LC(X)   &kp LC(C)    &kp LC(V)      &trans  &trans    &trans  &trans  &kp LC(V)      &kp LC(C)    &kp LC(X)  &kp LC(A)       &kp LS(LA(TAB))
-                                             &trans       &trans         &trans  &trans    &trans  &trans  &trans         &trans
+&kp F13          &kp F14         &kp F15     &kp F16      &kp F17        &kp F18                    &kp F19  &kp F20        &kp F21      &kp F22    &kp F23         &kp F24
+&kp LA(TAB)      &kp SCROLLLOCK  &kp INSERT  &trans       &trans         &trans                     &trans   &trans         &trans       &kp INS    &kp SCROLLLOCK  &kp LA(TAB)
+&trans           &kp CAPS        &trans      &kp LA(TAB)  &kp LA(GRAVE)  &trans                     &trans   &kp RA(GRAVE)  &kp LA(TAB)  &UndoRedo  &kp CAPSLOCK    &trans
+&kp LS(LA(TAB))  &kp LC(A)       &kp LC(X)   &kp LC(C)    &kp LC(V)      &trans   &trans    &trans  &trans   &kp LC(V)      &kp LC(C)    &kp LC(X)  &kp LC(A)       &kp LS(LA(TAB))
+                                             &trans       &trans         &trans   &trans    &trans  &trans   &trans         &trans
             >;
 
             label = "Quick";
