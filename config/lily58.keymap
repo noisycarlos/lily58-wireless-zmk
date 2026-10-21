@@ -1056,37 +1056,37 @@
         };
 
         NukeViewer1L {
-            bindings = <&kp LC(LS(NUMBER_1))>;
+            bindings = <&kp NUMBER_1>;
             key-positions = <3 4>;
             layers = <6>;
         };
 
         NukeViewer2L {
-            bindings = <&kp LC(LS(NUMBER_2))>;
+            bindings = <&kp NUMBER_2>;
             key-positions = <3 2>;
             layers = <6>;
         };
 
         NukeViewer3L {
-            bindings = <&kp LC(LS(NUMBER_3))>;
+            bindings = <&kp NUMBER_3>;
             key-positions = <2 1>;
             layers = <6>;
         };
 
         NukeViewer1R {
-            bindings = <&kp LC(LS(NUMBER_1))>;
+            bindings = <&kp NUMBER_1>;
             key-positions = <7 8>;
             layers = <6>;
         };
 
         NukeViewer2R {
-            bindings = <&kp LC(LS(NUMBER_2))>;
+            bindings = <&kp NUMBER_2>;
             key-positions = <8 9>;
             layers = <6>;
         };
 
         NukeViewer3R {
-            bindings = <&kp LC(LS(NUMBER_3))>;
+            bindings = <&kp NUMBER_3>;
             key-positions = <9 10>;
             layers = <6>;
         };
