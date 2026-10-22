@@ -771,6 +771,27 @@
             bindings = <&kp S &kp T &kp A &kp T &kp S>;
             label = "TYPES_STATS";
         };
+
+        NukeCrop: NukeCrop {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp C &kp R &kp O &kp P &kp ENTER>;
+            label = "NUKECROP";
+        };
+
+        NukeDefocus: NukeDefocus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp D &kp E &kp F &kp O &kp C &kp U &kp S &kp ENTER>;
+            label = "NUKEDEFOCUS";
+        };
+
+        NukeTracker: NukeTracker {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp T &kp R &kp A &kp C &kp K &kp E &kp R>;
+            label = "NUKETRACKER";
+        };
     };
 
     combos {
@@ -784,12 +805,6 @@
         WindowSwitcherR {
             bindings = <&kp LG(F12)>;
             key-positions = <43 54>;
-        };
-
-        RailsDbActions {
-            bindings = <&TypesRailsDb>;
-            key-positions = <40 26>;
-            layers = <4>;
         };
 
         NukeNextKeyframe {
@@ -1033,13 +1048,13 @@
 
         NukeColorR {
             bindings = <&kp C>;
-            key-positions = <30 45 46>;
+            key-positions = <30 46>;
             layers = <6>;
         };
 
         NukeColorL {
             bindings = <&kp C>;
-            key-positions = <29 40 39>;
+            key-positions = <29 39>;
             layers = <6>;
         };
 
@@ -1088,6 +1103,18 @@
         NukeViewer3R {
             bindings = <&kp NUMBER_3>;
             key-positions = <9 10>;
+            layers = <6>;
+        };
+
+        NukeTrackerL {
+            bindings = <&NukeTracker>;
+            key-positions = <17 25>;
+            layers = <6>;
+        };
+
+        NukeTrackerR {
+            bindings = <&NukeTracker>;
+            key-positions = <18 34>;
             layers = <6>;
         };
     };
@@ -1183,7 +1210,7 @@
 &nuke_tab_backdrop_tapdance  &kp D      &kp I           &nuke_layer_or_bt_swap  &kp O           &kp M                          &kp M        &kp I                &to 10             &kp O           &mt F7 LC(S)  &kp D
 &NukeAddNodeDance            &kp Q      &kp HOME        &kp UP_ARROW            &DualKey 5 END  &kp T                          &kp T        &kp HOME             &kp UP_ARROW       &kp END         &kp Q         &NukeAddNodeDance
 &kp A                        &kp LC(Z)  &kp LEFT        &kp DOWN                &kp RIGHT       &NukeViewer                    &NukeViewer  &kp LEFT             &kp DOWN           &kp RIGHT       &kp LC(Z)     &kp A
-&to 0                        &trans     &mt LEFT_ALT J  &mt LEFT_SHIFT K        &mt LCTRL L     &NukeFit     &trans    &trans  &NukeFit     &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp Z         &to 0
+&to 0                        &trans     &mt LEFT_ALT J  &mt LEFT_SHIFT K        &mt LCTRL L     &mt F H      &trans    &trans  &mt F H      &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp Z         &to 0
                                                         &to 0                   &trans          &kp SPACE    &trans    &trans  &kp SPACE    &trans               &to 0
             >;
 
