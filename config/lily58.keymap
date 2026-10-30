@@ -1160,25 +1160,25 @@
 
         NukeSwitchL {
             bindings = <&NukeSwitch>;
-            key-positions = <17 5 4 3>;
+            key-positions = <17 4>;
             layers = <6>;
         };
 
         NukeSwitchR {
             bindings = <&NukeSwitch>;
-            key-positions = <18 7 6 8>;
+            key-positions = <18 7>;
             layers = <6>;
         };
 
         NukePremultR {
             bindings = <&NukePremult>;
-            key-positions = <22 21 23>;
+            key-positions = <22 21 20>;
             layers = <6>;
         };
 
         NukePremultL {
             bindings = <&NukePremult>;
-            key-positions = <13 12 14>;
+            key-positions = <13 14 15>;
             layers = <6>;
         };
 
